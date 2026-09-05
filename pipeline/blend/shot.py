@@ -146,27 +146,151 @@ def street_camera(centreline: list[tuple[float, float]], *, along: float = 0.18,
 
 
 def sun(*, elevation_deg: float = 34.0, azimuth_deg: float = 205.0,
-        strength: float = 3.2, angle_deg: float = 1.5) -> bpy.types.Object:
+        strength: float = 3.2, angle_deg: float = 0.55,
+        colour: tuple[float, float, float] | None = None) -> bpy.types.Object:
     """Directional key light.
 
-    `angle` is the sun's apparent disc size — the single most important control
-    for shadow softness, and the thing that most obviously reads as fake when
-    left at zero.
+    Azimuth is a compass bearing, clockwise from north, matching
+    `pipeline.solar`. `angle` is the sun's apparent disc size: the real one is
+    0.53 degrees, and it is the single most important control for shadow
+    softness — left at zero, every shadow edge is razor sharp and the image
+    reads as CG immediately.
     """
     data = bpy.data.lights.new("sun", type="SUN")
     data.energy = strength
     data.angle = math.radians(angle_deg)
+    if colour:
+        data.color = colour
 
     obj = bpy.data.objects.new("sun", data)
     elevation = math.radians(elevation_deg)
     azimuth = math.radians(azimuth_deg)
     obj.location = Vector((
         math.sin(azimuth) * math.cos(elevation),
-        -math.cos(azimuth) * math.cos(elevation),
+        math.cos(azimuth) * math.cos(elevation),
         math.sin(elevation),
-    )) * 200.0
+    )) * 400.0
     bpy.context.collection.objects.link(obj)
     _look_at(obj, Vector((0, 0, 0)))
+    return obj
+
+
+def _node_tree(datablock):
+    """World node trees are implicit from Blender 5.0; `use_nodes` is on its
+    way out but still needed on older builds."""
+    if datablock.node_tree is None:
+        datablock.use_nodes = True
+    return datablock.node_tree
+
+
+def sky(sun_position, *, dust: float = 2.2, strength: float = 1.0,
+        air: float = 1.0, ozone: float = 1.4,
+        ground_albedo: float = 0.16) -> bpy.types.World:
+    """Physical sky, driving ambient light and the visible background.
+
+    The sky's own sun disc is switched off and a separate sun lamp does the
+    key. A disc in an environment texture is sampled as part of the whole
+    hemisphere, so it converges far more slowly than a light Cycles knows how
+    to aim rays at — on a CPU budget that difference is the render.
+
+    `dust` is doing the London work: it warms and thickens the low sun and
+    pushes the horizon toward the milky grey the city actually has.
+    """
+    world = bpy.data.worlds.new("sky")
+    tree = _node_tree(world)
+    background = tree.nodes["Background"]
+    background.inputs["Strength"].default_value = strength
+
+    texture = tree.nodes.new("ShaderNodeTexSky")
+    # Blender 5.0 replaced the single "Nishita" model with an explicit choice
+    # of scattering order; multiple scattering is the one that fills shadowed
+    # streets with sky light instead of leaving them flat.
+    texture.sky_type = "MULTIPLE_SCATTERING"
+    texture.sun_elevation = math.radians(max(sun_position.elevation, 0.4))
+    texture.sun_rotation = _sky_rotation(sun_position.azimuth)
+    texture.sun_disc = False
+    texture.air_density = air
+    texture.aerosol_density = dust
+    texture.ozone_density = ozone
+    texture.ground_albedo = ground_albedo
+    tree.links.new(texture.outputs["Color"], background.inputs["Color"])
+
+    bpy.context.scene.world = world
+    return world
+
+
+def _sky_rotation(azimuth_deg: float) -> float:
+    """Compass azimuth to sky-texture rotation.
+
+    The sky texture measures anticlockwise from +X; a compass bearing runs
+    clockwise from +Y. The two differ by a quarter turn and a sign.
+    """
+    return math.radians(90.0 - azimuth_deg)
+
+
+def atmosphere(*, span: float = 2000.0, height: float = 600.0,
+               density: float = 0.00016, anisotropy: float = 0.45,
+               colour: tuple[float, float, float] = (0.66, 0.72, 0.82),
+               ) -> bpy.types.Object:
+    """Aerial perspective — haze accumulating with distance.
+
+    The strongest depth cue a city image has: without it every building sits
+    at the same apparent distance and the street reads as a diorama. A low sun
+    through a narrow street also picks out shafts where it clears a roofline.
+
+    This is a *bounded* box, not a world volume. Attaching a scatter shader to
+    the world volume output looks like the obvious way to do it and renders
+    pure black: the world volume is infinite, so every ray that escapes to the
+    sky accumulates extinction over infinite distance and transmittance goes
+    to zero. The box has to contain both cameras, but only just — sized at 6 km
+    the sun has kilometres of volume to cross and is extinguished before it
+    reaches anything, which produces a scene lit entirely by flat sky ambient.
+
+    Shadow rays are excluded from the volume for the same reason. Physically
+    the sun should be slightly dimmed by haze, but that dimming is already in
+    the sky model's own sun colour, and paying for it twice costs the whole
+    key light. Camera rays still cross the volume, so the haze itself is
+    unaffected.
+
+    Density is deliberately restrained: genuinely strong aerial perspective
+    happens across kilometres, and forcing it at street scale reads as fog
+    rather than distance.
+    """
+    half, top = span / 2, height
+
+    mesh = bpy.data.meshes.new("atmosphere")
+    verts = [(-half, -half, -5.0), (half, -half, -5.0),
+             (half, half, -5.0), (-half, half, -5.0),
+             (-half, -half, top), (half, -half, top),
+             (half, half, top), (-half, half, top)]
+    faces = [(0, 1, 2, 3), (7, 6, 5, 4), (0, 4, 5, 1),
+             (1, 5, 6, 2), (2, 6, 7, 3), (3, 7, 4, 0)]
+    mesh.from_pydata(verts, [], faces)
+    mesh.validate(verbose=False)
+
+    material = bpy.data.materials.new("atmosphere")
+    tree = _node_tree(material)
+    # No surface shader at all, so the box itself is invisible and only its
+    # volume contributes.
+    for node in [n for n in tree.nodes if n.type == "BSDF_PRINCIPLED"]:
+        tree.nodes.remove(node)
+    output = next(n for n in tree.nodes if n.type == "OUTPUT_MATERIAL")
+
+    scatter = tree.nodes.new("ShaderNodeVolumeScatter")
+    scatter.inputs["Density"].default_value = density
+    scatter.inputs["Anisotropy"].default_value = anisotropy
+    scatter.inputs["Color"].default_value = (*colour, 1.0)
+    tree.links.new(scatter.outputs["Volume"], output.inputs["Volume"])
+
+    mesh.materials.append(material)
+    obj = bpy.data.objects.new("atmosphere", mesh)
+    obj.visible_shadow = False
+    bpy.context.collection.objects.link(obj)
+
+    # Single scattering is what makes the haze visible at all; without at
+    # least one volume bounce the box only subtracts light.
+    bpy.context.scene.cycles.volume_bounces = max(
+        bpy.context.scene.cycles.volume_bounces, 1)
     return obj
 
 
@@ -175,15 +299,15 @@ def flat_world(colour: tuple[float, float, float] = (0.55, 0.60, 0.68),
     """Plain sky ambient. Deliberately not an HDRI: at massing stage a busy
     environment flatters bad geometry."""
     world = bpy.data.worlds.new("world")
-    world.use_nodes = True
-    background = world.node_tree.nodes["Background"]
+    background = _node_tree(world).nodes["Background"]
     background.inputs["Color"].default_value = (*colour, 1.0)
     background.inputs["Strength"].default_value = strength
     bpy.context.scene.world = world
 
 
 def configure_render(*, samples: int = 64, resolution: tuple[int, int] = (1600, 900),
-                     denoise: bool = True) -> None:
+                     denoise: bool = True, exposure: float = 0.0,
+                     look: str = "None") -> None:
     scene = bpy.context.scene
     scene.render.engine = "CYCLES"
     scene.cycles.device = "CPU"
@@ -199,7 +323,8 @@ def configure_render(*, samples: int = 64, resolution: tuple[int, int] = (1600, 
     scene.render.resolution_percentage = 100
     scene.render.film_transparent = False
     scene.view_settings.view_transform = "AgX"
-    scene.view_settings.look = "None"
+    scene.view_settings.look = look
+    scene.view_settings.exposure = exposure
 
 
 def render_to(path, camera: bpy.types.Object) -> None:

@@ -98,6 +98,37 @@ def wall_material(osm_material: str | None, osm_id: int,
     return cache[tone]
 
 
+def weathered_wall_material(osm_material: str | None, osm_id: int,
+                            cache: dict) -> bpy.types.Material:
+    """As `wall_material`, but with procedural drift, streaking and relief."""
+    from . import textures
+
+    tone = OSM_MATERIAL.get((osm_material or "").lower())
+    if tone is None:
+        tone = UNTAGGED_MIX[osm_id % len(UNTAGGED_MIX)]
+
+    key = f"weathered_{tone}"
+    if key not in cache:
+        colour, roughness = WALL_TONES[tone]
+        # Stone and stucco streak more visibly than brick: the dirt sits on a
+        # pale ground instead of blending into it.
+        streak = 0.46 if tone in ("portland_stone", "stucco") else 0.34
+        cache[key] = textures.weathered_wall(key, colour, roughness,
+                                             streak=streak)
+    return cache[key]
+
+
+def prop_materials() -> dict[str, bpy.types.Material]:
+    """Materials for rooftop and street clutter."""
+    return {
+        "brick": _principled("prop_brick", (0.196, 0.148, 0.112), 0.88),
+        # Chimney pots are unglazed terracotta and read warm even in shade -
+        # a useful spot of colour along an otherwise grey roofline.
+        "terracotta": _principled("prop_terracotta", (0.315, 0.152, 0.088), 0.80),
+        "metal": _principled("prop_metal", (0.105, 0.107, 0.108), 0.44),
+    }
+
+
 def trim(name: str = "trim") -> bpy.types.Material:
     """Painted stone: cornices, sills, shopfront fascias. Off-white rather
     than white, which would blow out against the sky."""

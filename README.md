@@ -149,6 +149,64 @@ instead of stretching with the opening. Glass is opaque and dark rather than
 refractive — tracing into interiors we have not built is not affordable on a
 CPU-only budget, and from the street it reads the same.
 
+## Light
+
+The sun is computed from the site's own latitude and longitude (NOAA's solar
+position approximation) rather than dialled in until it looks right, so the
+shadows in one shot cannot contradict those in another.
+
+The hero time is **5 September 2026, 17:00 BST — sun 23.8° up, azimuth 250°
+(WSW)** — and it was chosen against the street's geometry, not by eye. Berwick
+Street runs 149/329°, so the camera looks SSE at a facade facing WSW; at that
+moment the sun is 11° off that facade's normal and low enough to be warm.
+Lower would be warmer still but cannot clear the opposite roofline: at 23.8°
+sunlight reaches only 4.2 m below the roof of a 9.5 m street, which is why the
+hero camera is wide and tilted well up. The canyon below stays in cool sky
+shade, which is exactly how these streets look.
+
+Sun colour tracks elevation, approximating ~4500K against Blender's 6500K
+white.
+
+## Materials
+
+Procedural node graphs, no image textures — nothing to fetch, nothing to
+cache, no memory spent on maps.
+
+- **Tonal drift** so no two stretches of brickwork match.
+- **Rain streaking** from a noise field crushed in Z. Scale matters more than
+  it looks: feature size is `1/(mapping × noise)` metres, and crushing Z too
+  hard turns rain streaks into fine vertical corduroy that reads as fabric.
+- **Per-instance glass** driven by Object Info's Random output, which differs
+  per linked duplicate — so 5,000 windows sharing 135 meshes still each have
+  their own tint and reflectivity. Variation for free, no extra geometry.
+
+## Clutter
+
+Rooftops are the most neglected part of a city model and, from any raised
+angle, a third of what the camera sees. Chimney stacks are placed on *party
+walls* — the edges facades.py already found to be hidden — which is where they
+actually stand on a terrace. Everything is seeded from the OSM id, so a re-run
+produces the same city.
+
+```
+chimney 328   pot 720   plant 52   tank 5   aerial 7
+bollard 294   streetlight 44
+1450 objects from 70 meshes (21:1)
+```
+
+## Atmosphere
+
+A **bounded** volume box, not a world volume. Two traps here, both of which
+render as a scene that is obviously wrong but not obviously why:
+
+- A scatter shader on the *world* volume output renders **pure black**. The
+  world volume is infinite, so every ray escaping to the sky accumulates
+  extinction over infinite distance and transmittance goes to zero.
+- Sized too generously (6 km), the box extinguishes the **sun** instead: the
+  key light has kilometres of volume to cross, and the scene ends up lit
+  entirely by flat sky ambient. Raising sun strength 150× did nothing at all.
+  The box is now 2 km and shadow rays skip the volume.
+
 ## Usage
 
 ```bash
@@ -158,6 +216,7 @@ python3 -m pipeline.preview          # render the QA preview
 python3 -m pipeline.stage2_massing   # extrude and clay-render
 python3 -m pipeline.stage3_streets   # carriageway, kerbs, pavement
 python3 -m pipeline.stage4_facades   # bays, windows, shopfronts, cornices
+python3 -m pipeline.stage5_dressing  # clutter, materials, sun, atmosphere
 ```
 
 Overpass responses are cached under `data/cache/` by query hash; re-runs do not
@@ -181,6 +240,11 @@ pipeline/stage3_streets.py stage 3 -> out/stage3_*.png
 pipeline/facades.py        bay/storey layout, opening rectangles
 pipeline/blend/facade.py   facade meshing, window instancing
 pipeline/stage4_facades.py stage 4 -> out/stage4_*.png
+pipeline/solar.py          sun position from lat/lon and a clock time
+pipeline/clutter.py        chimney/plant/furniture placement
+pipeline/blend/props.py    clutter meshing and instancing
+pipeline/blend/textures.py procedural weathering and glass
+pipeline/stage5_dressing.py stage 5 -> out/stage5_*.png
 ```
 
 Coordinates downstream of `stage1_data` are **local metres**, +X east, +Y north,
@@ -194,8 +258,9 @@ origin at the site centre.
 - [x] **3 — Streets.** Centreline buffering, junction union, kerbs, pavement.
 - [x] **4 — Facades.** Bays, recessed windows, sills, shopfronts, fascias,
       cornices; wall material from OSM tags; instanced openings.
-- [ ] 5 — Clutter and materials.
-- [ ] 6 — Lighting, atmosphere, hero render, grade.
+- [x] **5 — Clutter, materials and atmosphere.** Chimneys and roof plant,
+      street furniture, procedural weathering, computed sun, haze.
+- [ ] 6 — Hero render and grade.
 
 ## Environment
 
