@@ -93,6 +93,62 @@ def build_footprints(elements: list[dict], projection: Projection) -> list[Build
     return buildings
 
 
+def resolve_overlaps(buildings: list[Building]) -> tuple[list[Building], int, int]:
+    """Remove footprint overlap between buildings.
+
+    OSM lets building outlines overlap, and around here they genuinely do: a
+    handful of Soho buildings are mapped twice, or as an outer shell plus an
+    inner block. Extruded as-is that produces two solids sharing a volume, and
+    where the heights also match - which they often do, because a building
+    inherits its neighbour's height during inference - the roof caps end up
+    exactly coplanar and Cycles z-fights them into black holes.
+
+    Largest footprint wins. Each subsequent building is clipped against what
+    has already been accepted; if almost nothing survives, it was a duplicate
+    rather than a neighbour, and it is dropped.
+    """
+    from shapely.ops import unary_union
+
+    # A survivor this much smaller than it started is a duplicate, not a
+    # building that merely shares a wall.
+    keep_fraction = 0.25
+    keep_area_m2 = 8.0
+
+    ordered = sorted(buildings, key=lambda b: -b.polygon.area)
+    kept: list[Building] = []
+    accepted_parts: list = []
+    clipped = dropped = 0
+
+    for building in ordered:
+        polygon = building.polygon
+        if accepted_parts:
+            blocker = unary_union(accepted_parts)
+            if polygon.intersects(blocker):
+                remainder = polygon.difference(blocker)
+                if remainder.is_empty:
+                    dropped += 1
+                    continue
+                if remainder.geom_type == "MultiPolygon":
+                    remainder = max(remainder.geoms, key=lambda p: p.area)
+                if (remainder.area < keep_area_m2
+                        or remainder.area < polygon.area * keep_fraction):
+                    dropped += 1
+                    continue
+                if remainder.area < polygon.area - 0.01:
+                    clipped += 1
+                polygon = remainder
+
+        if polygon.exterior.is_ccw:
+            polygon = Polygon(list(polygon.exterior.coords)[::-1])
+        building.polygon = polygon
+        building.ring = [(round(x, 3), round(y, 3))
+                         for x, y in list(polygon.exterior.coords)[:-1]]
+        kept.append(building)
+        accepted_parts.append(polygon)
+
+    return kept, clipped, dropped
+
+
 def road_width(tags: dict[str, str]) -> float:
     """Best available carriageway width, in metres."""
     from .heights import parse_length
@@ -170,6 +226,12 @@ def main(argv: list[str]) -> int:
     buildings = build_footprints(osm.buildings(bbox), Projection.for_bbox(bbox))
     print("fetching  : roads ...", flush=True)
     roads = build_roads(osm.roads(bbox), Projection.for_bbox(bbox))
+
+    raw_count = len(buildings)
+    buildings, clipped, dropped = resolve_overlaps(buildings)
+    if clipped or dropped:
+        print(f"overlaps  : {clipped} clipped, {dropped} dropped as duplicates "
+              f"({raw_count} -> {len(buildings)})")
 
     resolve(buildings)
 

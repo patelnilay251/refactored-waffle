@@ -58,10 +58,23 @@ Every building records a `height_source`, so inferred geometry stays auditable.
 On the current site nothing reaches step 5:
 
 ```
-tag:levels          130   67%
-inferred:terrace     50   25%
+tag:levels          130   68%
+inferred:terrace     46   24%
 inferred:nearby      13    6%
 ```
+
+## Overlapping footprints
+
+OSM permits building outlines to overlap, and four pairs here did — two of them
+by over 80 m², i.e. the same building mapped twice. Extruded as-is that makes
+two solids sharing a volume, and because a building often *inherits* its
+neighbour's height during inference, the roof caps land exactly coplanar and
+Cycles z-fights them into black holes.
+
+`resolve_overlaps` clips each footprint against the larger ones already
+accepted and drops whatever barely survives. All four pairs here were true
+duplicates: 4 dropped, 0 clipped, and near-black artifact pixels went from
+8,596 to 0.
 
 ## Usage
 
@@ -69,6 +82,7 @@ inferred:nearby      13    6%
 pip install bpy shapely matplotlib
 python3 -m pipeline.stage1_data      # fetch, project, resolve heights
 python3 -m pipeline.preview          # render the QA preview
+python3 -m pipeline.stage2_massing   # extrude and clay-render
 ```
 
 Overpass responses are cached under `data/cache/` by query hash; re-runs do not
@@ -77,12 +91,16 @@ re-hit the API.
 ## Layout
 
 ```
-config/soho.json        site definition (centre, extent)
-pipeline/geo.py         lat/lon <-> local metres
-pipeline/osm.py         Overpass client, mirror fallthrough, cache
-pipeline/heights.py     height resolution and inference
-pipeline/stage1_data.py stage 1 orchestrator -> data/soho/scene.json
-pipeline/preview.py     QA preview -> out/
+config/soho.json           site definition (centre, extent)
+pipeline/geo.py            lat/lon <-> local metres
+pipeline/osm.py            Overpass client, mirror fallthrough, cache
+pipeline/heights.py        height resolution and inference
+pipeline/stage1_data.py    stage 1 -> data/soho/scene.json
+pipeline/preview.py        QA preview -> out/
+pipeline/blend/mesh.py     footprint extrusion, ground
+pipeline/blend/materials.py clay shaders
+pipeline/blend/shot.py     cameras, sun, world, render settings
+pipeline/stage2_massing.py stage 2 -> out/stage2_*.png
 ```
 
 Coordinates downstream of `stage1_data` are **local metres**, +X east, +Y north,
@@ -91,7 +109,8 @@ origin at the site centre.
 ## Stages
 
 - [x] **1 — Data layer.** Fetch, reproject, resolve heights, QA preview.
-- [ ] 2 — Massing. LOD1 extrusion, clay render.
+- [x] **2 — Massing.** LOD1 extrusion, overlap resolution, clay render from an
+      overview and from eye height on Berwick Street.
 - [ ] 3 — Roads and ground. Centreline buffering, junctions, footways.
 - [ ] 4 — Facades. Procedural bays, windows, shopfronts, cornices.
 - [ ] 5 — Clutter and materials.
