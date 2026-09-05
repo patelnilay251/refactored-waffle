@@ -105,6 +105,50 @@ Slabs are meshed by constrained Delaunay rather than as ngons, because the
 pavement is one polygon with a hole punched for every building and Blender
 ngons cannot carry holes.
 
+## Facades
+
+The jump from LOD1 boxes to something that reads as buildings. Two ideas carry
+most of it.
+
+**Most walls are never seen.** A terrace is a row sharing party walls, so each
+wall is probed against its neighbours and only open ones get detail — 999 of
+1,600 edges. Those are then split against the stage-3 street surface into 548
+frontages and 451 rear elevations, and rears get plainer, sparser windows and
+no shopfront or cornice. That is both how London is built and half the
+geometry.
+
+**Terraces are strikingly regular.** Storey heights diminish going up (7% per
+floor), window height follows the storey, bays repeat at a fixed pitch, and
+the ground floor is a shopfront rather than a shrunken version of the floors
+above. Encoding those rules beats scattering identical windows over a box.
+
+Each frontage carries a recessed reveal (the shadow is most of the effect), a
+projecting stone sill, a painted fascia band over each shopfront, and a
+cornice at the roofline. Wall material comes from `building:material` where
+tagged, otherwise a weighted mix biased to London stock brick — the
+yellow-brown one, which is what Soho is actually built from.
+
+### Memory
+
+This is where a city model normally explodes. Current site:
+
+```
+shell faces        86,609    unique per building, but cheap
+opening instances   5,002
+window meshes         135    instancing ratio 37:1
+wall materials          6
+unique faces       95,432    across 327 meshes
+objects             5,195
+```
+
+Openings are **quantised to 15 cm** and cached, so a few thousand of them
+resolve to ~135 meshes shared by linked duplicates; the residual is taken up
+by a small scale on the instance so the fit stays exact. Quantising rather
+than scaling one unit mesh keeps frame and glazing-bar thickness constant
+instead of stretching with the opening. Glass is opaque and dark rather than
+refractive — tracing into interiors we have not built is not affordable on a
+CPU-only budget, and from the street it reads the same.
+
 ## Usage
 
 ```bash
@@ -113,6 +157,7 @@ python3 -m pipeline.stage1_data      # fetch, project, resolve heights
 python3 -m pipeline.preview          # render the QA preview
 python3 -m pipeline.stage2_massing   # extrude and clay-render
 python3 -m pipeline.stage3_streets   # carriageway, kerbs, pavement
+python3 -m pipeline.stage4_facades   # bays, windows, shopfronts, cornices
 ```
 
 Overpass responses are cached under `data/cache/` by query hash; re-runs do not
@@ -133,6 +178,9 @@ pipeline/blend/shot.py     cameras, sun, world, render settings
 pipeline/stage2_massing.py stage 2 -> out/stage2_*.png
 pipeline/streets.py        centrelines -> carriageway and pavement polygons
 pipeline/stage3_streets.py stage 3 -> out/stage3_*.png
+pipeline/facades.py        bay/storey layout, opening rectangles
+pipeline/blend/facade.py   facade meshing, window instancing
+pipeline/stage4_facades.py stage 4 -> out/stage4_*.png
 ```
 
 Coordinates downstream of `stage1_data` are **local metres**, +X east, +Y north,
@@ -144,7 +192,8 @@ origin at the site centre.
 - [x] **2 — Massing.** LOD1 extrusion, overlap resolution, clay render from an
       overview and from eye height on Berwick Street.
 - [x] **3 — Streets.** Centreline buffering, junction union, kerbs, pavement.
-- [ ] 4 — Facades. Procedural bays, windows, shopfronts, cornices.
+- [x] **4 — Facades.** Bays, recessed windows, sills, shopfronts, fascias,
+      cornices; wall material from OSM tags; instanced openings.
 - [ ] 5 — Clutter and materials.
 - [ ] 6 — Lighting, atmosphere, hero render, grade.
 
