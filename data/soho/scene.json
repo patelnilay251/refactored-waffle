@@ -1,0 +1,12106 @@
+{
+ "name": "soho",
+ "description": "Berwick Street / Broadwick Street, Soho, London",
+ "crs": "local tangent plane, metres, +X east +Y north",
+ "origin_wgs84": [
+  51.5137,
+  -0.1352
+ ],
+ "bbox_wgs84": [
+  51.51280168471588,
+  -0.13664347678598696,
+  51.51459831528412,
+  -0.13375652321401302
+ ],
+ "extent_m": [
+  200.0,
+  200.0
+ ],
+ "buildings": [
+  {
+   "osm_id": 40858235,
+   "kind": "residential",
+   "name": null,
+   "material": null,
+   "height_m": 18.7,
+   "height_source": "inferred:nearby",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     21.718,
+     -72.736
+    ],
+    [
+     39.176,
+     -64.487
+    ],
+    [
+     41.255,
+     -67.827
+    ],
+    [
+     44.746,
+     -74.473
+    ],
+    [
+     49.069,
+     -82.699
+    ],
+    [
+     50.981,
+     -85.794
+    ],
+    [
+     33.336,
+     -94.866
+    ]
+   ]
+  },
+  {
+   "osm_id": 40952618,
+   "kind": "yes",
+   "name": "Soho Fitness Lab",
+   "material": null,
+   "height_m": 22.1,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     79.634,
+     58.632
+    ],
+    [
+     74.875,
+     69.33
+    ],
+    [
+     78.491,
+     71.011
+    ],
+    [
+     83.285,
+     60.324
+    ]
+   ]
+  },
+  {
+   "osm_id": 61509992,
+   "kind": "yes",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -102.454,
+     93.72
+    ],
+    [
+     -103.112,
+     95.111
+    ],
+    [
+     -96.669,
+     98.451
+    ],
+    [
+     -95.866,
+     96.759
+    ],
+    [
+     -92.443,
+     89.211
+    ],
+    [
+     -95.325,
+     87.72
+    ],
+    [
+     -98.817,
+     86.017
+    ],
+    [
+     -99.69,
+     85.582
+    ],
+    [
+     -100.604,
+     85.137
+    ],
+    [
+     -111.543,
+     79.783
+    ],
+    [
+     -115.568,
+     88.911
+    ],
+    [
+     -104.913,
+     94.221
+    ],
+    [
+     -104.255,
+     92.818
+    ]
+   ]
+  },
+  {
+   "osm_id": 61509996,
+   "kind": "commercial",
+   "name": null,
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": "flat",
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -73.559,
+     44.283
+    ],
+    [
+     -67.518,
+     47.467
+    ],
+    [
+     -57.93,
+     52.532
+    ],
+    [
+     -56.17,
+     49.047
+    ],
+    [
+     -54.958,
+     49.693
+    ],
+    [
+     -53.877,
+     50.261
+    ],
+    [
+     -55.54,
+     53.701
+    ],
+    [
+     -49.18,
+     56.873
+    ],
+    [
+     -47.517,
+     53.489
+    ],
+    [
+     -39.37,
+     57.719
+    ],
+    [
+     -36.301,
+     51.352
+    ],
+    [
+     -34.791,
+     48.235
+    ],
+    [
+     -36.329,
+     47.467
+    ],
+    [
+     -44.49,
+     43.392
+    ],
+    [
+     -44.746,
+     43.259
+    ],
+    [
+     -49.201,
+     41.043
+    ],
+    [
+     -50.399,
+     40.442
+    ],
+    [
+     -56.018,
+     37.637
+    ],
+    [
+     -64.047,
+     33.63
+    ],
+    [
+     -67.171,
+     32.071
+    ],
+    [
+     -71.73,
+     40.954
+    ]
+   ]
+  },
+  {
+   "osm_id": 61510007,
+   "kind": "commercial",
+   "name": null,
+   "material": null,
+   "height_m": 18.7,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -28.043,
+     18.813
+    ],
+    [
+     -30.316,
+     23.533
+    ],
+    [
+     -23.838,
+     26.628
+    ],
+    [
+     -9.553,
+     33.574
+    ],
+    [
+     -7.503,
+     29.611
+    ],
+    [
+     -5.258,
+     25.247
+    ],
+    [
+     -1.773,
+     18.501
+    ],
+    [
+     -2.307,
+     16.798
+    ],
+    [
+     -7.108,
+     14.416
+    ],
+    [
+     -9.72,
+     13.136
+    ],
+    [
+     -11.147,
+     11.076
+    ],
+    [
+     -15.262,
+     8.872
+    ],
+    [
+     -19.19,
+     8.427
+    ],
+    [
+     -22.335,
+     6.868
+    ]
+   ]
+  },
+  {
+   "osm_id": 61510012,
+   "kind": "yes",
+   "name": "Smoke and Mirrors",
+   "material": "plaster",
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -68.051,
+     22.765
+    ],
+    [
+     -84.941,
+     14.95
+    ],
+    [
+     -86.312,
+     18.067
+    ],
+    [
+     -98.471,
+     45.697
+    ],
+    [
+     -79.44,
+     54.881
+    ],
+    [
+     -73.559,
+     44.283
+    ],
+    [
+     -71.73,
+     40.954
+    ],
+    [
+     -67.171,
+     32.071
+    ],
+    [
+     -66.264,
+     30.045
+    ],
+    [
+     -65.37,
+     28.108
+    ],
+    [
+     -64.511,
+     26.238
+    ],
+    [
+     -63.874,
+     24.858
+    ]
+   ]
+  },
+  {
+   "osm_id": 61926915,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -91.841,
+     80.05
+    ],
+    [
+     -87.857,
+     82.087
+    ],
+    [
+     -85.398,
+     83.345
+    ],
+    [
+     -83.95,
+     80.451
+    ],
+    [
+     -82.703,
+     77.957
+    ],
+    [
+     -79.031,
+     70.766
+    ],
+    [
+     -85.786,
+     67.259
+    ],
+    [
+     -88.321,
+     72.413
+    ]
+   ]
+  },
+  {
+   "osm_id": 61936008,
+   "kind": "office",
+   "name": null,
+   "material": null,
+   "height_m": 18.7,
+   "height_source": "tag:levels",
+   "levels": 5,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     38.671,
+     32.283
+    ],
+    [
+     45.792,
+     37.504
+    ],
+    [
+     47.947,
+     37.615
+    ],
+    [
+     50.101,
+     36.702
+    ],
+    [
+     51.549,
+     34.899
+    ],
+    [
+     55.165,
+     26.806
+    ],
+    [
+     57.86,
+     20.694
+    ],
+    [
+     65.058,
+     4.141
+    ],
+    [
+     46.991,
+     -3.707
+    ],
+    [
+     37.105,
+     19.025
+    ],
+    [
+     35.172,
+     20.472
+    ],
+    [
+     42.543,
+     24.145
+    ]
+   ]
+  },
+  {
+   "osm_id": 61936009,
+   "kind": "commercial",
+   "name": "Broadwick House",
+   "material": "glass",
+   "height_m": 25.5,
+   "height_source": "tag:levels",
+   "levels": 7,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     7.288,
+     1.926
+    ],
+    [
+     16.869,
+     -16.62
+    ],
+    [
+     -6.2,
+     -28.542
+    ],
+    [
+     -15.359,
+     -10.831
+    ],
+    [
+     -14.922,
+     -10.609
+    ],
+    [
+     -15.67,
+     -9.162
+    ],
+    [
+     -10.551,
+     -6.512
+    ],
+    [
+     -9.678,
+     -8.193
+    ],
+    [
+     -8.202,
+     -7.436
+    ],
+    [
+     -8.757,
+     -6.356
+    ]
+   ]
+  },
+  {
+   "osm_id": 117623601,
+   "kind": "office",
+   "name": "Lipsync",
+   "material": null,
+   "height_m": 18.7,
+   "height_source": "tag:levels",
+   "levels": 5,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     66.631,
+     -44.172
+    ],
+    [
+     60.756,
+     -46.632
+    ],
+    [
+     58.99,
+     -42.402
+    ],
+    [
+     56.738,
+     -37.069
+    ],
+    [
+     54.736,
+     -32.227
+    ],
+    [
+     52.581,
+     -26.717
+    ],
+    [
+     52.173,
+     -25.882
+    ],
+    [
+     55.907,
+     -24.379
+    ],
+    [
+     73.739,
+     -17.099
+    ],
+    [
+     76.6,
+     -24.123
+    ],
+    [
+     80.251,
+     -33.062
+    ],
+    [
+     82.184,
+     -37.704
+    ]
+   ]
+  },
+  {
+   "osm_id": 117623604,
+   "kind": "yes",
+   "name": "Supreme",
+   "material": "brick",
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     86.631,
+     -89.378
+    ],
+    [
+     80.687,
+     -78.625
+    ],
+    [
+     92.083,
+     -73.326
+    ],
+    [
+     93.018,
+     -75.363
+    ],
+    [
+     90.843,
+     -76.465
+    ],
+    [
+     94.986,
+     -84.825
+    ]
+   ]
+  },
+  {
+   "osm_id": 117623605,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     94.827,
+     -90.892
+    ],
+    [
+     103.694,
+     -85.271
+    ],
+    [
+     105.336,
+     -85.582
+    ],
+    [
+     109.416,
+     -94.789
+    ],
+    [
+     99.884,
+     -99.497
+    ],
+    [
+     99.163,
+     -99.831
+    ]
+   ]
+  },
+  {
+   "osm_id": 117623606,
+   "kind": "commercial",
+   "name": null,
+   "material": "stone",
+   "height_m": 22.1,
+   "height_source": "tag:levels",
+   "levels": 6,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     74.584,
+     -65.133
+    ],
+    [
+     68.605,
+     -67.727
+    ],
+    [
+     58.636,
+     -73.159
+    ],
+    [
+     56.191,
+     -68.517
+    ],
+    [
+     64.047,
+     -64.376
+    ],
+    [
+     80.943,
+     -56.06
+    ],
+    [
+     80.549,
+     -55.259
+    ],
+    [
+     88.218,
+     -51.53
+    ],
+    [
+     89.25,
+     -53.645
+    ],
+    [
+     91.065,
+     -57.808
+    ]
+   ]
+  },
+  {
+   "osm_id": 117623609,
+   "kind": "retail",
+   "name": "Bone Daddies",
+   "material": null,
+   "height_m": 13.6,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     84.906,
+     -96.692
+    ],
+    [
+     94.827,
+     -90.892
+    ],
+    [
+     99.163,
+     -99.831
+    ],
+    [
+     89.749,
+     -104.885
+    ]
+   ]
+  },
+  {
+   "osm_id": 117623612,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 13.6,
+   "height_source": "inferred:nearby",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     80.701,
+     -108.793
+    ],
+    [
+     76.468,
+     -101.646
+    ],
+    [
+     80.652,
+     -99.175
+    ],
+    [
+     85.516,
+     -107.39
+    ],
+    [
+     86.257,
+     -108.603
+    ],
+    [
+     83.922,
+     -110.028
+    ],
+    [
+     82.516,
+     -107.702
+    ],
+    [
+     81.359,
+     -108.403
+    ]
+   ]
+  },
+  {
+   "osm_id": 117623618,
+   "kind": "yes",
+   "name": "Hearst Magazines UK",
+   "material": null,
+   "height_m": 25.5,
+   "height_source": "tag:levels",
+   "levels": 7,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -77.009,
+     -57.207
+    ],
+    [
+     -79.496,
+     -52.109
+    ],
+    [
+     -84.511,
+     -41.834
+    ],
+    [
+     -83.909,
+     -40.498
+    ],
+    [
+     -71.563,
+     -34.364
+    ],
+    [
+     -67.795,
+     -32.416
+    ],
+    [
+     -64.352,
+     -30.624
+    ],
+    [
+     -54.078,
+     -25.637
+    ],
+    [
+     -52.36,
+     -25.659
+    ],
+    [
+     -51.805,
+     -26.783
+    ],
+    [
+     -47.309,
+     -35.244
+    ],
+    [
+     -46.52,
+     -36.724
+    ],
+    [
+     -45.169,
+     -39.262
+    ],
+    [
+     -44.608,
+     -40.32
+    ],
+    [
+     -43.943,
+     -41.578
+    ],
+    [
+     -43.603,
+     -42.212
+    ],
+    [
+     -42.799,
+     -43.893
+    ],
+    [
+     -53.69,
+     -47.968
+    ],
+    [
+     -62.239,
+     -51.519
+    ]
+   ]
+  },
+  {
+   "osm_id": 117623621,
+   "kind": "commercial",
+   "name": "Technicolor",
+   "material": null,
+   "height_m": 18.7,
+   "height_source": "tag:levels",
+   "levels": 5,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -41.428,
+     -116.262
+    ],
+    [
+     -43.458,
+     -115.182
+    ],
+    [
+     -43.555,
+     -115.038
+    ],
+    [
+     -50.489,
+     -104.741
+    ],
+    [
+     -50.988,
+     -103.961
+    ],
+    [
+     -41.393,
+     -98.696
+    ],
+    [
+     -37.756,
+     -99.431
+    ],
+    [
+     -35.608,
+     -101.178
+    ],
+    [
+     -30.385,
+     -98.529
+    ],
+    [
+     -25.529,
+     -108.113
+    ],
+    [
+     -30.794,
+     -110.585
+    ],
+    [
+     -32.207,
+     -111.275
+    ],
+    [
+     -31.819,
+     -111.776
+    ]
+   ]
+  },
+  {
+   "osm_id": 117623623,
+   "kind": "residential",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "inferred:nearby",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -22.591,
+     -10.564
+    ],
+    [
+     -2.078,
+     -50.06
+    ],
+    [
+     -16.294,
+     -57.396
+    ],
+    [
+     -19.245,
+     -58.91
+    ],
+    [
+     -23.021,
+     -60.992
+    ],
+    [
+     -37.597,
+     -32.695
+    ],
+    [
+     -43.735,
+     -20.783
+    ]
+   ]
+  },
+  {
+   "osm_id": 117623624,
+   "kind": "apartments",
+   "name": "Ingestre Court",
+   "material": null,
+   "height_m": 43.0,
+   "height_source": "tag:levels",
+   "levels": 14,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -13.426,
+     -75.931
+    ],
+    [
+     -11.68,
+     -75.029
+    ],
+    [
+     5.556,
+     -66.146
+    ],
+    [
+     13.551,
+     -81.653
+    ],
+    [
+     16.329,
+     -87.052
+    ],
+    [
+     7.537,
+     -91.583
+    ],
+    [
+     -2.66,
+     -96.837
+    ],
+    [
+     -5.106,
+     -92.083
+    ],
+    [
+     -11.936,
+     -78.836
+    ],
+    [
+     -12.865,
+     -77.033
+    ]
+   ]
+  },
+  {
+   "osm_id": 117623631,
+   "kind": "residential",
+   "name": null,
+   "material": "brick",
+   "height_m": 13.0,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": "1886",
+   "footprint": [
+    [
+     -21.933,
+     -88.187
+    ],
+    [
+     -27.725,
+     -90.981
+    ],
+    [
+     -33.586,
+     -78.948
+    ],
+    [
+     -35.615,
+     -79.849
+    ],
+    [
+     -33.987,
+     -83.022
+    ],
+    [
+     -37.126,
+     -84.681
+    ],
+    [
+     -38.289,
+     -84.903
+    ],
+    [
+     -39.003,
+     -84.625
+    ],
+    [
+     -39.696,
+     -84.124
+    ],
+    [
+     -43.25,
+     -77.189
+    ],
+    [
+     -39.918,
+     -75.452
+    ],
+    [
+     -30.801,
+     -70.599
+    ]
+   ]
+  },
+  {
+   "osm_id": 118312536,
+   "kind": "commercial",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -43.035,
+     -88.911
+    ],
+    [
+     -42.467,
+     -89.98
+    ],
+    [
+     -41.497,
+     -89.456
+    ],
+    [
+     -39.724,
+     -92.941
+    ],
+    [
+     -43.298,
+     -94.8
+    ],
+    [
+     -41.393,
+     -98.696
+    ],
+    [
+     -50.988,
+     -103.961
+    ],
+    [
+     -52.041,
+     -102.403
+    ],
+    [
+     -52.595,
+     -101.501
+    ],
+    [
+     -53.094,
+     -100.711
+    ],
+    [
+     -55.685,
+     -96.581
+    ]
+   ]
+  },
+  {
+   "osm_id": 118312541,
+   "kind": "yes",
+   "name": "Our Legacy",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -47.78,
+     -79.56
+    ],
+    [
+     -44.698,
+     -85.905
+    ],
+    [
+     -48.203,
+     -87.831
+    ],
+    [
+     -49.381,
+     -85.271
+    ],
+    [
+     -53.413,
+     -87.408
+    ],
+    [
+     -55.373,
+     -83.512
+    ],
+    [
+     -48.91,
+     -80.15
+    ]
+   ]
+  },
+  {
+   "osm_id": 118312542,
+   "kind": "yes",
+   "name": "Partizan",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -69.45,
+     -72.669
+    ],
+    [
+     -61.172,
+     -68.617
+    ],
+    [
+     -60.43,
+     -70.142
+    ],
+    [
+     -56.433,
+     -78.369
+    ],
+    [
+     -57.472,
+     -79.003
+    ],
+    [
+     -63.382,
+     -82.376
+    ],
+    [
+     -65.28,
+     -81.252
+    ]
+   ]
+  },
+  {
+   "osm_id": 118312547,
+   "kind": "yes",
+   "name": null,
+   "material": "brick",
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     14.507,
+     -122.585
+    ],
+    [
+     10.357,
+     -115.405
+    ],
+    [
+     2.674,
+     -119.947
+    ],
+    [
+     -2.203,
+     -110.974
+    ],
+    [
+     19.564,
+     -98.217
+    ],
+    [
+     19.051,
+     -97.438
+    ],
+    [
+     25.39,
+     -93.876
+    ],
+    [
+     35.636,
+     -111.008
+    ],
+    [
+     28.84,
+     -115.015
+    ],
+    [
+     28.362,
+     -114.247
+    ],
+    [
+     27.628,
+     -114.737
+    ],
+    [
+     30.316,
+     -119.19
+    ],
+    [
+     25.203,
+     -122.062
+    ],
+    [
+     22.709,
+     -117.62
+    ],
+    [
+     16.28,
+     -121.483
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620017,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 18.7,
+   "height_source": "inferred:nearby",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     45.882,
+     -49.159
+    ],
+    [
+     53.78,
+     -45.018
+    ],
+    [
+     54.313,
+     -46.031
+    ],
+    [
+     57.355,
+     -44.428
+    ],
+    [
+     58.373,
+     -46.376
+    ],
+    [
+     55.546,
+     -47.856
+    ],
+    [
+     56.78,
+     -50.205
+    ],
+    [
+     48.667,
+     -54.469
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620018,
+   "kind": "retail",
+   "name": null,
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     18.608,
+     0.033
+    ],
+    [
+     28.348,
+     4.965
+    ],
+    [
+     30.988,
+     0.045
+    ],
+    [
+     21.199,
+     -4.909
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620019,
+   "kind": "yes",
+   "name": "Ronning",
+   "material": null,
+   "height_m": 16.0,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     66.167,
+     -86.718
+    ],
+    [
+     62.987,
+     -80.94
+    ],
+    [
+     72.637,
+     -75.619
+    ],
+    [
+     75.2,
+     -80.284
+    ],
+    [
+     75.817,
+     -81.397
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620020,
+   "kind": "commercial",
+   "name": "Studio Nicholson",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     17.042,
+     21.295
+    ],
+    [
+     26.886,
+     26.472
+    ],
+    [
+     31.036,
+     17.856
+    ],
+    [
+     23.873,
+     14.305
+    ],
+    [
+     23.416,
+     15.462
+    ],
+    [
+     20.693,
+     14.104
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620021,
+   "kind": "retail",
+   "name": "A Day's March",
+   "material": "brick",
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     4.108,
+     29.867
+    ],
+    [
+     -0.672,
+     39.051
+    ],
+    [
+     6.831,
+     42.769
+    ],
+    [
+     7.655,
+     42.98
+    ],
+    [
+     11.188,
+     35.967
+    ],
+    [
+     10.724,
+     35.778
+    ],
+    [
+     8.071,
+     34.32
+    ],
+    [
+     9.138,
+     32.483
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620022,
+   "kind": "yes",
+   "name": "Centrepoint",
+   "material": "brick",
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     14.541,
+     52.509
+    ],
+    [
+     14.881,
+     52.688
+    ],
+    [
+     17.008,
+     48.391
+    ],
+    [
+     11.299,
+     45.563
+    ],
+    [
+     10.856,
+     46.454
+    ],
+    [
+     6.152,
+     44.127
+    ],
+    [
+     6.831,
+     42.769
+    ],
+    [
+     -0.672,
+     39.051
+    ],
+    [
+     -3.055,
+     43.871
+    ],
+    [
+     5.355,
+     48.034
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620023,
+   "kind": "retail",
+   "name": "Namaiki",
+   "material": "stone",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     12.186,
+     29.266
+    ],
+    [
+     11.597,
+     33.752
+    ],
+    [
+     10.724,
+     35.778
+    ],
+    [
+     11.188,
+     35.967
+    ],
+    [
+     13.003,
+     36.713
+    ],
+    [
+     11.424,
+     39.975
+    ],
+    [
+     12.809,
+     40.487
+    ],
+    [
+     13.661,
+     38.684
+    ],
+    [
+     16.994,
+     32.015
+    ],
+    [
+     16.28,
+     31.537
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620024,
+   "kind": "retail",
+   "name": "Flat White",
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     23.817,
+     -9.818
+    ],
+    [
+     33.177,
+     -4.943
+    ],
+    [
+     35.705,
+     -10.074
+    ],
+    [
+     26.644,
+     -14.783
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620026,
+   "kind": "retail",
+   "name": "Good News",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     6.062,
+     26.104
+    ],
+    [
+     4.108,
+     29.867
+    ],
+    [
+     9.138,
+     32.483
+    ],
+    [
+     11.597,
+     33.752
+    ],
+    [
+     12.186,
+     29.266
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620030,
+   "kind": "yes",
+   "name": "Borovick Fabrics",
+   "material": null,
+   "height_m": 11.9,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     26.644,
+     -14.783
+    ],
+    [
+     35.705,
+     -10.074
+    ],
+    [
+     38.608,
+     -15.418
+    ],
+    [
+     29.193,
+     -19.837
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620031,
+   "kind": "yes",
+   "name": null,
+   "material": "brick",
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -3.055,
+     43.871
+    ],
+    [
+     -3.505,
+     44.45
+    ],
+    [
+     -3.852,
+     45.118
+    ],
+    [
+     -5.404,
+     48.068
+    ],
+    [
+     -5.826,
+     48.88
+    ],
+    [
+     2.009,
+     52.899
+    ],
+    [
+     3.921,
+     53.879
+    ],
+    [
+     11.874,
+     57.953
+    ],
+    [
+     12.962,
+     55.593
+    ],
+    [
+     13.765,
+     53.834
+    ],
+    [
+     14.174,
+     53.144
+    ],
+    [
+     14.541,
+     52.509
+    ],
+    [
+     5.355,
+     48.034
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620032,
+   "kind": "yes",
+   "name": "Islamic Centre",
+   "material": null,
+   "height_m": 18.7,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     42.993,
+     -43.871
+    ],
+    [
+     49.727,
+     -40.509
+    ],
+    [
+     56.738,
+     -37.069
+    ],
+    [
+     58.99,
+     -42.402
+    ],
+    [
+     53.78,
+     -45.018
+    ],
+    [
+     45.882,
+     -49.159
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620033,
+   "kind": "retail",
+   "name": "Mediterranean Cafe",
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     21.199,
+     -4.909
+    ],
+    [
+     30.988,
+     0.045
+    ],
+    [
+     33.177,
+     -4.943
+    ],
+    [
+     23.817,
+     -9.818
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620035,
+   "kind": "yes",
+   "name": "Natural Wellness",
+   "material": null,
+   "height_m": 13.6,
+   "height_source": "inferred:nearby",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     85.516,
+     -107.39
+    ],
+    [
+     80.652,
+     -99.175
+    ],
+    [
+     84.906,
+     -96.692
+    ],
+    [
+     89.749,
+     -104.885
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620036,
+   "kind": "retail",
+   "name": "My Place",
+   "material": "brick",
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     21.019,
+     13.414
+    ],
+    [
+     23.097,
+     8.783
+    ],
+    [
+     15.851,
+     4.92
+    ],
+    [
+     13.447,
+     9.306
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620037,
+   "kind": "retail",
+   "name": "Reign Vintage",
+   "material": null,
+   "height_m": 18.7,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     37.375,
+     -34.509
+    ],
+    [
+     45.993,
+     -30.045
+    ],
+    [
+     52.581,
+     -26.717
+    ],
+    [
+     54.736,
+     -32.227
+    ],
+    [
+     40.603,
+     -39.563
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620039,
+   "kind": "yes",
+   "name": "bubble",
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "inferred:nearby",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     34.798,
+     -29.555
+    ],
+    [
+     43.416,
+     -25.08
+    ],
+    [
+     45.993,
+     -30.045
+    ],
+    [
+     37.375,
+     -34.509
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620040,
+   "kind": "retail",
+   "name": "Soho Dry Cleaners",
+   "material": null,
+   "height_m": 11.9,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     29.193,
+     -19.837
+    ],
+    [
+     38.608,
+     -15.418
+    ],
+    [
+     40.915,
+     -19.893
+    ],
+    [
+     31.57,
+     -24.568
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620041,
+   "kind": "retail",
+   "name": null,
+   "material": null,
+   "height_m": 11.9,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     31.57,
+     -24.568
+    ],
+    [
+     40.915,
+     -19.893
+    ],
+    [
+     43.416,
+     -25.08
+    ],
+    [
+     34.798,
+     -29.555
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620042,
+   "kind": "retail",
+   "name": "The Blue Posts",
+   "material": "brick",
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     9.664,
+     15.195
+    ],
+    [
+     9.65,
+     16.253
+    ],
+    [
+     10.163,
+     17.577
+    ],
+    [
+     17.042,
+     21.295
+    ],
+    [
+     20.693,
+     14.104
+    ],
+    [
+     21.019,
+     13.414
+    ],
+    [
+     13.447,
+     9.306
+    ],
+    [
+     11.431,
+     12.011
+    ],
+    [
+     10.689,
+     13.57
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620043,
+   "kind": "retail",
+   "name": "Red Dog Saloon",
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     15.851,
+     4.92
+    ],
+    [
+     23.097,
+     8.783
+    ],
+    [
+     25.889,
+     10.141
+    ],
+    [
+     28.348,
+     4.965
+    ],
+    [
+     18.608,
+     0.033
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620044,
+   "kind": "apartments",
+   "name": "Salt House",
+   "material": null,
+   "height_m": 16.0,
+   "height_source": "tag:levels",
+   "levels": 5,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     58.636,
+     -73.159
+    ],
+    [
+     68.605,
+     -67.727
+    ],
+    [
+     70.351,
+     -70.922
+    ],
+    [
+     72.637,
+     -75.619
+    ],
+    [
+     75.2,
+     -80.284
+    ],
+    [
+     80.126,
+     -77.612
+    ],
+    [
+     80.687,
+     -78.625
+    ],
+    [
+     86.631,
+     -89.378
+    ],
+    [
+     81.532,
+     -92.195
+    ],
+    [
+     71.903,
+     -97.449
+    ],
+    [
+     66.167,
+     -86.718
+    ],
+    [
+     62.987,
+     -80.94
+    ],
+    [
+     62.093,
+     -79.516
+    ],
+    [
+     60.271,
+     -76.165
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620046,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     45.21,
+     -12.1
+    ],
+    [
+     47.58,
+     -16.776
+    ],
+    [
+     40.915,
+     -19.893
+    ],
+    [
+     38.608,
+     -15.418
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620047,
+   "kind": "yes",
+   "name": "Bar Bruno",
+   "material": null,
+   "height_m": 11.9,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     94.986,
+     -84.825
+    ],
+    [
+     90.843,
+     -76.465
+    ],
+    [
+     93.018,
+     -75.363
+    ],
+    [
+     97.75,
+     -72.97
+    ],
+    [
+     101.74,
+     -81.33
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620048,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     40.181,
+     -1.648
+    ],
+    [
+     42.425,
+     -6.457
+    ],
+    [
+     35.705,
+     -10.074
+    ],
+    [
+     33.177,
+     -4.943
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620049,
+   "kind": "yes",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     31.036,
+     17.856
+    ],
+    [
+     32.976,
+     13.436
+    ],
+    [
+     25.889,
+     10.141
+    ],
+    [
+     23.873,
+     14.305
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620050,
+   "kind": "yes",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     35.352,
+     8.527
+    ],
+    [
+     37.867,
+     3.406
+    ],
+    [
+     30.988,
+     0.045
+    ],
+    [
+     28.348,
+     4.965
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620051,
+   "kind": "yes",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     32.976,
+     13.436
+    ],
+    [
+     35.352,
+     8.527
+    ],
+    [
+     28.348,
+     4.965
+    ],
+    [
+     25.889,
+     10.141
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620052,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 18.7,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     50.164,
+     -21.752
+    ],
+    [
+     52.173,
+     -25.882
+    ],
+    [
+     52.581,
+     -26.717
+    ],
+    [
+     45.993,
+     -30.045
+    ],
+    [
+     43.416,
+     -25.08
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620054,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 11.9,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     47.58,
+     -16.776
+    ],
+    [
+     50.164,
+     -21.752
+    ],
+    [
+     43.416,
+     -25.08
+    ],
+    [
+     40.915,
+     -19.893
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620055,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     37.867,
+     3.406
+    ],
+    [
+     40.181,
+     -1.648
+    ],
+    [
+     33.177,
+     -4.943
+    ],
+    [
+     30.988,
+     0.045
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620057,
+   "kind": "yes",
+   "name": "The Breakfast Club",
+   "material": null,
+   "height_m": 18.7,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     40.603,
+     -39.563
+    ],
+    [
+     54.736,
+     -32.227
+    ],
+    [
+     56.738,
+     -37.069
+    ],
+    [
+     49.727,
+     -40.509
+    ],
+    [
+     42.993,
+     -43.871
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620058,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     42.425,
+     -6.457
+    ],
+    [
+     45.21,
+     -12.1
+    ],
+    [
+     38.608,
+     -15.418
+    ],
+    [
+     35.705,
+     -10.074
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620059,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 18.7,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     48.667,
+     -54.469
+    ],
+    [
+     56.78,
+     -50.205
+    ],
+    [
+     57.583,
+     -51.953
+    ],
+    [
+     60.216,
+     -50.595
+    ],
+    [
+     61.865,
+     -53.812
+    ],
+    [
+     62.183,
+     -54.435
+    ],
+    [
+     59.627,
+     -55.738
+    ],
+    [
+     51.695,
+     -59.834
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620060,
+   "kind": "yes",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     16.994,
+     32.015
+    ],
+    [
+     13.661,
+     38.684
+    ],
+    [
+     18.719,
+     42.368
+    ],
+    [
+     16.557,
+     46.687
+    ],
+    [
+     17.548,
+     47.166
+    ],
+    [
+     19.197,
+     47.968
+    ],
+    [
+     23.263,
+     49.949
+    ],
+    [
+     25.598,
+     45.574
+    ],
+    [
+     26.658,
+     46.064
+    ],
+    [
+     28.196,
+     43.058
+    ],
+    [
+     30.087,
+     38.695
+    ],
+    [
+     19.792,
+     33.329
+    ]
+   ]
+  },
+  {
+   "osm_id": 156620061,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 20.4,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     51.695,
+     -59.834
+    ],
+    [
+     59.627,
+     -55.738
+    ],
+    [
+     61.068,
+     -58.476
+    ],
+    [
+     63.555,
+     -57.174
+    ],
+    [
+     64.476,
+     -58.921
+    ],
+    [
+     65.093,
+     -60.101
+    ],
+    [
+     62.509,
+     -61.459
+    ],
+    [
+     63.347,
+     -63.051
+    ],
+    [
+     64.047,
+     -64.376
+    ],
+    [
+     56.191,
+     -68.517
+    ],
+    [
+     55.533,
+     -67.248
+    ]
+   ]
+  },
+  {
+   "osm_id": 157779546,
+   "kind": "retail",
+   "name": "C\u00f4te Brasserie",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     59.107,
+     45.374
+    ],
+    [
+     52.72,
+     57.018
+    ],
+    [
+     53.101,
+     59.055
+    ],
+    [
+     68.972,
+     66.58
+    ],
+    [
+     70.268,
+     63.686
+    ],
+    [
+     66.305,
+     61.749
+    ],
+    [
+     70.815,
+     51.741
+    ],
+    [
+     69.215,
+     50.784
+    ]
+   ]
+  },
+  {
+   "osm_id": 157779561,
+   "kind": "office",
+   "name": "Film House",
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     34.59,
+     94.31
+    ],
+    [
+     23.256,
+     119.501
+    ],
+    [
+     23.312,
+     120.648
+    ],
+    [
+     24.192,
+     122.518
+    ],
+    [
+     25.127,
+     123.286
+    ],
+    [
+     59.156,
+     138.014
+    ],
+    [
+     61.026,
+     138.827
+    ],
+    [
+     62.8,
+     139.595
+    ],
+    [
+     63.811,
+     140.051
+    ],
+    [
+     68.051,
+     130.5
+    ],
+    [
+     65.224,
+     129.242
+    ],
+    [
+     70.219,
+     118.01
+    ],
+    [
+     77.334,
+     102.392
+    ],
+    [
+     62.765,
+     95.746
+    ],
+    [
+     61.199,
+     99.197
+    ],
+    [
+     62.71,
+     99.876
+    ],
+    [
+     61.837,
+     101.791
+    ],
+    [
+     58.934,
+     108.403
+    ],
+    [
+     56.198,
+     107.201
+    ],
+    [
+     51.688,
+     105.186
+    ],
+    [
+     44.365,
+     101.891
+    ],
+    [
+     45.557,
+     99.241
+    ]
+   ]
+  },
+  {
+   "osm_id": 157779567,
+   "kind": "yes",
+   "name": "100 Wardour Street",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     91.681,
+     -25.77
+    ],
+    [
+     88.612,
+     -17.767
+    ],
+    [
+     86.59,
+     -17.232
+    ],
+    [
+     81.505,
+     -3.963
+    ],
+    [
+     90.975,
+     -0.334
+    ],
+    [
+     96.344,
+     -14.36
+    ],
+    [
+     99.787,
+     -13.047
+    ],
+    [
+     103.001,
+     -21.44
+    ]
+   ]
+  },
+  {
+   "osm_id": 157779574,
+   "kind": "retail",
+   "name": "GAIL's",
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     49.928,
+     63.129
+    ],
+    [
+     47.954,
+     66.781
+    ],
+    [
+     56.045,
+     70.71
+    ],
+    [
+     56.745,
+     68.907
+    ],
+    [
+     58.234,
+     69.619
+    ],
+    [
+     57.417,
+     71.3
+    ],
+    [
+     59.662,
+     72.257
+    ],
+    [
+     61.768,
+     67.615
+    ],
+    [
+     51.639,
+     62.74
+    ]
+   ]
+  },
+  {
+   "osm_id": 157779587,
+   "kind": "yes",
+   "name": null,
+   "material": "stone",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     99.884,
+     -99.497
+    ],
+    [
+     109.416,
+     -94.789
+    ],
+    [
+     113.94,
+     -104.039
+    ],
+    [
+     115.734,
+     -107.312
+    ],
+    [
+     103.77,
+     -109.984
+    ],
+    [
+     102.71,
+     -107.657
+    ],
+    [
+     101.643,
+     -105.331
+    ],
+    [
+     102.412,
+     -104.663
+    ]
+   ]
+  },
+  {
+   "osm_id": 157779589,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     38.906,
+     85.393
+    ],
+    [
+     34.59,
+     94.31
+    ],
+    [
+     45.557,
+     99.241
+    ],
+    [
+     52.824,
+     102.714
+    ],
+    [
+     55.498,
+     97.048
+    ],
+    [
+     49.346,
+     94.577
+    ],
+    [
+     46.305,
+     93.152
+    ],
+    [
+     48.009,
+     89.679
+    ],
+    [
+     47.102,
+     89.156
+    ]
+   ]
+  },
+  {
+   "osm_id": 157779627,
+   "kind": "retail",
+   "name": "Cocomelt",
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "inferred:nearby",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     45.64,
+     71.601
+    ],
+    [
+     42.924,
+     76.632
+    ],
+    [
+     51.224,
+     80.428
+    ],
+    [
+     55.346,
+     82.31
+    ],
+    [
+     57.41,
+     77.133
+    ]
+   ]
+  },
+  {
+   "osm_id": 157779641,
+   "kind": "retail",
+   "name": "MOI Restaurant",
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     97.799,
+     -40.888
+    ],
+    [
+     120.009,
+     -32.283
+    ],
+    [
+     123.563,
+     -41.043
+    ],
+    [
+     101.685,
+     -50.84
+    ]
+   ]
+  },
+  {
+   "osm_id": 157779659,
+   "kind": "yes",
+   "name": "Soho Lofts",
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     94.529,
+     -32.327
+    ],
+    [
+     93.434,
+     -31.058
+    ],
+    [
+     91.21,
+     -25.603
+    ],
+    [
+     91.681,
+     -25.77
+    ],
+    [
+     103.001,
+     -21.44
+    ],
+    [
+     105.267,
+     -28.253
+    ]
+   ]
+  },
+  {
+   "osm_id": 157779664,
+   "kind": "yes",
+   "name": "The Ship",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     62.938,
+     38.127
+    ],
+    [
+     71.868,
+     42.802
+    ],
+    [
+     74.916,
+     44.416
+    ],
+    [
+     77.175,
+     39.518
+    ],
+    [
+     66.998,
+     34.353
+    ],
+    [
+     64.843,
+     34.453
+    ],
+    [
+     63.749,
+     36.524
+    ]
+   ]
+  },
+  {
+   "osm_id": 157779682,
+   "kind": "yes",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     90.975,
+     -0.334
+    ],
+    [
+     81.505,
+     -3.963
+    ],
+    [
+     79.683,
+     1.325
+    ],
+    [
+     77.757,
+     6.212
+    ],
+    [
+     76.634,
+     9.017
+    ],
+    [
+     72.277,
+     20.338
+    ],
+    [
+     71.688,
+     21.885
+    ],
+    [
+     71.12,
+     23.355
+    ],
+    [
+     67.815,
+     31.938
+    ],
+    [
+     76.371,
+     35.121
+    ],
+    [
+     76.898,
+     33.863
+    ],
+    [
+     79.239,
+     28.253
+    ],
+    [
+     79.835,
+     26.828
+    ],
+    [
+     81.096,
+     23.822
+    ],
+    [
+     85.634,
+     12.946
+    ],
+    [
+     86.763,
+     9.763
+    ],
+    [
+     88.689,
+     4.887
+    ]
+   ]
+  },
+  {
+   "osm_id": 157779684,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     56.198,
+     107.201
+    ],
+    [
+     59.225,
+     100.599
+    ],
+    [
+     61.837,
+     101.791
+    ],
+    [
+     62.71,
+     99.876
+    ],
+    [
+     61.199,
+     99.197
+    ],
+    [
+     60.223,
+     98.829
+    ],
+    [
+     62.814,
+     93.119
+    ],
+    [
+     58.976,
+     91.438
+    ],
+    [
+     53.759,
+     89.145
+    ],
+    [
+     53.219,
+     90.336
+    ],
+    [
+     51.625,
+     89.612
+    ],
+    [
+     49.346,
+     94.577
+    ],
+    [
+     55.498,
+     97.048
+    ],
+    [
+     52.824,
+     102.714
+    ],
+    [
+     51.688,
+     105.186
+    ]
+   ]
+  },
+  {
+   "osm_id": 157779686,
+   "kind": "yes",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     126.847,
+     -48.09
+    ],
+    [
+     127.491,
+     -49.381
+    ],
+    [
+     131.1,
+     -57.775
+    ],
+    [
+     113.102,
+     -70.031
+    ],
+    [
+     112.458,
+     -71.0
+    ],
+    [
+     111.592,
+     -71.445
+    ],
+    [
+     110.352,
+     -71.222
+    ],
+    [
+     109.68,
+     -70.287
+    ],
+    [
+     105.308,
+     -59.723
+    ],
+    [
+     101.685,
+     -50.84
+    ],
+    [
+     97.799,
+     -40.888
+    ],
+    [
+     94.529,
+     -32.327
+    ],
+    [
+     105.267,
+     -28.253
+    ],
+    [
+     116.815,
+     -24.012
+    ],
+    [
+     137.058,
+     -16.587
+    ],
+    [
+     140.224,
+     -24.212
+    ],
+    [
+     140.653,
+     -24.958
+    ],
+    [
+     142.974,
+     -28.932
+    ],
+    [
+     136.601,
+     -31.47
+    ],
+    [
+     132.389,
+     -23.444
+    ],
+    [
+     118.935,
+     -29.21
+    ],
+    [
+     120.009,
+     -32.283
+    ],
+    [
+     123.563,
+     -41.043
+    ]
+   ]
+  },
+  {
+   "osm_id": 157779693,
+   "kind": "yes",
+   "name": "acai berry",
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     47.954,
+     66.781
+    ],
+    [
+     46.263,
+     70.276
+    ],
+    [
+     45.64,
+     71.601
+    ],
+    [
+     57.41,
+     77.133
+    ],
+    [
+     59.662,
+     72.257
+    ],
+    [
+     57.417,
+     71.3
+    ],
+    [
+     56.045,
+     70.71
+    ]
+   ]
+  },
+  {
+   "osm_id": 157779705,
+   "kind": "yes",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     62.938,
+     38.127
+    ],
+    [
+     60.216,
+     43.303
+    ],
+    [
+     59.523,
+     44.595
+    ],
+    [
+     59.107,
+     45.374
+    ],
+    [
+     69.215,
+     50.784
+    ],
+    [
+     70.538,
+     48.324
+    ],
+    [
+     69.152,
+     47.979
+    ],
+    [
+     71.868,
+     42.802
+    ]
+   ]
+  },
+  {
+   "osm_id": 157779708,
+   "kind": "retail",
+   "name": "inamo",
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "inferred:nearby",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     42.924,
+     76.632
+    ],
+    [
+     38.906,
+     85.393
+    ],
+    [
+     47.102,
+     89.156
+    ],
+    [
+     47.711,
+     87.82
+    ],
+    [
+     51.625,
+     89.612
+    ],
+    [
+     53.219,
+     90.336
+    ],
+    [
+     53.759,
+     89.145
+    ],
+    [
+     55.9,
+     84.491
+    ],
+    [
+     50.496,
+     82.009
+    ],
+    [
+     51.224,
+     80.428
+    ]
+   ]
+  },
+  {
+   "osm_id": 159482768,
+   "kind": "retail",
+   "name": "Chris Kerr",
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -15.892,
+     68.183
+    ],
+    [
+     -16.301,
+     68.951
+    ],
+    [
+     -18.352,
+     72.948
+    ],
+    [
+     -18.76,
+     73.771
+    ],
+    [
+     -17.472,
+     74.406
+    ],
+    [
+     -17.118,
+     74.584
+    ],
+    [
+     -10.586,
+     77.656
+    ],
+    [
+     -9.824,
+     78.024
+    ],
+    [
+     -6.311,
+     79.805
+    ],
+    [
+     -0.845,
+     82.644
+    ],
+    [
+     -0.201,
+     81.397
+    ],
+    [
+     1.822,
+     77.612
+    ],
+    [
+     -6.9,
+     72.948
+    ],
+    [
+     -7.918,
+     72.413
+    ],
+    [
+     -14.527,
+     68.907
+    ]
+   ]
+  },
+  {
+   "osm_id": 159482773,
+   "kind": "retail",
+   "name": "Euro Accessories",
+   "material": "plaster",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -21.337,
+     78.525
+    ],
+    [
+     -23.991,
+     83.456
+    ],
+    [
+     -13.758,
+     88.978
+    ],
+    [
+     -12.394,
+     86.451
+    ],
+    [
+     -14.361,
+     85.248
+    ],
+    [
+     -13.121,
+     82.855
+    ],
+    [
+     -19.696,
+     79.337
+    ]
+   ]
+  },
+  {
+   "osm_id": 159482782,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -14.153,
+     64.81
+    ],
+    [
+     -15.567,
+     67.526
+    ],
+    [
+     -15.892,
+     68.183
+    ],
+    [
+     -14.527,
+     68.907
+    ],
+    [
+     -7.918,
+     72.413
+    ],
+    [
+     -6.9,
+     72.948
+    ],
+    [
+     1.822,
+     77.612
+    ],
+    [
+     3.859,
+     73.827
+    ],
+    [
+     -5.043,
+     69.374
+    ]
+   ]
+  },
+  {
+   "osm_id": 159482785,
+   "kind": "yes",
+   "name": "Weekday",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -23.991,
+     83.456
+    ],
+    [
+     -29.318,
+     93.653
+    ],
+    [
+     -21.954,
+     97.683
+    ],
+    [
+     -18.629,
+     99.442
+    ],
+    [
+     -17.271,
+     96.77
+    ],
+    [
+     -20.312,
+     95.134
+    ],
+    [
+     -17.783,
+     90.213
+    ],
+    [
+     -16.46,
+     91.07
+    ],
+    [
+     -16.114,
+     90.391
+    ],
+    [
+     -14.742,
+     91.115
+    ],
+    [
+     -13.758,
+     88.978
+    ]
+   ]
+  },
+  {
+   "osm_id": 159482788,
+   "kind": "retail",
+   "name": "Vital Ingredient",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -29.318,
+     93.653
+    ],
+    [
+     -31.923,
+     98.418
+    ],
+    [
+     -27.933,
+     100.599
+    ],
+    [
+     -26.526,
+     101.368
+    ],
+    [
+     -24.517,
+     102.447
+    ],
+    [
+     -17.964,
+     105.898
+    ],
+    [
+     -13.987,
+     107.969
+    ],
+    [
+     -13.481,
+     106.989
+    ],
+    [
+     -11.486,
+     103.126
+    ],
+    [
+     -18.629,
+     99.442
+    ],
+    [
+     -21.954,
+     97.683
+    ]
+   ]
+  },
+  {
+   "osm_id": 159482793,
+   "kind": "apartments",
+   "name": null,
+   "material": "plaster",
+   "height_m": 13.0,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -31.923,
+     98.418
+    ],
+    [
+     -36.426,
+     107.134
+    ],
+    [
+     -32.574,
+     109.026
+    ],
+    [
+     -31.777,
+     109.416
+    ],
+    [
+     -30.905,
+     109.839
+    ],
+    [
+     -27.413,
+     102.993
+    ],
+    [
+     -26.526,
+     101.368
+    ],
+    [
+     -27.933,
+     100.599
+    ]
+   ]
+  },
+  {
+   "osm_id": 159482794,
+   "kind": "yes",
+   "name": null,
+   "material": "plaster",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -13.634,
+     63.808
+    ],
+    [
+     -13.876,
+     64.276
+    ],
+    [
+     -14.153,
+     64.81
+    ],
+    [
+     -15.567,
+     67.526
+    ],
+    [
+     -15.892,
+     68.183
+    ],
+    [
+     -14.527,
+     68.907
+    ],
+    [
+     -7.918,
+     72.413
+    ],
+    [
+     -6.9,
+     72.948
+    ],
+    [
+     1.822,
+     77.612
+    ],
+    [
+     3.859,
+     73.827
+    ],
+    [
+     4.261,
+     73.003
+    ],
+    [
+     -3.706,
+     68.807
+    ],
+    [
+     -4.614,
+     68.328
+    ],
+    [
+     -6.228,
+     67.482
+    ]
+   ]
+  },
+  {
+   "osm_id": 159482796,
+   "kind": "yes",
+   "name": "DigitalVision",
+   "material": "brick",
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     3.921,
+     53.879
+    ],
+    [
+     -2.272,
+     66.012
+    ],
+    [
+     -3.706,
+     68.807
+    ],
+    [
+     4.261,
+     73.003
+    ],
+    [
+     5.064,
+     71.411
+    ],
+    [
+     6.041,
+     69.486
+    ],
+    [
+     11.244,
+     59.2
+    ],
+    [
+     11.874,
+     57.953
+    ]
+   ]
+  },
+  {
+   "osm_id": 159482797,
+   "kind": "retail",
+   "name": "Clarks",
+   "material": "brick",
+   "height_m": 18.7,
+   "height_source": "tag:levels",
+   "levels": 5,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -18.76,
+     73.771
+    ],
+    [
+     -19.384,
+     74.851
+    ],
+    [
+     -20.956,
+     77.801
+    ],
+    [
+     -21.337,
+     78.525
+    ],
+    [
+     -19.696,
+     79.337
+    ],
+    [
+     -13.121,
+     82.855
+    ],
+    [
+     -12.456,
+     83.211
+    ],
+    [
+     -11.091,
+     83.924
+    ],
+    [
+     -10.038,
+     84.48
+    ],
+    [
+     -8.798,
+     81.864
+    ],
+    [
+     -7.6,
+     82.488
+    ],
+    [
+     -6.311,
+     79.805
+    ],
+    [
+     -9.824,
+     78.024
+    ],
+    [
+     -10.586,
+     77.656
+    ],
+    [
+     -17.118,
+     74.584
+    ],
+    [
+     -17.472,
+     74.406
+    ]
+   ]
+  },
+  {
+   "osm_id": 159483956,
+   "kind": "retail",
+   "name": "Nudie Jeans",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -52.034,
+     98.796
+    ],
+    [
+     -51.085,
+     99.241
+    ],
+    [
+     -44.67,
+     102.258
+    ],
+    [
+     -40.977,
+     94.989
+    ],
+    [
+     -48.563,
+     91.349
+    ]
+   ]
+  },
+  {
+   "osm_id": 159483957,
+   "kind": "retail",
+   "name": "D'Arblay Tabac",
+   "material": "brick",
+   "height_m": 18.7,
+   "height_source": "tag:levels",
+   "levels": 5,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -48.563,
+     91.349
+    ],
+    [
+     -49.131,
+     88.432
+    ],
+    [
+     -51.729,
+     86.907
+    ],
+    [
+     -56.593,
+     96.614
+    ],
+    [
+     -55.733,
+     97.026
+    ],
+    [
+     -52.865,
+     98.395
+    ],
+    [
+     -52.034,
+     98.796
+    ]
+   ]
+  },
+  {
+   "osm_id": 184410863,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     82.502,
+     29.366
+    ],
+    [
+     79.239,
+     28.253
+    ],
+    [
+     76.898,
+     33.863
+    ],
+    [
+     80.174,
+     35.333
+    ]
+   ]
+  },
+  {
+   "osm_id": 184419081,
+   "kind": "yes",
+   "name": "The Soho Hotel",
+   "material": null,
+   "height_m": 22.1,
+   "height_source": "tag:levels",
+   "levels": 6,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     113.774,
+     28.208
+    ],
+    [
+     123.119,
+     11.332
+    ],
+    [
+     97.584,
+     1.781
+    ],
+    [
+     89.354,
+     23.043
+    ],
+    [
+     91.487,
+     23.889
+    ],
+    [
+     89.756,
+     28.453
+    ],
+    [
+     94.536,
+     30.145
+    ],
+    [
+     93.503,
+     33.184
+    ],
+    [
+     88.737,
+     31.247
+    ],
+    [
+     86.486,
+     37.504
+    ],
+    [
+     77.48,
+     57.753
+    ],
+    [
+     79.634,
+     58.632
+    ],
+    [
+     83.285,
+     60.324
+    ],
+    [
+     87.04,
+     61.949
+    ],
+    [
+     90.317,
+     63.363
+    ],
+    [
+     93.587,
+     64.732
+    ],
+    [
+     96.676,
+     66.024
+    ],
+    [
+     104.934,
+     49.092
+    ],
+    [
+     109.333,
+     39.062
+    ]
+   ]
+  },
+  {
+   "osm_id": 184419082,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 22.1,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     82.502,
+     29.366
+    ],
+    [
+     80.174,
+     35.333
+    ],
+    [
+     86.486,
+     37.504
+    ],
+    [
+     88.737,
+     31.247
+    ],
+    [
+     89.756,
+     28.453
+    ],
+    [
+     91.487,
+     23.889
+    ],
+    [
+     89.354,
+     23.043
+    ],
+    [
+     85.724,
+     21.529
+    ]
+   ]
+  },
+  {
+   "osm_id": 184419083,
+   "kind": "apartments",
+   "name": "Soho Lofts",
+   "material": "brick",
+   "height_m": 16.0,
+   "height_source": "tag:levels",
+   "levels": 5,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     103.001,
+     -21.44
+    ],
+    [
+     105.779,
+     -20.171
+    ],
+    [
+     97.584,
+     1.781
+    ],
+    [
+     123.119,
+     11.332
+    ],
+    [
+     137.058,
+     -16.587
+    ],
+    [
+     116.815,
+     -24.012
+    ],
+    [
+     105.267,
+     -28.253
+    ]
+   ]
+  },
+  {
+   "osm_id": 273697609,
+   "kind": "yes",
+   "name": "Andrew Edmunds",
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -63.617,
+     -63.597
+    ],
+    [
+     -61.172,
+     -68.617
+    ],
+    [
+     -69.45,
+     -72.669
+    ],
+    [
+     -72.014,
+     -67.448
+    ]
+   ]
+  },
+  {
+   "osm_id": 273697611,
+   "kind": "yes",
+   "name": "Andrew Edmunds",
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "inferred:nearby",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -63.617,
+     -63.597
+    ],
+    [
+     -72.014,
+     -67.448
+    ],
+    [
+     -74.376,
+     -62.573
+    ],
+    [
+     -65.73,
+     -59.244
+    ]
+   ]
+  },
+  {
+   "osm_id": 273697615,
+   "kind": "yes",
+   "name": "A.P.C.",
+   "material": null,
+   "height_m": 25.5,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -62.239,
+     -51.519
+    ],
+    [
+     -60.68,
+     -54.714
+    ],
+    [
+     -56.17,
+     -52.743
+    ],
+    [
+     -53.641,
+     -57.853
+    ],
+    [
+     -58.879,
+     -60.435
+    ],
+    [
+     -60.618,
+     -56.817
+    ],
+    [
+     -65.73,
+     -59.244
+    ],
+    [
+     -74.376,
+     -62.573
+    ],
+    [
+     -77.009,
+     -57.207
+    ]
+   ]
+  },
+  {
+   "osm_id": 273697633,
+   "kind": "yes",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -88.737,
+     -24.012
+    ],
+    [
+     -92.305,
+     -16.308
+    ],
+    [
+     -88.82,
+     -14.694
+    ],
+    [
+     -90.725,
+     -10.575
+    ],
+    [
+     -86.465,
+     -8.605
+    ],
+    [
+     -84.934,
+     -11.922
+    ],
+    [
+     -84.504,
+     -12.857
+    ],
+    [
+     -80.985,
+     -20.427
+    ]
+   ]
+  },
+  {
+   "osm_id": 273697638,
+   "kind": "yes",
+   "name": "Tapas Brindisa",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -98.699,
+     -17.433
+    ],
+    [
+     -99.766,
+     -14.85
+    ],
+    [
+     -97.064,
+     -13.603
+    ],
+    [
+     -95.672,
+     -16.609
+    ],
+    [
+     -92.783,
+     -15.262
+    ],
+    [
+     -92.305,
+     -16.308
+    ],
+    [
+     -88.737,
+     -24.012
+    ],
+    [
+     -94.376,
+     -26.583
+    ]
+   ]
+  },
+  {
+   "osm_id": 273697641,
+   "kind": "yes",
+   "name": "The John Snow",
+   "material": "brick",
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -102.669,
+     -45.006
+    ],
+    [
+     -101.879,
+     -44.572
+    ],
+    [
+     -101.346,
+     -44.283
+    ],
+    [
+     -96.018,
+     -42.034
+    ],
+    [
+     -95.131,
+     -42.457
+    ],
+    [
+     -91.335,
+     -50.238
+    ],
+    [
+     -98.173,
+     -53.589
+    ]
+   ]
+  },
+  {
+   "osm_id": 273697652,
+   "kind": "semidetached_house",
+   "name": null,
+   "material": "brick",
+   "height_m": 22.1,
+   "height_source": "tag:levels",
+   "levels": 6,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -105.759,
+     -17.767
+    ],
+    [
+     -102.89,
+     -16.765
+    ],
+    [
+     -101.865,
+     -18.924
+    ],
+    [
+     -98.699,
+     -17.433
+    ],
+    [
+     -94.376,
+     -26.583
+    ],
+    [
+     -95.409,
+     -27.073
+    ],
+    [
+     -100.057,
+     -29.288
+    ]
+   ]
+  },
+  {
+   "osm_id": 273720722,
+   "kind": "yes",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -76.337,
+     -80.985
+    ],
+    [
+     -75.845,
+     -81.987
+    ],
+    [
+     -73.752,
+     -86.284
+    ],
+    [
+     -80.195,
+     -89.935
+    ],
+    [
+     -81.969,
+     -90.948
+    ],
+    [
+     -84.719,
+     -85.382
+    ]
+   ]
+  },
+  {
+   "osm_id": 273720723,
+   "kind": "yes",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -86.583,
+     -59.979
+    ],
+    [
+     -83.888,
+     -65.5
+    ],
+    [
+     -90.393,
+     -68.517
+    ],
+    [
+     -93.219,
+     -63.107
+    ]
+   ]
+  },
+  {
+   "osm_id": 273720724,
+   "kind": "retail",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -91.335,
+     -50.238
+    ],
+    [
+     -88.876,
+     -55.27
+    ],
+    [
+     -95.727,
+     -58.298
+    ],
+    [
+     -98.173,
+     -53.589
+    ]
+   ]
+  },
+  {
+   "osm_id": 273720726,
+   "kind": "retail",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -78.893,
+     -75.742
+    ],
+    [
+     -78.533,
+     -76.488
+    ],
+    [
+     -78.034,
+     -77.501
+    ],
+    [
+     -76.337,
+     -80.985
+    ],
+    [
+     -84.719,
+     -85.382
+    ],
+    [
+     -86.25,
+     -82.465
+    ],
+    [
+     -82.786,
+     -80.417
+    ],
+    [
+     -84.019,
+     -78.213
+    ]
+   ]
+  },
+  {
+   "osm_id": 273720728,
+   "kind": "commercial",
+   "name": "Thirty Broadwick",
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": "2016-11",
+   "footprint": [
+    [
+     -32.623,
+     28.275
+    ],
+    [
+     -30.316,
+     23.533
+    ],
+    [
+     -28.043,
+     18.813
+    ],
+    [
+     -22.335,
+     6.868
+    ],
+    [
+     -35.241,
+     0.701
+    ],
+    [
+     -34.902,
+     -0.011
+    ],
+    [
+     -52.561,
+     -8.438
+    ],
+    [
+     -68.855,
+     -16.208
+    ],
+    [
+     -70.704,
+     -12.334
+    ],
+    [
+     -72.443,
+     -13.158
+    ],
+    [
+     -83.223,
+     9.429
+    ],
+    [
+     -65.328,
+     17.967
+    ],
+    [
+     -62.53,
+     19.325
+    ],
+    [
+     -64.081,
+     22.498
+    ],
+    [
+     -32.754,
+     37.782
+    ],
+    [
+     -29.616,
+     39.318
+    ],
+    [
+     -28.473,
+     36.602
+    ],
+    [
+     -26.88,
+     32.884
+    ],
+    [
+     -26.235,
+     31.381
+    ]
+   ]
+  },
+  {
+   "osm_id": 273720730,
+   "kind": "retail",
+   "name": null,
+   "material": "plaster",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -81.165,
+     -71.089
+    ],
+    [
+     -80.147,
+     -73.17
+    ],
+    [
+     -79.336,
+     -74.829
+    ],
+    [
+     -78.893,
+     -75.742
+    ],
+    [
+     -84.019,
+     -78.213
+    ],
+    [
+     -85.024,
+     -78.569
+    ],
+    [
+     -85.668,
+     -77.323
+    ],
+    [
+     -90.67,
+     -79.939
+    ],
+    [
+     -92.374,
+     -76.688
+    ],
+    [
+     -89.25,
+     -75.052
+    ],
+    [
+     -87.428,
+     -74.061
+    ]
+   ]
+  },
+  {
+   "osm_id": 273720735,
+   "kind": "yes",
+   "name": "Star & Garter",
+   "material": null,
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -86.465,
+     -8.605
+    ],
+    [
+     -90.725,
+     -10.575
+    ],
+    [
+     -97.064,
+     -13.603
+    ],
+    [
+     -99.766,
+     -14.85
+    ],
+    [
+     -103.029,
+     -7.926
+    ],
+    [
+     -89.257,
+     -1.503
+    ],
+    [
+     -88.931,
+     -2.327
+    ],
+    [
+     -87.864,
+     -5.054
+    ],
+    [
+     -86.894,
+     -7.514
+    ]
+   ]
+  },
+  {
+   "osm_id": 273720736,
+   "kind": "retail",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -83.888,
+     -65.5
+    ],
+    [
+     -83.223,
+     -66.858
+    ],
+    [
+     -81.636,
+     -70.12
+    ],
+    [
+     -81.165,
+     -71.089
+    ],
+    [
+     -87.428,
+     -74.061
+    ],
+    [
+     -89.25,
+     -75.052
+    ],
+    [
+     -90.871,
+     -71.946
+    ],
+    [
+     -89.09,
+     -71.022
+    ],
+    [
+     -90.393,
+     -68.517
+    ]
+   ]
+  },
+  {
+   "osm_id": 273720737,
+   "kind": "yes",
+   "name": "American Vintage",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -43.035,
+     -88.911
+    ],
+    [
+     -55.685,
+     -96.581
+    ],
+    [
+     -56.253,
+     -95.679
+    ],
+    [
+     -60.943,
+     -88.21
+    ],
+    [
+     -60.257,
+     -86.106
+    ],
+    [
+     -55.373,
+     -83.512
+    ],
+    [
+     -53.413,
+     -87.408
+    ],
+    [
+     -49.381,
+     -85.271
+    ],
+    [
+     -48.203,
+     -87.831
+    ],
+    [
+     -44.698,
+     -85.905
+    ],
+    [
+     -44.344,
+     -86.54
+    ]
+   ]
+  },
+  {
+   "osm_id": 273720739,
+   "kind": "yes",
+   "name": "Milk and Honey",
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -91.938,
+     4.542
+    ],
+    [
+     -91.467,
+     3.484
+    ],
+    [
+     -89.257,
+     -1.503
+    ],
+    [
+     -103.029,
+     -7.926
+    ],
+    [
+     -105.994,
+     -1.937
+    ]
+   ]
+  },
+  {
+   "osm_id": 273720740,
+   "kind": "retail",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -38.172,
+     -68.706
+    ],
+    [
+     -42.321,
+     -70.966
+    ],
+    [
+     -45.051,
+     -65.389
+    ],
+    [
+     -41.296,
+     -63.508
+    ],
+    [
+     -40.839,
+     -64.588
+    ],
+    [
+     -40.257,
+     -64.242
+    ]
+   ]
+  },
+  {
+   "osm_id": 273720742,
+   "kind": "yes",
+   "name": "Patta",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -49.983,
+     -64.977
+    ],
+    [
+     -46.146,
+     -63.007
+    ],
+    [
+     -45.051,
+     -65.389
+    ],
+    [
+     -42.321,
+     -70.966
+    ],
+    [
+     -45.176,
+     -72.48
+    ],
+    [
+     -45.958,
+     -72.892
+    ]
+   ]
+  },
+  {
+   "osm_id": 273720743,
+   "kind": "yes",
+   "name": "art4noise",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -49.381,
+     -53.177
+    ],
+    [
+     -50.413,
+     -50.862
+    ],
+    [
+     -52.041,
+     -51.597
+    ],
+    [
+     -53.69,
+     -47.968
+    ],
+    [
+     -42.799,
+     -43.893
+    ],
+    [
+     -42.238,
+     -44.817
+    ],
+    [
+     -40.95,
+     -47.199
+    ],
+    [
+     -40.105,
+     -48.869
+    ]
+   ]
+  },
+  {
+   "osm_id": 273720746,
+   "kind": "yes",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -68.307,
+     -111.854
+    ],
+    [
+     -77.798,
+     -117.342
+    ],
+    [
+     -78.637,
+     -115.583
+    ],
+    [
+     -79.454,
+     -113.858
+    ],
+    [
+     -84.435,
+     -103.405
+    ],
+    [
+     -67.746,
+     -92.473
+    ],
+    [
+     -60.832,
+     -102.848
+    ],
+    [
+     -59.98,
+     -104.139
+    ],
+    [
+     -59.059,
+     -105.531
+    ],
+    [
+     -66.326,
+     -110.696
+    ],
+    [
+     -68.661,
+     -107.334
+    ],
+    [
+     -70.268,
+     -108.525
+    ]
+   ]
+  },
+  {
+   "osm_id": 273720747,
+   "kind": "yes",
+   "name": "Eyes On Soho",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -35.65,
+     -57.163
+    ],
+    [
+     -35.428,
+     -57.586
+    ],
+    [
+     -33.842,
+     -60.569
+    ],
+    [
+     -33.558,
+     -61.103
+    ],
+    [
+     -40.257,
+     -64.242
+    ],
+    [
+     -40.839,
+     -64.588
+    ],
+    [
+     -41.296,
+     -63.508
+    ],
+    [
+     -43.007,
+     -60.28
+    ]
+   ]
+  },
+  {
+   "osm_id": 274002575,
+   "kind": "yes",
+   "name": "Vintage Threads",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -14.583,
+     43.337
+    ],
+    [
+     -22.044,
+     39.719
+    ],
+    [
+     -28.473,
+     36.602
+    ],
+    [
+     -29.616,
+     39.318
+    ],
+    [
+     -30.233,
+     40.331
+    ],
+    [
+     -31.105,
+     42.034
+    ],
+    [
+     -31.251,
+     42.569
+    ],
+    [
+     -30.939,
+     42.914
+    ],
+    [
+     -26.097,
+     45.274
+    ],
+    [
+     -24.961,
+     45.83
+    ],
+    [
+     -17.721,
+     49.348
+    ],
+    [
+     -16.869,
+     47.767
+    ]
+   ]
+  },
+  {
+   "osm_id": 274002585,
+   "kind": "retail",
+   "name": "Sounds of the Universe",
+   "material": null,
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     38.671,
+     32.283
+    ],
+    [
+     42.543,
+     24.145
+    ],
+    [
+     35.172,
+     20.472
+    ],
+    [
+     31.625,
+     28.075
+    ],
+    [
+     31.958,
+     29.043
+    ]
+   ]
+  },
+  {
+   "osm_id": 274002594,
+   "kind": "retail",
+   "name": null,
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     30.087,
+     38.695
+    ],
+    [
+     28.196,
+     43.058
+    ],
+    [
+     32.138,
+     45.051
+    ],
+    [
+     35.934,
+     46.966
+    ],
+    [
+     33.911,
+     50.528
+    ],
+    [
+     38.574,
+     52.765
+    ],
+    [
+     40.479,
+     49.225
+    ],
+    [
+     42.599,
+     44.828
+    ],
+    [
+     38.123,
+     42.624
+    ],
+    [
+     34.417,
+     40.732
+    ]
+   ]
+  },
+  {
+   "osm_id": 274002596,
+   "kind": "yes",
+   "name": "MPC",
+   "material": "stone",
+   "height_m": 18.7,
+   "height_source": "tag:levels",
+   "levels": 5,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     55.907,
+     -24.379
+    ],
+    [
+     46.991,
+     -3.707
+    ],
+    [
+     65.058,
+     4.141
+    ],
+    [
+     66.18,
+     1.536
+    ],
+    [
+     73.739,
+     -17.099
+    ]
+   ]
+  },
+  {
+   "osm_id": 274002600,
+   "kind": "office",
+   "name": "Footpatrol",
+   "material": "plaster",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -33.114,
+     52.91
+    ],
+    [
+     -35.186,
+     57.196
+    ],
+    [
+     -32.366,
+     58.621
+    ],
+    [
+     -24.531,
+     62.595
+    ],
+    [
+     -24.226,
+     61.972
+    ],
+    [
+     -22.73,
+     58.91
+    ],
+    [
+     -22.377,
+     58.176
+    ],
+    [
+     -30.177,
+     54.346
+    ]
+   ]
+  },
+  {
+   "osm_id": 274002602,
+   "kind": "yes",
+   "name": null,
+   "material": "brick",
+   "height_m": 18.7,
+   "height_source": "tag:levels",
+   "levels": 5,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -28.473,
+     36.602
+    ],
+    [
+     -22.044,
+     39.719
+    ],
+    [
+     -14.583,
+     43.337
+    ],
+    [
+     -13.571,
+     41.366
+    ],
+    [
+     -12.643,
+     39.574
+    ],
+    [
+     -12.414,
+     39.129
+    ],
+    [
+     -12.179,
+     38.672
+    ],
+    [
+     -11.756,
+     37.849
+    ],
+    [
+     -9.553,
+     33.574
+    ],
+    [
+     -23.838,
+     26.628
+    ],
+    [
+     -26.235,
+     31.381
+    ],
+    [
+     -26.88,
+     32.884
+    ]
+   ]
+  },
+  {
+   "osm_id": 274002604,
+   "kind": "yes",
+   "name": "Sandqvist",
+   "material": "plaster",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -32.366,
+     58.621
+    ],
+    [
+     -33.634,
+     61.638
+    ],
+    [
+     -36.8,
+     60.023
+    ],
+    [
+     -37.742,
+     62.439
+    ],
+    [
+     -26.9,
+     67.46
+    ],
+    [
+     -26.402,
+     66.447
+    ],
+    [
+     -24.919,
+     63.396
+    ],
+    [
+     -24.531,
+     62.595
+    ]
+   ]
+  },
+  {
+   "osm_id": 274002606,
+   "kind": "retail",
+   "name": "Oliver Spencer",
+   "material": "plaster",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -22.377,
+     58.176
+    ],
+    [
+     -21.31,
+     55.983
+    ],
+    [
+     -20.16,
+     53.623
+    ],
+    [
+     -27.801,
+     49.782
+    ],
+    [
+     -30.87,
+     48.246
+    ],
+    [
+     -34.112,
+     46.621
+    ],
+    [
+     -34.791,
+     48.235
+    ],
+    [
+     -36.301,
+     51.352
+    ],
+    [
+     -33.114,
+     52.91
+    ],
+    [
+     -30.177,
+     54.346
+    ]
+   ]
+  },
+  {
+   "osm_id": 274458673,
+   "kind": "yes",
+   "name": null,
+   "material": "stone",
+   "height_m": 18.7,
+   "height_source": "tag:levels",
+   "levels": 5,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     66.631,
+     -44.172
+    ],
+    [
+     82.184,
+     -37.704
+    ],
+    [
+     82.668,
+     -38.795
+    ],
+    [
+     84.747,
+     -43.593
+    ],
+    [
+     85.758,
+     -45.886
+    ],
+    [
+     87.04,
+     -48.736
+    ],
+    [
+     87.83,
+     -50.428
+    ],
+    [
+     88.218,
+     -51.53
+    ],
+    [
+     80.549,
+     -55.259
+    ],
+    [
+     79.918,
+     -54.157
+    ],
+    [
+     78.976,
+     -52.175
+    ],
+    [
+     64.476,
+     -58.921
+    ],
+    [
+     63.555,
+     -57.174
+    ],
+    [
+     63.077,
+     -56.272
+    ],
+    [
+     61.906,
+     -53.645
+    ],
+    [
+     69.34,
+     -50.35
+    ],
+    [
+     67.13,
+     -45.363
+    ]
+   ]
+  },
+  {
+   "osm_id": 274458674,
+   "kind": "yes",
+   "name": "Fora",
+   "material": null,
+   "height_m": 18.7,
+   "height_source": "tag:levels",
+   "levels": 5,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     38.483,
+     57.352
+    ],
+    [
+     30.184,
+     53.211
+    ],
+    [
+     25.556,
+     51.029
+    ],
+    [
+     23.263,
+     49.949
+    ],
+    [
+     17.548,
+     47.166
+    ],
+    [
+     17.008,
+     48.391
+    ],
+    [
+     14.881,
+     52.688
+    ],
+    [
+     17.111,
+     53.667
+    ],
+    [
+     19.46,
+     54.736
+    ],
+    [
+     19.162,
+     55.304
+    ],
+    [
+     18.92,
+     55.749
+    ],
+    [
+     18.719,
+     56.127
+    ],
+    [
+     18.303,
+     55.949
+    ],
+    [
+     16.578,
+     58.02
+    ],
+    [
+     15.504,
+     59.389
+    ],
+    [
+     13.481,
+     62.651
+    ],
+    [
+     12.837,
+     64.198
+    ],
+    [
+     12.567,
+     65.656
+    ],
+    [
+     13.329,
+     66.146
+    ],
+    [
+     12.574,
+     67.627
+    ],
+    [
+     11.465,
+     69.808
+    ],
+    [
+     10.274,
+     72.168
+    ],
+    [
+     9.283,
+     74.139
+    ],
+    [
+     26.097,
+     82.722
+    ],
+    [
+     27.974,
+     78.246
+    ],
+    [
+     30.856,
+     72.558
+    ],
+    [
+     33.031,
+     68.228
+    ]
+   ]
+  },
+  {
+   "osm_id": 274458675,
+   "kind": "office",
+   "name": "Jungle",
+   "material": null,
+   "height_m": 25.5,
+   "height_source": "tag:levels",
+   "levels": 7,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     38.574,
+     52.765
+    ],
+    [
+     33.911,
+     50.528
+    ],
+    [
+     30.427,
+     48.914
+    ],
+    [
+     30.184,
+     53.211
+    ],
+    [
+     38.483,
+     57.352
+    ]
+   ]
+  },
+  {
+   "osm_id": 274458679,
+   "kind": "apartments",
+   "name": "Pathe Building",
+   "material": null,
+   "height_m": 16.0,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     91.065,
+     -57.808
+    ],
+    [
+     92.256,
+     -60.513
+    ],
+    [
+     97.182,
+     -71.69
+    ],
+    [
+     97.75,
+     -72.97
+    ],
+    [
+     93.018,
+     -75.363
+    ],
+    [
+     92.083,
+     -73.326
+    ],
+    [
+     80.687,
+     -78.625
+    ],
+    [
+     80.126,
+     -77.612
+    ],
+    [
+     74.584,
+     -65.133
+    ]
+   ]
+  },
+  {
+   "osm_id": 275102857,
+   "kind": "yes",
+   "name": "Court Security Locksmiths",
+   "material": null,
+   "height_m": 22.1,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     93.587,
+     64.732
+    ],
+    [
+     88.716,
+     75.775
+    ],
+    [
+     92.402,
+     77.512
+    ],
+    [
+     96.676,
+     66.024
+    ]
+   ]
+  },
+  {
+   "osm_id": 275102858,
+   "kind": "office",
+   "name": null,
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "inferred:nearby",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     58.976,
+     91.438
+    ],
+    [
+     62.814,
+     93.119
+    ],
+    [
+     65.661,
+     94.432
+    ],
+    [
+     75.18,
+     74.072
+    ],
+    [
+     68.529,
+     70.866
+    ],
+    [
+     64.573,
+     79.449
+    ]
+   ]
+  },
+  {
+   "osm_id": 275102859,
+   "kind": "school",
+   "name": "Good Housekeeping Institute",
+   "material": "brick",
+   "height_m": 14.6,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     113.455,
+     96.481
+    ],
+    [
+     88.703,
+     85.582
+    ],
+    [
+     84.851,
+     94.566
+    ],
+    [
+     83.777,
+     96.881
+    ],
+    [
+     92.263,
+     100.722
+    ],
+    [
+     99.572,
+     103.928
+    ],
+    [
+     102.302,
+     105.152
+    ],
+    [
+     108.647,
+     107.98
+    ]
+   ]
+  },
+  {
+   "osm_id": 275102860,
+   "kind": "yes",
+   "name": "Walk-in backrubs",
+   "material": null,
+   "height_m": 22.1,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     82.024,
+     72.658
+    ],
+    [
+     87.04,
+     61.949
+    ],
+    [
+     83.285,
+     60.324
+    ],
+    [
+     78.491,
+     71.011
+    ]
+   ]
+  },
+  {
+   "osm_id": 275102861,
+   "kind": "yes",
+   "name": "Kova Patisserie",
+   "material": null,
+   "height_m": 22.1,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     74.875,
+     69.33
+    ],
+    [
+     79.634,
+     58.632
+    ],
+    [
+     77.48,
+     57.753
+    ],
+    [
+     75.935,
+     57.074
+    ],
+    [
+     71.252,
+     67.638
+    ]
+   ]
+  },
+  {
+   "osm_id": 275102862,
+   "kind": "yes",
+   "name": "Sendean Cameras",
+   "material": null,
+   "height_m": 22.1,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     90.317,
+     63.363
+    ],
+    [
+     85.294,
+     74.183
+    ],
+    [
+     88.716,
+     75.775
+    ],
+    [
+     93.587,
+     64.732
+    ]
+   ]
+  },
+  {
+   "osm_id": 275102863,
+   "kind": "yes",
+   "name": "Tanning Shop",
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     61.768,
+     67.615
+    ],
+    [
+     59.662,
+     72.257
+    ],
+    [
+     57.867,
+     76.276
+    ],
+    [
+     61.303,
+     78.035
+    ],
+    [
+     65.391,
+     69.352
+    ]
+   ]
+  },
+  {
+   "osm_id": 275102865,
+   "kind": "yes",
+   "name": "Wacky Haircutters",
+   "material": null,
+   "height_m": 22.1,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     87.04,
+     61.949
+    ],
+    [
+     82.024,
+     72.658
+    ],
+    [
+     85.294,
+     74.183
+    ],
+    [
+     90.317,
+     63.363
+    ]
+   ]
+  },
+  {
+   "osm_id": 275102868,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "inferred:nearby",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     65.391,
+     69.352
+    ],
+    [
+     61.303,
+     78.035
+    ],
+    [
+     64.573,
+     79.449
+    ],
+    [
+     68.529,
+     70.866
+    ]
+   ]
+  },
+  {
+   "osm_id": 275102869,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 16.65,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     84.851,
+     94.566
+    ],
+    [
+     88.703,
+     85.582
+    ],
+    [
+     90.483,
+     81.441
+    ],
+    [
+     75.18,
+     74.072
+    ],
+    [
+     65.661,
+     94.432
+    ],
+    [
+     75.367,
+     99.108
+    ],
+    [
+     78.637,
+     91.827
+    ],
+    [
+     81.56,
+     93.152
+    ]
+   ]
+  },
+  {
+   "osm_id": 275127230,
+   "kind": "yes",
+   "name": "Delicious Edit",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     26.097,
+     82.722
+    ],
+    [
+     9.283,
+     74.139
+    ],
+    [
+     7.911,
+     73.437
+    ],
+    [
+     6.789,
+     75.63
+    ],
+    [
+     6.207,
+     76.777
+    ],
+    [
+     5.695,
+     77.779
+    ],
+    [
+     12.692,
+     81.352
+    ],
+    [
+     25.48,
+     87.887
+    ],
+    [
+     27.697,
+     83.545
+    ]
+   ]
+  },
+  {
+   "osm_id": 275127232,
+   "kind": "commercial",
+   "name": "Imli Street",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     16.453,
+     105.553
+    ],
+    [
+     7.634,
+     101.045
+    ],
+    [
+     5.508,
+     100.098
+    ],
+    [
+     5.84,
+     98.93
+    ],
+    [
+     4.586,
+     97.505
+    ],
+    [
+     5.909,
+     94.622
+    ],
+    [
+     -1.115,
+     91.104
+    ],
+    [
+     -7.371,
+     103.304
+    ],
+    [
+     -8.133,
+     104.785
+    ],
+    [
+     -4.032,
+     106.889
+    ],
+    [
+     11.77,
+     114.96
+    ],
+    [
+     12.227,
+     114.047
+    ],
+    [
+     16.038,
+     106.399
+    ]
+   ]
+  },
+  {
+   "osm_id": 275127236,
+   "kind": "yes",
+   "name": "Pho",
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     20.839,
+     96.982
+    ],
+    [
+     8.133,
+     90.269
+    ],
+    [
+     1.185,
+     86.607
+    ],
+    [
+     0.048,
+     88.833
+    ],
+    [
+     -1.115,
+     91.104
+    ],
+    [
+     5.909,
+     94.622
+    ],
+    [
+     9.9,
+     96.614
+    ],
+    [
+     7.634,
+     101.045
+    ],
+    [
+     16.453,
+     105.553
+    ],
+    [
+     18.338,
+     101.88
+    ],
+    [
+     18.76,
+     101.045
+    ],
+    [
+     19.065,
+     100.455
+    ],
+    [
+     19.474,
+     99.653
+    ],
+    [
+     20.513,
+     97.605
+    ]
+   ]
+  },
+  {
+   "osm_id": 275127238,
+   "kind": "yes",
+   "name": "St Moritz Club",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     3.429,
+     82.209
+    ],
+    [
+     10.385,
+     85.861
+    ],
+    [
+     23.104,
+     92.54
+    ],
+    [
+     25.48,
+     87.887
+    ],
+    [
+     12.692,
+     81.352
+    ],
+    [
+     5.695,
+     77.779
+    ],
+    [
+     5.265,
+     78.614
+    ],
+    [
+     3.845,
+     81.397
+    ]
+   ]
+  },
+  {
+   "osm_id": 275127239,
+   "kind": "yes",
+   "name": "St. Moritz Restaurant",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     23.104,
+     92.54
+    ],
+    [
+     10.385,
+     85.861
+    ],
+    [
+     8.133,
+     90.269
+    ],
+    [
+     20.839,
+     96.982
+    ]
+   ]
+  },
+  {
+   "osm_id": 275127245,
+   "kind": "yes",
+   "name": "Root 6",
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     8.133,
+     90.269
+    ],
+    [
+     10.385,
+     85.861
+    ],
+    [
+     3.429,
+     82.209
+    ],
+    [
+     2.792,
+     83.456
+    ],
+    [
+     1.753,
+     85.493
+    ],
+    [
+     1.185,
+     86.607
+    ]
+   ]
+  },
+  {
+   "osm_id": 275127253,
+   "kind": "commercial",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -6.311,
+     79.805
+    ],
+    [
+     -7.6,
+     82.488
+    ],
+    [
+     -9.082,
+     85.215
+    ],
+    [
+     -3.755,
+     88.098
+    ],
+    [
+     -3.076,
+     86.796
+    ],
+    [
+     -0.845,
+     82.644
+    ]
+   ]
+  },
+  {
+   "osm_id": 275127256,
+   "kind": "yes",
+   "name": null,
+   "material": "brick",
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -6.512,
+     93.186
+    ],
+    [
+     -13.758,
+     88.978
+    ],
+    [
+     -14.742,
+     91.115
+    ],
+    [
+     -17.271,
+     96.77
+    ],
+    [
+     -18.629,
+     99.442
+    ],
+    [
+     -11.486,
+     103.126
+    ],
+    [
+     -10.627,
+     101.423
+    ],
+    [
+     -7.253,
+     94.677
+    ]
+   ]
+  },
+  {
+   "osm_id": 275127257,
+   "kind": "commercial",
+   "name": null,
+   "material": "brick",
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -12.394,
+     86.451
+    ],
+    [
+     -13.758,
+     88.978
+    ],
+    [
+     -6.512,
+     93.186
+    ],
+    [
+     -6.013,
+     92.273
+    ],
+    [
+     -4.33,
+     89.156
+    ],
+    [
+     -3.755,
+     88.098
+    ],
+    [
+     -9.082,
+     85.215
+    ],
+    [
+     -10.038,
+     84.48
+    ],
+    [
+     -11.091,
+     83.924
+    ]
+   ]
+  },
+  {
+   "osm_id": 282571335,
+   "kind": "yes",
+   "name": "Codex Digital Ltd.",
+   "material": null,
+   "height_m": 17.0,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -105.994,
+     -1.937
+    ],
+    [
+     -109.035,
+     4.508
+    ],
+    [
+     -94.633,
+     10.92
+    ],
+    [
+     -94.231,
+     9.974
+    ],
+    [
+     -91.938,
+     4.542
+    ]
+   ]
+  },
+  {
+   "osm_id": 282571336,
+   "kind": "yes",
+   "name": "Smiths",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -98.353,
+     20.75
+    ],
+    [
+     -109.908,
+     16.208
+    ],
+    [
+     -110.705,
+     18.279
+    ],
+    [
+     -115.139,
+     16.62
+    ],
+    [
+     -116.386,
+     19.102
+    ],
+    [
+     -100.265,
+     25.793
+    ],
+    [
+     -98.852,
+     22.064
+    ]
+   ]
+  },
+  {
+   "osm_id": 288392855,
+   "kind": "yes",
+   "name": "The Resident Soho",
+   "material": null,
+   "height_m": 18.7,
+   "height_source": "tag:levels",
+   "levels": 5,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     84.781,
+     118.399
+    ],
+    [
+     92.263,
+     100.722
+    ],
+    [
+     83.777,
+     96.881
+    ],
+    [
+     84.851,
+     94.566
+    ],
+    [
+     81.56,
+     93.152
+    ],
+    [
+     77.334,
+     102.392
+    ],
+    [
+     70.219,
+     118.01
+    ],
+    [
+     73.531,
+     119.468
+    ],
+    [
+     69.173,
+     130.812
+    ],
+    [
+     68.051,
+     130.5
+    ],
+    [
+     63.811,
+     140.051
+    ],
+    [
+     74.127,
+     144.548
+    ]
+   ]
+  },
+  {
+   "osm_id": 310643711,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 13.6,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -98.173,
+     -53.589
+    ],
+    [
+     -111.633,
+     -60.725
+    ],
+    [
+     -119.288,
+     -64.354
+    ],
+    [
+     -120.487,
+     -65.011
+    ],
+    [
+     -123.888,
+     -57.741
+    ],
+    [
+     -124.602,
+     -56.328
+    ],
+    [
+     -102.669,
+     -45.006
+    ]
+   ]
+  },
+  {
+   "osm_id": 428716363,
+   "kind": "hotel",
+   "name": "90-104 Berwick Street",
+   "material": null,
+   "height_m": 8.5,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     39.176,
+     -64.487
+    ],
+    [
+     21.718,
+     -72.736
+    ],
+    [
+     20.34,
+     -73.382
+    ],
+    [
+     1.005,
+     -37.414
+    ],
+    [
+     5.646,
+     -35.055
+    ],
+    [
+     18.546,
+     -28.286
+    ],
+    [
+     19.183,
+     -29.399
+    ],
+    [
+     19.702,
+     -29.188
+    ]
+   ]
+  },
+  {
+   "osm_id": 476776071,
+   "kind": "retail",
+   "name": "YMC (You Must Create)",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -117.834,
+     94.332
+    ],
+    [
+     -116.469,
+     94.944
+    ],
+    [
+     -114.675,
+     95.746
+    ],
+    [
+     -108.183,
+     98.651
+    ],
+    [
+     -102.025,
+     101.401
+    ],
+    [
+     -98.845,
+     102.848
+    ],
+    [
+     -96.669,
+     98.451
+    ],
+    [
+     -103.112,
+     95.111
+    ],
+    [
+     -104.913,
+     94.221
+    ],
+    [
+     -115.568,
+     88.911
+    ],
+    [
+     -115.908,
+     89.724
+    ],
+    [
+     -117.529,
+     93.597
+    ]
+   ]
+  },
+  {
+   "osm_id": 477053956,
+   "kind": "retail",
+   "name": null,
+   "material": "plaster",
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -31.674,
+     76.844
+    ],
+    [
+     -30.939,
+     75.397
+    ],
+    [
+     -29.658,
+     72.881
+    ],
+    [
+     -29.367,
+     72.302
+    ],
+    [
+     -43.7,
+     65.834
+    ],
+    [
+     -44.33,
+     67.115
+    ],
+    [
+     -45.598,
+     69.975
+    ]
+   ]
+  },
+  {
+   "osm_id": 477053958,
+   "kind": "retail",
+   "name": "Bathroom Merchant Services",
+   "material": "brick",
+   "height_m": 22.1,
+   "height_source": "tag:levels",
+   "levels": 6,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -33.883,
+     81.185
+    ],
+    [
+     -33.53,
+     80.495
+    ],
+    [
+     -32.061,
+     77.601
+    ],
+    [
+     -31.674,
+     76.844
+    ],
+    [
+     -45.598,
+     69.975
+    ],
+    [
+     -47.78,
+     74.406
+    ]
+   ]
+  },
+  {
+   "osm_id": 477053984,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -35.879,
+     85.104
+    ],
+    [
+     -34.133,
+     81.675
+    ],
+    [
+     -33.883,
+     81.185
+    ],
+    [
+     -47.78,
+     74.406
+    ],
+    [
+     -49.616,
+     78.313
+    ]
+   ]
+  },
+  {
+   "osm_id": 477053985,
+   "kind": "commercial",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -36.419,
+     86.172
+    ],
+    [
+     -36.183,
+     85.716
+    ],
+    [
+     -35.879,
+     85.104
+    ],
+    [
+     -34.133,
+     81.675
+    ],
+    [
+     -33.883,
+     81.185
+    ],
+    [
+     -47.78,
+     74.406
+    ],
+    [
+     -49.616,
+     78.313
+    ],
+    [
+     -50.15,
+     79.471
+    ]
+   ]
+  },
+  {
+   "osm_id": 477053987,
+   "kind": "office",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -40.977,
+     94.989
+    ],
+    [
+     -40.576,
+     94.221
+    ],
+    [
+     -38.802,
+     90.781
+    ],
+    [
+     -37.223,
+     87.742
+    ],
+    [
+     -36.862,
+     87.041
+    ],
+    [
+     -36.419,
+     86.172
+    ],
+    [
+     -50.15,
+     79.471
+    ],
+    [
+     -50.801,
+     81.096
+    ],
+    [
+     -48.944,
+     81.976
+    ],
+    [
+     -50.288,
+     84.992
+    ],
+    [
+     -49.783,
+     85.315
+    ],
+    [
+     -49.131,
+     88.432
+    ],
+    [
+     -48.563,
+     91.349
+    ]
+   ]
+  },
+  {
+   "osm_id": 477598135,
+   "kind": "retail",
+   "name": "Mix Max",
+   "material": "plaster",
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -29.367,
+     72.302
+    ],
+    [
+     -28.986,
+     71.567
+    ],
+    [
+     -27.455,
+     68.539
+    ],
+    [
+     -26.9,
+     67.46
+    ],
+    [
+     -37.742,
+     62.439
+    ],
+    [
+     -41.442,
+     60.524
+    ],
+    [
+     -43.7,
+     65.834
+    ]
+   ]
+  },
+  {
+   "osm_id": 477598173,
+   "kind": "commercial",
+   "name": null,
+   "material": "brick",
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -70.476,
+     53.4
+    ],
+    [
+     -69.707,
+     53.79
+    ],
+    [
+     -60.867,
+     58.276
+    ],
+    [
+     -57.93,
+     52.532
+    ],
+    [
+     -67.518,
+     47.467
+    ]
+   ]
+  },
+  {
+   "osm_id": 477598176,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 11.9,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -72.9,
+     58.276
+    ],
+    [
+     -70.476,
+     53.4
+    ],
+    [
+     -67.518,
+     47.467
+    ],
+    [
+     -73.559,
+     44.283
+    ],
+    [
+     -79.44,
+     54.881
+    ]
+   ]
+  },
+  {
+   "osm_id": 477598177,
+   "kind": "commercial",
+   "name": null,
+   "material": "brick",
+   "height_m": 8.5,
+   "height_source": "tag:levels",
+   "levels": 2,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -79.031,
+     70.766
+    ],
+    [
+     -76.482,
+     65.556
+    ],
+    [
+     -72.9,
+     58.276
+    ],
+    [
+     -79.44,
+     54.881
+    ],
+    [
+     -82.759,
+     61.326
+    ],
+    [
+     -85.786,
+     67.259
+    ]
+   ]
+  },
+  {
+   "osm_id": 477598191,
+   "kind": "yes",
+   "name": null,
+   "material": "brick",
+   "height_m": 8.5,
+   "height_source": "tag:levels",
+   "levels": 2,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -50.531,
+     64.142
+    ],
+    [
+     -44.33,
+     67.115
+    ],
+    [
+     -43.7,
+     65.834
+    ],
+    [
+     -41.442,
+     60.524
+    ],
+    [
+     -49.18,
+     56.873
+    ],
+    [
+     -55.54,
+     53.701
+    ],
+    [
+     -56.094,
+     54.736
+    ],
+    [
+     -58.456,
+     59.311
+    ],
+    [
+     -51.355,
+     62.684
+    ],
+    [
+     -50.094,
+     63.285
+    ],
+    [
+     -50.316,
+     63.708
+    ]
+   ]
+  },
+  {
+   "osm_id": 477598193,
+   "kind": "commercial",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -44.33,
+     67.115
+    ],
+    [
+     -50.531,
+     64.142
+    ],
+    [
+     -51.812,
+     64.654
+    ],
+    [
+     -55.914,
+     72.859
+    ],
+    [
+     -55.623,
+     74.061
+    ],
+    [
+     -55.858,
+     74.517
+    ],
+    [
+     -56.052,
+     74.907
+    ],
+    [
+     -56.135,
+     75.063
+    ],
+    [
+     -56.932,
+     74.684
+    ],
+    [
+     -58.733,
+     73.838
+    ],
+    [
+     -69.866,
+     68.584
+    ],
+    [
+     -73.642,
+     66.792
+    ],
+    [
+     -76.53,
+     72.725
+    ],
+    [
+     -68.377,
+     76.744
+    ],
+    [
+     -66.077,
+     77.846
+    ],
+    [
+     -63.763,
+     78.903
+    ],
+    [
+     -61.788,
+     79.916
+    ],
+    [
+     -59.163,
+     81.174
+    ],
+    [
+     -52.367,
+     84.447
+    ],
+    [
+     -50.801,
+     81.096
+    ],
+    [
+     -50.15,
+     79.471
+    ],
+    [
+     -49.616,
+     78.313
+    ],
+    [
+     -47.78,
+     74.406
+    ],
+    [
+     -45.598,
+     69.975
+    ]
+   ]
+  },
+  {
+   "osm_id": 477598197,
+   "kind": "office",
+   "name": null,
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -60.908,
+     84.915
+    ],
+    [
+     -63.527,
+     83.679
+    ],
+    [
+     -61.788,
+     79.916
+    ],
+    [
+     -63.763,
+     78.903
+    ],
+    [
+     -65.64,
+     82.688
+    ],
+    [
+     -68.688,
+     88.855
+    ],
+    [
+     -69.63,
+     90.759
+    ],
+    [
+     -65.737,
+     92.562
+    ],
+    [
+     -64.705,
+     93.041
+    ],
+    [
+     -63.839,
+     91.182
+    ]
+   ]
+  },
+  {
+   "osm_id": 477598198,
+   "kind": "yes",
+   "name": null,
+   "material": "plaster",
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -74.168,
+     88.61
+    ],
+    [
+     -70.316,
+     80.729
+    ],
+    [
+     -68.377,
+     76.744
+    ],
+    [
+     -76.53,
+     72.725
+    ],
+    [
+     -77.978,
+     75.653
+    ],
+    [
+     -79.821,
+     79.315
+    ],
+    [
+     -80.008,
+     79.248
+    ],
+    [
+     -81.158,
+     78.725
+    ],
+    [
+     -82.44,
+     78.091
+    ],
+    [
+     -82.703,
+     77.957
+    ],
+    [
+     -83.95,
+     80.451
+    ],
+    [
+     -85.398,
+     83.345
+    ],
+    [
+     -85.107,
+     83.478
+    ],
+    [
+     -83.77,
+     84.124
+    ],
+    [
+     -82.53,
+     84.658
+    ],
+    [
+     -82.371,
+     84.736
+    ],
+    [
+     -78.034,
+     86.785
+    ]
+   ]
+  },
+  {
+   "osm_id": 477598202,
+   "kind": "commercial",
+   "name": "Minimart",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -92.443,
+     89.211
+    ],
+    [
+     -95.866,
+     96.759
+    ],
+    [
+     -96.669,
+     98.451
+    ],
+    [
+     -98.845,
+     102.848
+    ],
+    [
+     -96.801,
+     103.861
+    ],
+    [
+     -96.233,
+     102.714
+    ],
+    [
+     -92.298,
+     104.674
+    ],
+    [
+     -94.071,
+     108.247
+    ],
+    [
+     -89.014,
+     110.763
+    ],
+    [
+     -81.075,
+     94.766
+    ],
+    [
+     -89.374,
+     90.647
+    ],
+    [
+     -90.573,
+     90.069
+    ],
+    [
+     -91.494,
+     89.634
+    ]
+   ]
+  },
+  {
+   "osm_id": 477598203,
+   "kind": "commercial",
+   "name": null,
+   "material": "brick",
+   "height_m": 18.7,
+   "height_source": "tag:levels",
+   "levels": 5,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -70.78,
+     99.753
+    ],
+    [
+     -78.9,
+     115.472
+    ],
+    [
+     -76.884,
+     116.585
+    ],
+    [
+     -74.508,
+     117.898
+    ],
+    [
+     -76.593,
+     121.939
+    ],
+    [
+     -75.159,
+     122.685
+    ],
+    [
+     -72.284,
+     124.288
+    ],
+    [
+     -70.78,
+     125.134
+    ],
+    [
+     -70.393,
+     124.288
+    ],
+    [
+     -68.259,
+     120.069
+    ],
+    [
+     -60.791,
+     104.618
+    ],
+    [
+     -61.594,
+     104.228
+    ],
+    [
+     -62.356,
+     103.85
+    ],
+    [
+     -67.296,
+     101.434
+    ],
+    [
+     -67.905,
+     101.134
+    ],
+    [
+     -68.889,
+     100.655
+    ],
+    [
+     -69.637,
+     100.288
+    ]
+   ]
+  },
+  {
+   "osm_id": 477598204,
+   "kind": "commercial",
+   "name": "House oft Cans",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -76.129,
+     96.982
+    ],
+    [
+     -84.29,
+     112.7
+    ],
+    [
+     -86.132,
+     116.184
+    ],
+    [
+     -80.777,
+     119.023
+    ],
+    [
+     -78.9,
+     115.472
+    ],
+    [
+     -70.78,
+     99.753
+    ],
+    [
+     -71.73,
+     99.264
+    ]
+   ]
+  },
+  {
+   "osm_id": 477598205,
+   "kind": "commercial",
+   "name": null,
+   "material": "plaster",
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -81.075,
+     94.766
+    ],
+    [
+     -89.014,
+     110.763
+    ],
+    [
+     -90.691,
+     113.724
+    ],
+    [
+     -86.132,
+     116.184
+    ],
+    [
+     -84.29,
+     112.7
+    ],
+    [
+     -76.129,
+     96.982
+    ]
+   ]
+  },
+  {
+   "osm_id": 477598209,
+   "kind": "commercial",
+   "name": "TC",
+   "material": "brick",
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -68.051,
+     22.765
+    ],
+    [
+     -65.328,
+     17.967
+    ],
+    [
+     -83.223,
+     9.429
+    ],
+    [
+     -82.828,
+     10.152
+    ],
+    [
+     -84.941,
+     14.95
+    ]
+   ]
+  },
+  {
+   "osm_id": 477598219,
+   "kind": "yes",
+   "name": "Barrio",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -79.44,
+     54.881
+    ],
+    [
+     -98.471,
+     45.697
+    ],
+    [
+     -99.122,
+     47.177
+    ],
+    [
+     -100.646,
+     50.639
+    ],
+    [
+     -101.297,
+     52.12
+    ],
+    [
+     -82.759,
+     61.326
+    ]
+   ]
+  },
+  {
+   "osm_id": 477598220,
+   "kind": "commercial",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -82.759,
+     61.326
+    ],
+    [
+     -101.297,
+     52.12
+    ],
+    [
+     -103.403,
+     56.895
+    ],
+    [
+     -103.722,
+     57.619
+    ],
+    [
+     -104.144,
+     58.587
+    ],
+    [
+     -99.634,
+     60.725
+    ],
+    [
+     -85.786,
+     67.259
+    ]
+   ]
+  },
+  {
+   "osm_id": 477598221,
+   "kind": "commercial",
+   "name": null,
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -85.786,
+     67.259
+    ],
+    [
+     -99.634,
+     60.725
+    ],
+    [
+     -104.144,
+     58.587
+    ],
+    [
+     -104.366,
+     59.077
+    ],
+    [
+     -104.602,
+     59.623
+    ],
+    [
+     -105.828,
+     62.406
+    ],
+    [
+     -106.056,
+     62.918
+    ],
+    [
+     -106.347,
+     63.586
+    ],
+    [
+     -98.443,
+     67.46
+    ],
+    [
+     -88.321,
+     72.413
+    ]
+   ]
+  },
+  {
+   "osm_id": 477598223,
+   "kind": "yes",
+   "name": null,
+   "material": "stone",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -106.347,
+     63.586
+    ],
+    [
+     -106.791,
+     64.599
+    ],
+    [
+     -109.354,
+     70.421
+    ],
+    [
+     -108.675,
+     72.046
+    ],
+    [
+     -102.038,
+     75.207
+    ],
+    [
+     -91.841,
+     80.05
+    ],
+    [
+     -88.321,
+     72.413
+    ],
+    [
+     -98.443,
+     67.46
+    ]
+   ]
+  },
+  {
+   "osm_id": 478529813,
+   "kind": "commercial",
+   "name": "Fifty Fifty",
+   "material": "brick",
+   "height_m": 11.9,
+   "height_source": "tag:levels",
+   "levels": 3,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -69.63,
+     90.759
+    ],
+    [
+     -68.688,
+     88.855
+    ],
+    [
+     -65.64,
+     82.688
+    ],
+    [
+     -63.763,
+     78.903
+    ],
+    [
+     -66.077,
+     77.846
+    ],
+    [
+     -67.94,
+     81.82
+    ],
+    [
+     -70.316,
+     80.729
+    ],
+    [
+     -74.168,
+     88.61
+    ],
+    [
+     -73.323,
+     89.011
+    ]
+   ]
+  },
+  {
+   "osm_id": 478529814,
+   "kind": "yes",
+   "name": "Copita",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -56.593,
+     96.614
+    ],
+    [
+     -51.729,
+     86.907
+    ],
+    [
+     -50.988,
+     85.159
+    ],
+    [
+     -52.367,
+     84.447
+    ],
+    [
+     -59.163,
+     81.174
+    ],
+    [
+     -60.908,
+     84.915
+    ],
+    [
+     -63.839,
+     91.182
+    ],
+    [
+     -64.705,
+     93.041
+    ],
+    [
+     -63.583,
+     93.531
+    ],
+    [
+     -57.652,
+     96.147
+    ]
+   ]
+  },
+  {
+   "osm_id": 478529825,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 11.9,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -6.228,
+     67.482
+    ],
+    [
+     -4.836,
+     64.699
+    ],
+    [
+     -2.272,
+     66.012
+    ],
+    [
+     3.921,
+     53.879
+    ],
+    [
+     2.009,
+     52.899
+    ],
+    [
+     -5.826,
+     48.88
+    ],
+    [
+     -10.26,
+     57.352
+    ],
+    [
+     -13.634,
+     63.808
+    ]
+   ]
+  },
+  {
+   "osm_id": 478686278,
+   "kind": "commercial",
+   "name": null,
+   "material": null,
+   "height_m": 18.7,
+   "height_source": "tag:levels",
+   "levels": 5,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -95.921,
+     14.305
+    ],
+    [
+     -95.298,
+     14.605
+    ],
+    [
+     -94.584,
+     14.449
+    ],
+    [
+     -94.217,
+     13.959
+    ],
+    [
+     -93.981,
+     13.336
+    ],
+    [
+     -94.12,
+     12.724
+    ],
+    [
+     -94.404,
+     12.223
+    ],
+    [
+     -95.041,
+     11.9
+    ],
+    [
+     -94.633,
+     10.92
+    ],
+    [
+     -109.035,
+     4.508
+    ],
+    [
+     -110.49,
+     7.403
+    ],
+    [
+     -112.908,
+     12.089
+    ],
+    [
+     -114.1,
+     14.561
+    ],
+    [
+     -109.908,
+     16.208
+    ],
+    [
+     -98.353,
+     20.75
+    ],
+    [
+     -97.889,
+     19.514
+    ],
+    [
+     -97.445,
+     18.345
+    ],
+    [
+     -96.635,
+     16.197
+    ]
+   ]
+  },
+  {
+   "osm_id": 478967748,
+   "kind": "retail",
+   "name": "The Duck and Rice",
+   "material": null,
+   "height_m": 8.5,
+   "height_source": "tag:levels",
+   "levels": 2,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     21.822,
+     -26.516
+    ],
+    [
+     18.546,
+     -28.286
+    ],
+    [
+     5.646,
+     -35.055
+    ],
+    [
+     1.108,
+     -27.028
+    ],
+    [
+     14.07,
+     -19.871
+    ],
+    [
+     17.215,
+     -18.067
+    ]
+   ]
+  },
+  {
+   "osm_id": 480077827,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 15.85,
+   "height_source": "inferred:terrace",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -38.539,
+     -95.779
+    ],
+    [
+     -35.844,
+     -94.388
+    ],
+    [
+     -37.375,
+     -91.315
+    ],
+    [
+     -39.017,
+     -88.076
+    ],
+    [
+     -36.163,
+     -86.629
+    ],
+    [
+     -32.81,
+     -93.542
+    ],
+    [
+     -30.385,
+     -98.529
+    ],
+    [
+     -35.608,
+     -101.178
+    ]
+   ]
+  },
+  {
+   "osm_id": 480077828,
+   "kind": "yes",
+   "name": "Cords",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -44.698,
+     -85.905
+    ],
+    [
+     -47.78,
+     -79.56
+    ],
+    [
+     -45.848,
+     -78.547
+    ],
+    [
+     -45.148,
+     -78.18
+    ],
+    [
+     -43.25,
+     -77.189
+    ],
+    [
+     -39.696,
+     -84.124
+    ],
+    [
+     -40.652,
+     -84.625
+    ],
+    [
+     -44.344,
+     -86.54
+    ]
+   ]
+  },
+  {
+   "osm_id": 480077831,
+   "kind": "retail",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -45.958,
+     -72.892
+    ],
+    [
+     -48.182,
+     -74.083
+    ],
+    [
+     -48.785,
+     -74.406
+    ],
+    [
+     -49.339,
+     -74.673
+    ],
+    [
+     -49.9,
+     -74.996
+    ],
+    [
+     -54.05,
+     -66.97
+    ],
+    [
+     -52.99,
+     -66.458
+    ],
+    [
+     -49.983,
+     -64.977
+    ]
+   ]
+  },
+  {
+   "osm_id": 480077832,
+   "kind": "yes",
+   "name": "Soho Frames",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -49.9,
+     -74.996
+    ],
+    [
+     -52.533,
+     -76.365
+    ],
+    [
+     -56.433,
+     -78.369
+    ],
+    [
+     -60.43,
+     -70.142
+    ],
+    [
+     -54.05,
+     -66.97
+    ]
+   ]
+  },
+  {
+   "osm_id": 480077837,
+   "kind": "yes",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -47.621,
+     -57.14
+    ],
+    [
+     -49.381,
+     -53.177
+    ],
+    [
+     -40.105,
+     -48.869
+    ],
+    [
+     -39.571,
+     -49.815
+    ],
+    [
+     -38.407,
+     -51.975
+    ],
+    [
+     -38.109,
+     -52.543
+    ]
+   ]
+  },
+  {
+   "osm_id": 480077838,
+   "kind": "yes",
+   "name": "House of Wax",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -47.621,
+     -57.14
+    ],
+    [
+     -38.109,
+     -52.543
+    ],
+    [
+     -37.721,
+     -53.266
+    ],
+    [
+     -35.989,
+     -56.528
+    ],
+    [
+     -35.65,
+     -57.163
+    ],
+    [
+     -43.007,
+     -60.28
+    ],
+    [
+     -45.654,
+     -61.471
+    ]
+   ]
+  },
+  {
+   "osm_id": 480077840,
+   "kind": "yes",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -33.558,
+     -61.103
+    ],
+    [
+     -33.281,
+     -61.626
+    ],
+    [
+     -31.32,
+     -65.3
+    ],
+    [
+     -38.172,
+     -68.706
+    ],
+    [
+     -40.257,
+     -64.242
+    ]
+   ]
+  },
+  {
+   "osm_id": 480077849,
+   "kind": "residential",
+   "name": null,
+   "material": "brick",
+   "height_m": 13.0,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -19.474,
+     -93.197
+    ],
+    [
+     -26.796,
+     -96.748
+    ],
+    [
+     -29.11,
+     -91.583
+    ],
+    [
+     -27.725,
+     -90.981
+    ],
+    [
+     -21.933,
+     -88.187
+    ],
+    [
+     -21.531,
+     -89.011
+    ],
+    [
+     -21.13,
+     -89.824
+    ],
+    [
+     -19.931,
+     -92.262
+    ],
+    [
+     -19.682,
+     -92.763
+    ]
+   ]
+  },
+  {
+   "osm_id": 480077850,
+   "kind": "apartments",
+   "name": null,
+   "material": "brick",
+   "height_m": 13.0,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -19.474,
+     -93.197
+    ],
+    [
+     -18.733,
+     -94.699
+    ],
+    [
+     -17.908,
+     -96.369
+    ],
+    [
+     -16.973,
+     -98.095
+    ],
+    [
+     -16.329,
+     -99.353
+    ],
+    [
+     -15.483,
+     -101.022
+    ],
+    [
+     -14.52,
+     -102.915
+    ],
+    [
+     -25.529,
+     -108.113
+    ],
+    [
+     -30.385,
+     -98.529
+    ],
+    [
+     -26.796,
+     -96.748
+    ]
+   ]
+  },
+  {
+   "osm_id": 480954389,
+   "kind": "commercial",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -101.976,
+     -87.564
+    ],
+    [
+     -96.074,
+     -98.941
+    ],
+    [
+     -97.03,
+     -99.486
+    ],
+    [
+     -99.752,
+     -101.034
+    ],
+    [
+     -101.221,
+     -101.857
+    ],
+    [
+     -107.248,
+     -90.314
+    ]
+   ]
+  },
+  {
+   "osm_id": 480954390,
+   "kind": "yes",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -97.321,
+     -85.081
+    ],
+    [
+     -91.487,
+     -96.347
+    ],
+    [
+     -92.457,
+     -96.892
+    ],
+    [
+     -94.723,
+     -98.173
+    ],
+    [
+     -96.074,
+     -98.941
+    ],
+    [
+     -101.976,
+     -87.564
+    ]
+   ]
+  },
+  {
+   "osm_id": 480954391,
+   "kind": "retail",
+   "name": null,
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -86.603,
+     -93.575
+    ],
+    [
+     -87.753,
+     -94.221
+    ],
+    [
+     -90.296,
+     -95.668
+    ],
+    [
+     -91.487,
+     -96.347
+    ],
+    [
+     -97.321,
+     -85.081
+    ],
+    [
+     -92.298,
+     -82.621
+    ],
+    [
+     -91.051,
+     -85.059
+    ]
+   ]
+  },
+  {
+   "osm_id": 480954392,
+   "kind": "retail",
+   "name": "John Wilkes",
+   "material": "brick",
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -81.969,
+     -90.948
+    ],
+    [
+     -82.842,
+     -91.438
+    ],
+    [
+     -85.308,
+     -92.84
+    ],
+    [
+     -86.603,
+     -93.575
+    ],
+    [
+     -91.051,
+     -85.059
+    ],
+    [
+     -86.25,
+     -82.465
+    ],
+    [
+     -84.719,
+     -85.382
+    ]
+   ]
+  },
+  {
+   "osm_id": 577429458,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "inferred:nearby",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -114.772,
+     -66.079
+    ],
+    [
+     -103.666,
+     -60.291
+    ],
+    [
+     -94.633,
+     -77.89
+    ],
+    [
+     -107.899,
+     -84.748
+    ],
+    [
+     -109.513,
+     -81.898
+    ],
+    [
+     -107.698,
+     -80.506
+    ]
+   ]
+  },
+  {
+   "osm_id": 1335938630,
+   "kind": "yes",
+   "name": null,
+   "material": null,
+   "height_m": 15.3,
+   "height_source": "tag:levels",
+   "levels": 4,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     -95.727,
+     -58.298
+    ],
+    [
+     -88.876,
+     -55.27
+    ],
+    [
+     -86.583,
+     -59.979
+    ],
+    [
+     -93.219,
+     -63.107
+    ]
+   ]
+  },
+  {
+   "osm_id": 1391436525,
+   "kind": "apartments",
+   "name": "The Watch House",
+   "material": null,
+   "height_m": 17.35,
+   "height_source": "inferred:nearby",
+   "levels": null,
+   "roof_shape": null,
+   "roof_height_m": 0.0,
+   "start_date": null,
+   "footprint": [
+    [
+     50.981,
+     -85.794
+    ],
+    [
+     54.196,
+     -84.213
+    ],
+    [
+     63.361,
+     -101.334
+    ],
+    [
+     42.723,
+     -112.499
+    ],
+    [
+     33.336,
+     -94.866
+    ]
+   ]
+  }
+ ],
+ "roads": [
+  {
+   "osm_id": 4082612,
+   "highway": "unclassified",
+   "name": "Poland Street",
+   "surface": "asphalt",
+   "oneway": true,
+   "width_m": 7.0,
+   "is_footway": false,
+   "centreline": [
+    [
+     -73.503,
+     -25.77
+    ],
+    [
+     -75.921,
+     -21.106
+    ],
+    [
+     -76.219,
+     -20.049
+    ],
+    [
+     -76.752,
+     -18.178
+    ],
+    [
+     -77.66,
+     -14.828
+    ],
+    [
+     -113.864,
+     69.352
+    ],
+    [
+     -115.679,
+     73.816
+    ],
+    [
+     -134.966,
+     118.7
+    ],
+    [
+     -136.012,
+     121.127
+    ],
+    [
+     -137.993,
+     125.958
+    ],
+    [
+     -140.522,
+     132.615
+    ],
+    [
+     -160.079,
+     184.111
+    ],
+    [
+     -166.625,
+     207.867
+    ],
+    [
+     -166.535,
+     210.65
+    ],
+    [
+     -166.944,
+     212.364
+    ]
+   ]
+  },
+  {
+   "osm_id": 4253462,
+   "highway": "tertiary",
+   "name": "Wardour Street",
+   "surface": "asphalt",
+   "oneway": true,
+   "width_m": 3.1,
+   "is_footway": false,
+   "centreline": [
+    [
+     128.087,
+     -122.852
+    ],
+    [
+     124.242,
+     -115.271
+    ],
+    [
+     121.29,
+     -109.661
+    ],
+    [
+     120.404,
+     -107.98
+    ],
+    [
+     106.458,
+     -79.382
+    ],
+    [
+     105.862,
+     -77.979
+    ],
+    [
+     92.831,
+     -48.268
+    ],
+    [
+     59.918,
+     29.745
+    ],
+    [
+     52.782,
+     43.849
+    ]
+   ]
+  },
+  {
+   "osm_id": 4253927,
+   "highway": "unclassified",
+   "name": "Broadwick Street",
+   "surface": "asphalt",
+   "oneway": true,
+   "width_m": 7.0,
+   "is_footway": false,
+   "centreline": [
+    [
+     52.782,
+     43.849
+    ],
+    [
+     49.748,
+     42.502
+    ],
+    [
+     27.822,
+     32.728
+    ],
+    [
+     8.175,
+     22.231
+    ],
+    [
+     6.852,
+     21.128
+    ],
+    [
+     5.14,
+     19.704
+    ],
+    [
+     4.122,
+     17.6
+    ]
+   ]
+  },
+  {
+   "osm_id": 4254010,
+   "highway": "unclassified",
+   "name": "Lexington Street",
+   "surface": "asphalt",
+   "oneway": true,
+   "width_m": 3.1,
+   "is_footway": false,
+   "centreline": [
+    [
+     16.439,
+     -206.175
+    ],
+    [
+     13.738,
+     -202.702
+    ],
+    [
+     1.51,
+     -187.317
+    ],
+    [
+     -17.25,
+     -163.128
+    ],
+    [
+     -20.374,
+     -158.307
+    ],
+    [
+     -22.799,
+     -154.578
+    ],
+    [
+     -55.408,
+     -104.351
+    ],
+    [
+     -64.185,
+     -90.826
+    ],
+    [
+     -66.354,
+     -87.486
+    ]
+   ]
+  },
+  {
+   "osm_id": 4254044,
+   "highway": "unclassified",
+   "name": "Lexington Street",
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 7.0,
+   "is_footway": false,
+   "centreline": [
+    [
+     -66.354,
+     -87.486
+    ],
+    [
+     -67.767,
+     -84.825
+    ],
+    [
+     -68.695,
+     -82.933
+    ],
+    [
+     -89.679,
+     -40.287
+    ]
+   ]
+  },
+  {
+   "osm_id": 4256251,
+   "highway": "unclassified",
+   "name": "Duck Lane",
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 7.0,
+   "is_footway": false,
+   "centreline": [
+    [
+     33.454,
+     20.327
+    ],
+    [
+     53.343,
+     -23.5
+    ]
+   ]
+  },
+  {
+   "osm_id": 4256252,
+   "highway": "footway",
+   "name": "St Anne's Court",
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     50.157,
+     59.656
+    ],
+    [
+     68.959,
+     68.795
+    ],
+    [
+     89.16,
+     78.258
+    ],
+    [
+     90.123,
+     78.814
+    ],
+    [
+     90.601,
+     79.382
+    ],
+    [
+     91.113,
+     80.272
+    ],
+    [
+     92.409,
+     83.568
+    ],
+    [
+     92.935,
+     84.302
+    ],
+    [
+     94.75,
+     85.326
+    ],
+    [
+     96.039,
+     85.95
+    ],
+    [
+     137.086,
+     103.805
+    ]
+   ]
+  },
+  {
+   "osm_id": 4259245,
+   "highway": "unclassified",
+   "name": "D'Arblay Street",
+   "surface": "asphalt",
+   "oneway": true,
+   "width_m": 7.0,
+   "is_footway": false,
+   "centreline": [
+    [
+     -42.98,
+     108.915
+    ],
+    [
+     -45.356,
+     107.768
+    ],
+    [
+     -46.513,
+     107.212
+    ],
+    [
+     -85.855,
+     88.121
+    ],
+    [
+     -111.903,
+     75.53
+    ],
+    [
+     -112.555,
+     75.219
+    ],
+    [
+     -113.261,
+     74.896
+    ],
+    [
+     -115.679,
+     73.816
+    ]
+   ]
+  },
+  {
+   "osm_id": 4259250,
+   "highway": "service",
+   "name": "Wardour Mews",
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 4.5,
+   "is_footway": false,
+   "centreline": [
+    [
+     -12.913,
+     110.429
+    ],
+    [
+     13.855,
+     57.24
+    ]
+   ]
+  },
+  {
+   "osm_id": 4370986,
+   "highway": "pedestrian",
+   "name": "Silver Place",
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 8.0,
+   "is_footway": false,
+   "centreline": [
+    [
+     -66.354,
+     -87.486
+    ],
+    [
+     -64.462,
+     -86.228
+    ],
+    [
+     -63.486,
+     -85.571
+    ],
+    [
+     -61.975,
+     -84.581
+    ],
+    [
+     -30.226,
+     -67.304
+    ],
+    [
+     -28.882,
+     -66.614
+    ],
+    [
+     -28.639,
+     -66.48
+    ],
+    [
+     -26.928,
+     -65.612
+    ]
+   ]
+  },
+  {
+   "osm_id": 4376564,
+   "highway": "unclassified",
+   "name": "Peter Street",
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 7.0,
+   "is_footway": false,
+   "centreline": [
+    [
+     10.426,
+     -137.624
+    ],
+    [
+     18.22,
+     -133.127
+    ],
+    [
+     28.03,
+     -127.528
+    ],
+    [
+     35.595,
+     -123.108
+    ],
+    [
+     37.036,
+     -122.685
+    ],
+    [
+     40.68,
+     -120.526
+    ],
+    [
+     43.215,
+     -118.466
+    ],
+    [
+     71.286,
+     -101.501
+    ],
+    [
+     103.237,
+     -81.508
+    ],
+    [
+     106.458,
+     -79.382
+    ]
+   ]
+  },
+  {
+   "osm_id": 4393240,
+   "highway": "unclassified",
+   "name": "Hopkins Street",
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 7.0,
+   "is_footway": false,
+   "centreline": [
+    [
+     43.215,
+     -118.466
+    ],
+    [
+     42.086,
+     -116.641
+    ],
+    [
+     25.833,
+     -90.369
+    ],
+    [
+     24.628,
+     -89.479
+    ],
+    [
+     9.311,
+     -61.56
+    ],
+    [
+     8.528,
+     -60.224
+    ],
+    [
+     2.937,
+     -50.739
+    ],
+    [
+     -7.96,
+     -32.316
+    ],
+    [
+     -20.631,
+     -8.193
+    ],
+    [
+     -21.621,
+     -6.312
+    ],
+    [
+     -23.042,
+     -3.607
+    ]
+   ]
+  },
+  {
+   "osm_id": 4393241,
+   "highway": "unclassified",
+   "name": "Ingestre Place",
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 7.0,
+   "is_footway": false,
+   "centreline": [
+    [
+     24.628,
+     -89.479
+    ],
+    [
+     23.035,
+     -90.347
+    ],
+    [
+     -3.187,
+     -104.607
+    ]
+   ]
+  },
+  {
+   "osm_id": 4393242,
+   "highway": "footway",
+   "name": "Kemps Court",
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -7.96,
+     -32.316
+    ],
+    [
+     -6.027,
+     -31.348
+    ],
+    [
+     0.61,
+     -26.917
+    ],
+    [
+     20.721,
+     -15.117
+    ]
+   ]
+  },
+  {
+   "osm_id": 4393243,
+   "highway": "footway",
+   "name": "Tyler's Court",
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     63.347,
+     -63.051
+    ],
+    [
+     79.918,
+     -54.157
+    ]
+   ]
+  },
+  {
+   "osm_id": 4393244,
+   "highway": "footway",
+   "name": "Flaxman Court",
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     64.525,
+     31.693
+    ],
+    [
+     82.08,
+     39.518
+    ],
+    [
+     68.959,
+     68.795
+    ]
+   ]
+  },
+  {
+   "osm_id": 4395793,
+   "highway": "service",
+   "name": "Portland Mews",
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 4.5,
+   "is_footway": false,
+   "centreline": [
+    [
+     -85.855,
+     88.121
+    ],
+    [
+     -84.934,
+     86.351
+    ],
+    [
+     -84.504,
+     85.527
+    ],
+    [
+     -83.77,
+     84.124
+    ]
+   ]
+  },
+  {
+   "osm_id": 40976543,
+   "highway": "unclassified",
+   "name": "Broadwick Street",
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 7.0,
+   "is_footway": false,
+   "centreline": [
+    [
+     -92.34,
+     -34.387
+    ],
+    [
+     -95.616,
+     -34.453
+    ],
+    [
+     -128.475,
+     -50.973
+    ],
+    [
+     -169.078,
+     -70.71
+    ],
+    [
+     -173.664,
+     -73.081
+    ]
+   ]
+  },
+  {
+   "osm_id": 61926916,
+   "highway": "service",
+   "name": "Portland Mews",
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 4.5,
+   "is_footway": false,
+   "centreline": [
+    [
+     -81.158,
+     78.725
+    ],
+    [
+     -72.131,
+     61.782
+    ],
+    [
+     -62.987,
+     65.99
+    ],
+    [
+     -57.992,
+     68.461
+    ]
+   ]
+  },
+  {
+   "osm_id": 61926920,
+   "highway": "service",
+   "name": "Portland Mews",
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 4.5,
+   "is_footway": false,
+   "centreline": [
+    [
+     -62.987,
+     65.99
+    ],
+    [
+     -54.958,
+     49.693
+    ]
+   ]
+  },
+  {
+   "osm_id": 118312532,
+   "highway": "footway",
+   "name": null,
+   "surface": null,
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -17.07,
+     -84.336
+    ],
+    [
+     -15.754,
+     -82.054
+    ],
+    [
+     -14.701,
+     -80.228
+    ],
+    [
+     -12.865,
+     -77.033
+    ]
+   ]
+  },
+  {
+   "osm_id": 180217865,
+   "highway": "pedestrian",
+   "name": "Berwick Street",
+   "surface": "sett",
+   "oneway": true,
+   "width_m": 8.0,
+   "is_footway": false,
+   "centreline": [
+    [
+     4.122,
+     17.6
+    ],
+    [
+     5.092,
+     12.746
+    ],
+    [
+     8.937,
+     5.967
+    ],
+    [
+     20.721,
+     -15.117
+    ],
+    [
+     53.288,
+     -68.584
+    ],
+    [
+     70.455,
+     -99.987
+    ],
+    [
+     71.286,
+     -101.501
+    ]
+   ]
+  },
+  {
+   "osm_id": 240505256,
+   "highway": "unclassified",
+   "name": "Beak Street",
+   "surface": "asphalt",
+   "oneway": true,
+   "width_m": 7.0,
+   "is_footway": false,
+   "centreline": [
+    [
+     -66.354,
+     -87.486
+    ],
+    [
+     -69.042,
+     -89.145
+    ],
+    [
+     -91.661,
+     -103.126
+    ],
+    [
+     -122.475,
+     -118.923
+    ],
+    [
+     -140.667,
+     -130.188
+    ]
+   ]
+  },
+  {
+   "osm_id": 246902443,
+   "highway": "unclassified",
+   "name": "Broadwick Street",
+   "surface": "sett",
+   "oneway": false,
+   "width_m": 7.0,
+   "is_footway": false,
+   "centreline": [
+    [
+     -73.503,
+     -25.77
+    ],
+    [
+     -92.34,
+     -34.387
+    ]
+   ]
+  },
+  {
+   "osm_id": 262200665,
+   "highway": "unclassified",
+   "name": "Broadwick Street",
+   "surface": "sett",
+   "oneway": true,
+   "width_m": 7.0,
+   "is_footway": false,
+   "centreline": [
+    [
+     4.122,
+     17.6
+    ],
+    [
+     3.117,
+     14.85
+    ],
+    [
+     2.792,
+     11.689
+    ],
+    [
+     0.603,
+     8.694
+    ],
+    [
+     -23.042,
+     -3.607
+    ],
+    [
+     -49.72,
+     -17.588
+    ],
+    [
+     -68.889,
+     -26.483
+    ],
+    [
+     -73.503,
+     -25.77
+    ]
+   ]
+  },
+  {
+   "osm_id": 262200666,
+   "highway": "unclassified",
+   "name": "Ingestre Place",
+   "surface": "asphalt",
+   "oneway": true,
+   "width_m": 3.1,
+   "is_footway": false,
+   "centreline": [
+    [
+     -3.187,
+     -104.607
+    ],
+    [
+     -6.554,
+     -103.572
+    ],
+    [
+     -17.07,
+     -84.336
+    ],
+    [
+     -21.587,
+     -75.764
+    ],
+    [
+     -26.928,
+     -65.612
+    ],
+    [
+     -47.912,
+     -21.407
+    ],
+    [
+     -49.72,
+     -17.588
+    ]
+   ]
+  },
+  {
+   "osm_id": 274458828,
+   "highway": "footway",
+   "name": "Tyler's Court",
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     79.918,
+     -54.157
+    ],
+    [
+     87.83,
+     -50.428
+    ]
+   ]
+  },
+  {
+   "osm_id": 274458829,
+   "highway": "footway",
+   "name": "Tyler's Court",
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     89.742,
+     -49.604
+    ],
+    [
+     92.831,
+     -48.268
+    ]
+   ]
+  },
+  {
+   "osm_id": 304118931,
+   "highway": "unclassified",
+   "name": "Berwick Street",
+   "surface": "asphalt",
+   "oneway": true,
+   "width_m": 7.0,
+   "is_footway": false,
+   "centreline": [
+    [
+     -42.98,
+     108.915
+    ],
+    [
+     -41.539,
+     106.165
+    ],
+    [
+     -14.271,
+     53.957
+    ],
+    [
+     2.314,
+     21.051
+    ],
+    [
+     4.122,
+     17.6
+    ]
+   ]
+  },
+  {
+   "osm_id": 325008373,
+   "highway": "unclassified",
+   "name": "Lexington Street",
+   "surface": "sett",
+   "oneway": false,
+   "width_m": 7.0,
+   "is_footway": false,
+   "centreline": [
+    [
+     -89.679,
+     -40.287
+    ],
+    [
+     -90.365,
+     -38.773
+    ],
+    [
+     -92.34,
+     -34.387
+    ]
+   ]
+  },
+  {
+   "osm_id": 371306107,
+   "highway": "unclassified",
+   "name": "Livonia Street",
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 7.0,
+   "is_footway": false,
+   "centreline": [
+    [
+     -61.823,
+     29.288
+    ],
+    [
+     -48.196,
+     35.967
+    ],
+    [
+     -18.275,
+     51.819
+    ],
+    [
+     -14.271,
+     53.957
+    ]
+   ]
+  },
+  {
+   "osm_id": 477598144,
+   "highway": "service",
+   "name": "Portland Mews",
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 4.5,
+   "is_footway": false,
+   "centreline": [
+    [
+     -50.399,
+     40.442
+    ],
+    [
+     -49.505,
+     38.628
+    ],
+    [
+     -48.196,
+     35.967
+    ]
+   ]
+  },
+  {
+   "osm_id": 477598147,
+   "highway": "service",
+   "name": "Portland Mews",
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 4.5,
+   "is_footway": false,
+   "centreline": [
+    [
+     -54.958,
+     49.693
+    ],
+    [
+     -50.399,
+     40.442
+    ]
+   ]
+  },
+  {
+   "osm_id": 477598199,
+   "highway": "service",
+   "name": "Portland Mews",
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 4.5,
+   "is_footway": false,
+   "centreline": [
+    [
+     -83.77,
+     84.124
+    ],
+    [
+     -81.158,
+     78.725
+    ]
+   ]
+  },
+  {
+   "osm_id": 479854357,
+   "highway": "footway",
+   "name": null,
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     2.937,
+     -50.739
+    ],
+    [
+     1.074,
+     -51.63
+    ],
+    [
+     0.443,
+     -51.953
+    ],
+    [
+     -0.7,
+     -52.509
+    ],
+    [
+     -18.151,
+     -61.07
+    ],
+    [
+     -23.111,
+     -63.641
+    ],
+    [
+     -24.808,
+     -64.532
+    ],
+    [
+     -26.928,
+     -65.612
+    ]
+   ]
+  },
+  {
+   "osm_id": 754133721,
+   "highway": "footway",
+   "name": null,
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -11.68,
+     -75.029
+    ],
+    [
+     -10.516,
+     -72.836
+    ],
+    [
+     7.219,
+     -62.751
+    ],
+    [
+     7.911,
+     -62.395
+    ],
+    [
+     9.311,
+     -61.56
+    ]
+   ]
+  },
+  {
+   "osm_id": 754133722,
+   "highway": "footway",
+   "name": null,
+   "surface": null,
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -12.865,
+     -77.033
+    ],
+    [
+     -11.68,
+     -75.029
+    ]
+   ]
+  },
+  {
+   "osm_id": 1185526416,
+   "highway": "tertiary",
+   "name": "Wardour Street",
+   "surface": "asphalt",
+   "oneway": true,
+   "width_m": 3.1,
+   "is_footway": false,
+   "centreline": [
+    [
+     52.782,
+     43.849
+    ],
+    [
+     45.868,
+     57.586
+    ],
+    [
+     13.765,
+     122.707
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220575389,
+   "highway": "footway",
+   "name": null,
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -115.353,
+     63.808
+    ],
+    [
+     -103.057,
+     36.669
+    ],
+    [
+     -78.595,
+     -21.062
+    ],
+    [
+     -128.038,
+     -45.474
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220582055,
+   "highway": "footway",
+   "name": null,
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     5.625,
+     24.078
+    ],
+    [
+     48.646,
+     44.884
+    ],
+    [
+     5.632,
+     129.465
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220582056,
+   "highway": "footway",
+   "name": null,
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -17.264,
+     49.804
+    ],
+    [
+     -63.229,
+     27.195
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220582057,
+   "highway": "footway",
+   "name": null,
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -19.308,
+     53.778
+    ],
+    [
+     -49.505,
+     38.628
+    ],
+    [
+     -64.746,
+     31.103
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220582058,
+   "highway": "footway",
+   "name": "D'Arblay Street",
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -83.098,
+     86.184
+    ],
+    [
+     -45.03,
+     104.295
+    ],
+    [
+     -44.254,
+     104.707
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220582059,
+   "highway": "footway",
+   "name": "D'Arblay Street",
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -112.866,
+     77.823
+    ],
+    [
+     -47.746,
+     109.627
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220582060,
+   "highway": "footway",
+   "name": "Berwick Street",
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -19.211,
+     53.589
+    ],
+    [
+     -19.308,
+     53.778
+    ],
+    [
+     -45.03,
+     104.295
+    ],
+    [
+     -45.425,
+     104.919
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220582061,
+   "highway": "footway",
+   "name": null,
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -17.292,
+     50.005
+    ],
+    [
+     -18.275,
+     51.819
+    ],
+    [
+     -19.211,
+     53.589
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220582064,
+   "highway": "footway",
+   "name": null,
+   "surface": "sett",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -74.418,
+     -19.448
+    ],
+    [
+     -76.219,
+     -20.049
+    ],
+    [
+     -78.117,
+     -20.65
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220582067,
+   "highway": "footway",
+   "name": null,
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -110.837,
+     73.003
+    ],
+    [
+     -107.996,
+     65.122
+    ],
+    [
+     -71.785,
+     -18.301
+    ],
+    [
+     0.035,
+     15.807
+    ],
+    [
+     -17.264,
+     49.804
+    ],
+    [
+     -17.292,
+     50.005
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220582068,
+   "highway": "footway",
+   "name": null,
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -17.894,
+     -7.503
+    ],
+    [
+     8.937,
+     5.967
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220582069,
+   "highway": "footway",
+   "name": null,
+   "surface": "sett",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -22.183,
+     -8.961
+    ],
+    [
+     -20.631,
+     -8.193
+    ],
+    [
+     -18.629,
+     -7.169
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220582070,
+   "highway": "footway",
+   "name": null,
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -50.635,
+     -22.865
+    ],
+    [
+     -47.912,
+     -21.407
+    ],
+    [
+     -45.564,
+     -20.26
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220582071,
+   "highway": "footway",
+   "name": null,
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -86.153,
+     -39.251
+    ],
+    [
+     -51.272,
+     -23.032
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220582072,
+   "highway": "footway",
+   "name": null,
+   "surface": "sett",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -92.824,
+     -39.207
+    ],
+    [
+     -90.365,
+     -38.773
+    ],
+    [
+     -87.393,
+     -38.171
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220582073,
+   "highway": "footway",
+   "name": null,
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -167.616,
+     -76.22
+    ],
+    [
+     -93.711,
+     -39.53
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220582075,
+   "highway": "footway",
+   "name": null,
+   "surface": null,
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -45.183,
+     -20.082
+    ],
+    [
+     -22.584,
+     -9.117
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220596402,
+   "highway": "footway",
+   "name": null,
+   "surface": null,
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     10.426,
+     -137.624
+    ],
+    [
+     12.456,
+     -139.884
+    ],
+    [
+     19.633,
+     -135.186
+    ],
+    [
+     29.36,
+     -129.398
+    ],
+    [
+     41.705,
+     -122.051
+    ],
+    [
+     70.025,
+     -105.208
+    ],
+    [
+     105.163,
+     -83.568
+    ],
+    [
+     117.57,
+     -109.115
+    ],
+    [
+     121.755,
+     -123.665
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220596403,
+   "highway": "footway",
+   "name": null,
+   "surface": null,
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -51.272,
+     -23.032
+    ],
+    [
+     -43.374,
+     -38.416
+    ],
+    [
+     -42.169,
+     -40.754
+    ],
+    [
+     -28.882,
+     -66.614
+    ],
+    [
+     -9.242,
+     -104.807
+    ],
+    [
+     -8.064,
+     -107.112
+    ],
+    [
+     -7.51,
+     -108.191
+    ],
+    [
+     -6.775,
+     -109.627
+    ],
+    [
+     25.196,
+     -91.983
+    ],
+    [
+     40.804,
+     -116.986
+    ],
+    [
+     9.837,
+     -135.342
+    ],
+    [
+     10.073,
+     -136.322
+    ],
+    [
+     10.426,
+     -137.624
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220596404,
+   "highway": "footway",
+   "name": null,
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -22.584,
+     -9.117
+    ],
+    [
+     -1.379,
+     -49.96
+    ],
+    [
+     0.443,
+     -51.953
+    ],
+    [
+     2.674,
+     -54.391
+    ],
+    [
+     7.219,
+     -62.751
+    ],
+    [
+     21.178,
+     -89.0
+    ],
+    [
+     -3.568,
+     -102.202
+    ],
+    [
+     -14.701,
+     -80.228
+    ],
+    [
+     -23.111,
+     -63.641
+    ],
+    [
+     -45.183,
+     -20.082
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220596405,
+   "highway": "footway",
+   "name": null,
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     50.115,
+     41.7
+    ],
+    [
+     49.748,
+     42.502
+    ],
+    [
+     48.84,
+     44.506
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220596408,
+   "highway": "footway",
+   "name": null,
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     26.36,
+     28.899
+    ],
+    [
+     7.821,
+     19.47
+    ],
+    [
+     4.122,
+     17.6
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220596409,
+   "highway": "footway",
+   "name": null,
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     29.789,
+     30.524
+    ],
+    [
+     28.999,
+     30.134
+    ],
+    [
+     26.36,
+     28.899
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220596410,
+   "highway": "footway",
+   "name": null,
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -17.894,
+     -7.503
+    ],
+    [
+     -6.027,
+     -31.348
+    ],
+    [
+     43.368,
+     -115.628
+    ],
+    [
+     43.485,
+     -115.828
+    ],
+    [
+     70.455,
+     -99.987
+    ],
+    [
+     101.886,
+     -81.486
+    ],
+    [
+     102.163,
+     -80.651
+    ],
+    [
+     89.742,
+     -49.604
+    ],
+    [
+     50.33,
+     41.21
+    ],
+    [
+     29.789,
+     30.524
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220596411,
+   "highway": "footway",
+   "name": null,
+   "surface": null,
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     74.134,
+     146.686
+    ],
+    [
+     60.264,
+     140.463
+    ],
+    [
+     19.488,
+     122.151
+    ],
+    [
+     50.157,
+     59.656
+    ],
+    [
+     64.525,
+     31.693
+    ],
+    [
+     86.167,
+     -19.102
+    ],
+    [
+     110.268,
+     -74.885
+    ],
+    [
+     123.327,
+     -102.169
+    ],
+    [
+     125.052,
+     -106.154
+    ],
+    [
+     132.375,
+     -119.301
+    ],
+    [
+     144.699,
+     -130.689
+    ]
+   ]
+  },
+  {
+   "osm_id": 1220603967,
+   "highway": "footway",
+   "name": null,
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -86.153,
+     -39.251
+    ],
+    [
+     -65.793,
+     -81.452
+    ],
+    [
+     -63.486,
+     -85.571
+    ],
+    [
+     -61.504,
+     -89.211
+    ],
+    [
+     -53.35,
+     -102.013
+    ],
+    [
+     -52.817,
+     -102.848
+    ],
+    [
+     -51.868,
+     -104.529
+    ],
+    [
+     -19.446,
+     -155.179
+    ],
+    [
+     -18.365,
+     -156.871
+    ],
+    [
+     -17.271,
+     -158.274
+    ],
+    [
+     2.688,
+     -183.933
+    ],
+    [
+     3.789,
+     -185.347
+    ],
+    [
+     4.981,
+     -186.783
+    ],
+    [
+     14.23,
+     -197.893
+    ],
+    [
+     15.553,
+     -199.073
+    ],
+    [
+     16.398,
+     -199.373
+    ],
+    [
+     17.326,
+     -199.351
+    ],
+    [
+     22.771,
+     -194.932
+    ],
+    [
+     25.494,
+     -192.716
+    ],
+    [
+     68.48,
+     -161.881
+    ],
+    [
+     90.462,
+     -146.118
+    ],
+    [
+     93.067,
+     -144.248
+    ],
+    [
+     121.755,
+     -123.665
+    ]
+   ]
+  },
+  {
+   "osm_id": 1221615564,
+   "highway": "footway",
+   "name": null,
+   "surface": null,
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -72.194,
+     -86.273
+    ],
+    [
+     -72.409,
+     -84.725
+    ],
+    [
+     -93.711,
+     -39.53
+    ]
+   ]
+  },
+  {
+   "osm_id": 1221615565,
+   "highway": "footway",
+   "name": null,
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -67.996,
+     -90.77
+    ],
+    [
+     -69.042,
+     -89.145
+    ],
+    [
+     -71.335,
+     -86.64
+    ]
+   ]
+  },
+  {
+   "osm_id": 1221615567,
+   "highway": "footway",
+   "name": null,
+   "surface": null,
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     12.165,
+     -204.171
+    ],
+    [
+     11.687,
+     -203.548
+    ],
+    [
+     -5.369,
+     -182.542
+    ],
+    [
+     -22.598,
+     -160.4
+    ],
+    [
+     -24.399,
+     -157.306
+    ],
+    [
+     -25.217,
+     -156.059
+    ],
+    [
+     -25.951,
+     -154.957
+    ],
+    [
+     -46.949,
+     -122.841
+    ],
+    [
+     -66.97,
+     -92.484
+    ],
+    [
+     -67.663,
+     -91.438
+    ]
+   ]
+  },
+  {
+   "osm_id": 1316105321,
+   "highway": "footway",
+   "name": "Berwick Street",
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -38.047,
+     109.227
+    ],
+    [
+     -37.562,
+     108.292
+    ],
+    [
+     5.625,
+     24.078
+    ]
+   ]
+  },
+  {
+   "osm_id": 1324679414,
+   "highway": "footway",
+   "name": null,
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     45.868,
+     57.586
+    ],
+    [
+     50.157,
+     59.656
+    ]
+   ]
+  },
+  {
+   "osm_id": 1324679415,
+   "highway": "footway",
+   "name": null,
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     59.918,
+     29.745
+    ],
+    [
+     64.525,
+     31.693
+    ]
+   ]
+  },
+  {
+   "osm_id": 1343597422,
+   "highway": "footway",
+   "name": "Tyler's Court",
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     87.83,
+     -50.428
+    ],
+    [
+     89.742,
+     -49.604
+    ]
+   ]
+  },
+  {
+   "osm_id": 1343597423,
+   "highway": "footway",
+   "name": "Tyler's Court",
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     53.288,
+     -68.584
+    ],
+    [
+     54.618,
+     -67.738
+    ],
+    [
+     55.533,
+     -67.248
+    ]
+   ]
+  },
+  {
+   "osm_id": 1343597424,
+   "highway": "footway",
+   "name": "Tyler's Court",
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     55.533,
+     -67.248
+    ],
+    [
+     63.347,
+     -63.051
+    ]
+   ]
+  },
+  {
+   "osm_id": 1344405333,
+   "highway": "footway",
+   "name": null,
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     0.035,
+     15.807
+    ],
+    [
+     4.122,
+     17.6
+    ]
+   ]
+  },
+  {
+   "osm_id": 1344405334,
+   "highway": "footway",
+   "name": null,
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     21.822,
+     -89.801
+    ],
+    [
+     23.035,
+     -90.347
+    ],
+    [
+     24.774,
+     -91.583
+    ]
+   ]
+  },
+  {
+   "osm_id": 1344405335,
+   "highway": "footway",
+   "name": "Beak Street",
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -140.896,
+     -126.515
+    ],
+    [
+     -140.272,
+     -126.259
+    ],
+    [
+     -106.361,
+     -106.087
+    ],
+    [
+     -85.183,
+     -94.276
+    ],
+    [
+     -72.194,
+     -86.273
+    ]
+   ]
+  },
+  {
+   "osm_id": 1344420837,
+   "highway": "footway",
+   "name": null,
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     50.115,
+     41.7
+    ],
+    [
+     50.33,
+     41.21
+    ]
+   ]
+  },
+  {
+   "osm_id": 1344420838,
+   "highway": "footway",
+   "name": null,
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     48.84,
+     44.506
+    ],
+    [
+     48.646,
+     44.884
+    ]
+   ]
+  },
+  {
+   "osm_id": 1344427933,
+   "highway": "footway",
+   "name": null,
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -85.786,
+     84.825
+    ],
+    [
+     -110.837,
+     73.003
+    ]
+   ]
+  },
+  {
+   "osm_id": 1344427935,
+   "highway": "footway",
+   "name": null,
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -83.098,
+     86.184
+    ],
+    [
+     -84.504,
+     85.527
+    ],
+    [
+     -85.786,
+     84.825
+    ]
+   ]
+  },
+  {
+   "osm_id": 1344843308,
+   "highway": "footway",
+   "name": null,
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -86.153,
+     -39.251
+    ],
+    [
+     -87.393,
+     -38.171
+    ]
+   ]
+  },
+  {
+   "osm_id": 1344843309,
+   "highway": "footway",
+   "name": null,
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -93.711,
+     -39.53
+    ],
+    [
+     -92.824,
+     -39.207
+    ]
+   ]
+  },
+  {
+   "osm_id": 1344843310,
+   "highway": "footway",
+   "name": null,
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -74.418,
+     -19.448
+    ],
+    [
+     -71.785,
+     -18.301
+    ]
+   ]
+  },
+  {
+   "osm_id": 1344843311,
+   "highway": "footway",
+   "name": null,
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -78.595,
+     -21.062
+    ],
+    [
+     -78.117,
+     -20.65
+    ]
+   ]
+  },
+  {
+   "osm_id": 1344843312,
+   "highway": "footway",
+   "name": null,
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -51.272,
+     -23.032
+    ],
+    [
+     -50.635,
+     -22.865
+    ]
+   ]
+  },
+  {
+   "osm_id": 1344843313,
+   "highway": "footway",
+   "name": null,
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -45.564,
+     -20.26
+    ],
+    [
+     -45.183,
+     -20.082
+    ]
+   ]
+  },
+  {
+   "osm_id": 1344843314,
+   "highway": "footway",
+   "name": null,
+   "surface": null,
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -22.584,
+     -9.117
+    ],
+    [
+     -22.183,
+     -8.961
+    ]
+   ]
+  },
+  {
+   "osm_id": 1344843315,
+   "highway": "footway",
+   "name": null,
+   "surface": "paving_stones",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -17.894,
+     -7.503
+    ],
+    [
+     -18.629,
+     -7.169
+    ]
+   ]
+  },
+  {
+   "osm_id": 1344843316,
+   "highway": "footway",
+   "name": null,
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     21.822,
+     -89.801
+    ],
+    [
+     21.178,
+     -89.0
+    ]
+   ]
+  },
+  {
+   "osm_id": 1344843317,
+   "highway": "footway",
+   "name": null,
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     24.774,
+     -91.583
+    ],
+    [
+     25.196,
+     -91.983
+    ]
+   ]
+  },
+  {
+   "osm_id": 1344843318,
+   "highway": "footway",
+   "name": null,
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -71.335,
+     -86.64
+    ],
+    [
+     -72.194,
+     -86.273
+    ]
+   ]
+  },
+  {
+   "osm_id": 1344843319,
+   "highway": "footway",
+   "name": null,
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -67.663,
+     -91.438
+    ],
+    [
+     -67.996,
+     -90.77
+    ]
+   ]
+  },
+  {
+   "osm_id": 1344843320,
+   "highway": "footway",
+   "name": "Beak Street",
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -67.663,
+     -91.438
+    ],
+    [
+     -86.541,
+     -104.284
+    ],
+    [
+     -87.615,
+     -104.952
+    ]
+   ]
+  },
+  {
+   "osm_id": 1394535507,
+   "highway": "footway",
+   "name": null,
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -72.409,
+     -84.725
+    ],
+    [
+     -71.688,
+     -84.347
+    ],
+    [
+     -68.695,
+     -82.933
+    ],
+    [
+     -66.762,
+     -81.953
+    ],
+    [
+     -65.793,
+     -81.452
+    ]
+   ]
+  },
+  {
+   "osm_id": 1394535508,
+   "highway": "footway",
+   "name": null,
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     -66.97,
+     -92.484
+    ],
+    [
+     -66.361,
+     -92.128
+    ],
+    [
+     -64.185,
+     -90.826
+    ],
+    [
+     -62.239,
+     -89.657
+    ],
+    [
+     -61.504,
+     -89.211
+    ]
+   ]
+  },
+  {
+   "osm_id": 1461905072,
+   "highway": "footway",
+   "name": null,
+   "surface": null,
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     26.36,
+     28.899
+    ],
+    [
+     30.953,
+     19.225
+    ]
+   ]
+  },
+  {
+   "osm_id": 1461905073,
+   "highway": "footway",
+   "name": null,
+   "surface": null,
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     29.789,
+     30.524
+    ],
+    [
+     34.258,
+     20.683
+    ]
+   ]
+  },
+  {
+   "osm_id": 1461905074,
+   "highway": "footway",
+   "name": null,
+   "surface": null,
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     30.953,
+     19.225
+    ],
+    [
+     33.454,
+     20.327
+    ],
+    [
+     34.258,
+     20.683
+    ]
+   ]
+  },
+  {
+   "osm_id": 1461905075,
+   "highway": "unclassified",
+   "name": "Duck Lane",
+   "surface": "asphalt",
+   "oneway": false,
+   "width_m": 7.0,
+   "is_footway": false,
+   "centreline": [
+    [
+     27.822,
+     32.728
+    ],
+    [
+     28.999,
+     30.134
+    ],
+    [
+     33.454,
+     20.327
+    ]
+   ]
+  },
+  {
+   "osm_id": 1510572410,
+   "highway": "service",
+   "name": null,
+   "surface": null,
+   "oneway": false,
+   "width_m": 4.5,
+   "is_footway": false,
+   "centreline": [
+    [
+     8.528,
+     -60.224
+    ],
+    [
+     5.729,
+     -61.905
+    ],
+    [
+     -16.973,
+     -73.437
+    ],
+    [
+     -21.587,
+     -75.764
+    ]
+   ]
+  },
+  {
+   "osm_id": 1512347669,
+   "highway": "footway",
+   "name": null,
+   "surface": null,
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     7.364,
+     20.216
+    ],
+    [
+     6.852,
+     21.128
+    ],
+    [
+     5.577,
+     23.399
+    ]
+   ]
+  },
+  {
+   "osm_id": 1512347670,
+   "highway": "footway",
+   "name": null,
+   "surface": null,
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     7.364,
+     20.216
+    ],
+    [
+     7.821,
+     19.47
+    ]
+   ]
+  },
+  {
+   "osm_id": 1512347671,
+   "highway": "footway",
+   "name": null,
+   "surface": null,
+   "oneway": false,
+   "width_m": 2.5,
+   "is_footway": true,
+   "centreline": [
+    [
+     5.577,
+     23.399
+    ],
+    [
+     5.625,
+     24.078
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "soho",
+  "description": "Berwick Street / Broadwick Street, Soho, London",
+  "centre": [51.5137, -0.1352],
+  "size_m": 200,
+  "note": "Chosen for the highest building:material tagging rate measured in central London (46%), low-rise terraced stock that infers well, and a street-level camera that keeps weakly-tagged roofs out of frame."
+}

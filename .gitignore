@@ -1,0 +1,11 @@
+# Cached Overpass responses - regenerate by re-running the pipeline.
+data/cache/
+
+# Blender working files and render scratch.
+*.blend
+*.blend[0-9]*
+out/tmp/
+
+__pycache__/
+*.py[cod]
+.venv/
