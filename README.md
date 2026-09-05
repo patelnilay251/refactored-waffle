@@ -76,6 +76,35 @@ accepted and drops whatever barely survives. All four pairs here were true
 duplicates: 4 dropped, 0 clipped, and near-black artifact pixels went from
 8,596 to 0.
 
+## Streets
+
+OSM gives centrelines, not surfaces. Junctions are normally the hard part —
+four buffered strips meeting leaves gaps or overlapping slivers — but buffering
+with round joins and then unioning sidesteps it: the union *is* the junction,
+and the rounding left at each corner approximates a real kerb radius.
+
+Pavement is defined negatively. Rather than guessing a width, it is whatever
+remains of the street void once the carriageway and the buildings are removed,
+so a 9.5 m Soho street automatically yields the ~1.25 m pavement it really has.
+
+Three things the data forced:
+
+- **Berwick Street is `highway=pedestrian`** — the market street is fully
+  paved with no carriageway, which the hero shot has to reflect.
+- **A lane count is not a carriageway width.** Lexington Street carries
+  `lanes=1` and derived 3.1 m, but on the ground it is one-way with parking
+  down one side. `MIN_CARRIAGEWAY` floors lane-derived widths by road class.
+- **Overpass returns whole ways**, so a road caught by the bbox arrives with
+  its full geometry and ran hundreds of metres off-site. Surfaces are clipped
+  to the built area grown by 14 m, so the edge follows the block's shape
+  rather than cutting a straight line across every street.
+
+Surfaces sit at a carriageway datum of z=0.010 — just proud of the ground plane
+so it wins the depth test outright — with a 125 mm kerb to pavement at z=0.135.
+Slabs are meshed by constrained Delaunay rather than as ngons, because the
+pavement is one polygon with a hole punched for every building and Blender
+ngons cannot carry holes.
+
 ## Usage
 
 ```bash
@@ -83,6 +112,7 @@ pip install bpy shapely matplotlib
 python3 -m pipeline.stage1_data      # fetch, project, resolve heights
 python3 -m pipeline.preview          # render the QA preview
 python3 -m pipeline.stage2_massing   # extrude and clay-render
+python3 -m pipeline.stage3_streets   # carriageway, kerbs, pavement
 ```
 
 Overpass responses are cached under `data/cache/` by query hash; re-runs do not
@@ -101,6 +131,8 @@ pipeline/blend/mesh.py     footprint extrusion, ground
 pipeline/blend/materials.py clay shaders
 pipeline/blend/shot.py     cameras, sun, world, render settings
 pipeline/stage2_massing.py stage 2 -> out/stage2_*.png
+pipeline/streets.py        centrelines -> carriageway and pavement polygons
+pipeline/stage3_streets.py stage 3 -> out/stage3_*.png
 ```
 
 Coordinates downstream of `stage1_data` are **local metres**, +X east, +Y north,
@@ -111,7 +143,7 @@ origin at the site centre.
 - [x] **1 — Data layer.** Fetch, reproject, resolve heights, QA preview.
 - [x] **2 — Massing.** LOD1 extrusion, overlap resolution, clay render from an
       overview and from eye height on Berwick Street.
-- [ ] 3 — Roads and ground. Centreline buffering, junctions, footways.
+- [x] **3 — Streets.** Centreline buffering, junction union, kerbs, pavement.
 - [ ] 4 — Facades. Procedural bays, windows, shopfronts, cornices.
 - [ ] 5 — Clutter and materials.
 - [ ] 6 — Lighting, atmosphere, hero render, grade.

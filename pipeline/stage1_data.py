@@ -42,6 +42,20 @@ ROAD_WIDTHS = {
 DEFAULT_ROAD_WIDTH = 6.0
 LANE_WIDTH_M = 3.1
 
+# A lane count is not a carriageway width. Lexington Street carries `lanes=1`
+# and derives 3.1 m, but on the ground it is a one-way street with parking down
+# one side, so the kerb-to-kerb width is nearer 5.5 m. These floors stop a
+# lane-derived width from pinching a real street into an alley.
+MIN_CARRIAGEWAY = {
+    "primary": 9.0,
+    "secondary": 8.0,
+    "tertiary": 6.5,
+    "residential": 5.5,
+    "unclassified": 5.5,
+    "living_street": 5.0,
+    "service": 3.5,
+}
+
 
 def load_config(path: Path) -> tuple[str, BBox, dict]:
     config = json.loads(path.read_text())
@@ -153,11 +167,15 @@ def road_width(tags: dict[str, str]) -> float:
     """Best available carriageway width, in metres."""
     from .heights import parse_length
 
+    highway = tags.get("highway", "")
+    floor = MIN_CARRIAGEWAY.get(highway, 0.0)
+
+    # An explicit width is a measurement and is trusted as-is.
     if (width := parse_length(tags.get("width"))) is not None:
         return width
     if (lanes := tags.get("lanes", "")).isdigit():
-        return max(int(lanes), 1) * LANE_WIDTH_M
-    return ROAD_WIDTHS.get(tags.get("highway", ""), DEFAULT_ROAD_WIDTH)
+        return max(max(int(lanes), 1) * LANE_WIDTH_M, floor)
+    return ROAD_WIDTHS.get(highway, DEFAULT_ROAD_WIDTH)
 
 
 def build_roads(elements: list[dict], projection: Projection) -> list[dict]:
