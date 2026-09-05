@@ -140,8 +140,11 @@ def _detail_camera(scene_data: dict):
     target = (sum(t[0] for t in nearby) / len(nearby),
               sum(t[1] for t in nearby) / len(nearby))
 
-    camera = shot.camera_towards(centreline, target, back=32.0, lens_mm=30.0,
-                                 rise=6.0)
+    # Far enough back that the nearest tree is a element of the street rather
+    # than the subject: at 32 m it filled half the frame, and procedural
+    # foliage does not reward being looked at that closely.
+    camera = shot.camera_towards(centreline, target, back=52.0, lens_mm=34.0,
+                                 rise=7.0)
     shot.depth_of_field(camera, 30.0, 5.6)
     return camera
 

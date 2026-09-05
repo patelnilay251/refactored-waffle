@@ -118,16 +118,50 @@ def weathered_wall_material(osm_material: str | None, osm_id: int,
     return cache[key]
 
 
-def prop_materials() -> dict[str, bpy.types.Material]:
-    """Materials for rooftop clutter and street furniture."""
-    foliage = _principled("prop_foliage", (0.062, 0.098, 0.038), 0.72)
+def _foliage_material() -> bpy.types.Material:
+    """Leaf canopy.
+
+    The geometry is clumps of coarse spheres, and smooth shading alone leaves
+    them reading as exactly that. High-frequency noise on both colour and
+    normal breaks the surface up so the eye stops resolving individual clumps
+    and sees a mass instead — the cheapest available substitute for leaf
+    cards, which is what this really wants.
+    """
+    from . import textures
+
+    material = bpy.data.materials.new("prop_foliage")
+    tree = textures._tree(material)
+    bsdf = tree.nodes["Principled BSDF"]
+
+    coords = textures._object_coords(tree, (1.0, 1.0, 1.0))
+    speckle = textures._noise(tree, coords.outputs["Vector"], scale=42.0,
+                              detail=8.0, roughness=0.75)
+
+    tone = tree.nodes.new("ShaderNodeMixRGB")
+    tone.inputs["Color1"].default_value = (0.030, 0.052, 0.019, 1.0)
+    tone.inputs["Color2"].default_value = (0.094, 0.138, 0.052, 1.0)
+    tree.links.new(speckle.outputs["Fac"], tone.inputs["Fac"])
+    tree.links.new(tone.outputs["Color"], bsdf.inputs["Base Color"])
+
+    bump = tree.nodes.new("ShaderNodeBump")
+    bump.inputs["Strength"].default_value = 0.85
+    bump.inputs["Distance"].default_value = 0.06
+    tree.links.new(speckle.outputs["Fac"], bump.inputs["Height"])
+    tree.links.new(bump.outputs["Normal"], bsdf.inputs["Normal"])
+
+    bsdf.inputs["Roughness"].default_value = 0.78
     # Leaves are thin: without some transmission a crown renders as a solid
     # dark mass, and the backlit glow is most of what says "tree".
-    bsdf = foliage.node_tree.nodes["Principled BSDF"]
     for socket in ("Transmission Weight", "Subsurface Weight"):
         if socket in bsdf.inputs:
-            bsdf.inputs[socket].default_value = 0.18
+            bsdf.inputs[socket].default_value = 0.16
             break
+    return material
+
+
+def prop_materials() -> dict[str, bpy.types.Material]:
+    """Materials for rooftop clutter and street furniture."""
+    foliage = _foliage_material()
 
     return {
         "brick": _principled("prop_brick", (0.196, 0.148, 0.112), 0.88),
