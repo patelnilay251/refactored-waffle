@@ -145,6 +145,36 @@ def street_camera(centreline: list[tuple[float, float]], *, along: float = 0.18,
     return _camera("cam_street", location, target, lens_mm)
 
 
+def camera_towards(centreline: list[tuple[float, float]],
+                   target: tuple[float, float], *, back: float = 34.0,
+                   lens_mm: float = 30.0, eye: float = EYE_HEIGHT_M,
+                   rise: float = 5.0) -> bpy.types.Object:
+    """Stand on a street, a set distance back from a point, and look at it.
+
+    Useful when the subject is a thing rather than a vista — a run of trees, a
+    parked bay, a junction — and the framing should be driven by where that
+    thing is rather than by a fraction along the centreline.
+    """
+    line = [Vector((x, y, 0.0)) for x, y in centreline]
+    goal = Vector((target[0], target[1], 0.0))
+    nearest = min(range(len(line)), key=lambda i: (line[i] - goal).length)
+    anchor = line[nearest]
+
+    # Walk back along the centreline until far enough away.
+    stand = line[0]
+    for index in range(len(line)):
+        candidate = line[index]
+        if (candidate - anchor).length >= back:
+            stand = candidate
+            break
+    else:
+        stand = max(line, key=lambda p: (p - anchor).length)
+
+    location = Vector((stand.x, stand.y, eye))
+    aim = Vector((goal.x, goal.y, eye + rise))
+    return _camera("cam_detail", location, aim, lens_mm)
+
+
 def sun(*, elevation_deg: float = 34.0, azimuth_deg: float = 205.0,
         strength: float = 3.2, angle_deg: float = 0.55,
         colour: tuple[float, float, float] | None = None) -> bpy.types.Object:

@@ -21,6 +21,7 @@ closer to the real thing than scattering identical windows over a box.
 from __future__ import annotations
 
 import math
+import random
 from dataclasses import dataclass, field
 
 from shapely.geometry import Point, Polygon
@@ -171,7 +172,20 @@ def _window(u0: float, bay: float, base: float, storey: float,
                    sill, sill + height, "window")
 
 
-def lay_out_wall(wall: Wall, storeys: list[float], retail: bool) -> None:
+def _door(u0: float, bay: float) -> Opening:
+    """A street door beside the shopfronts.
+
+    Terraces are not an unbroken run of glass: every few bays there is a door
+    to the flats or offices above, and its narrower, taller proportion is a
+    large part of what gives a London ground floor its rhythm.
+    """
+    width = min(1.05, bay * 0.42)
+    centre = u0 + bay / 2
+    return Opening(centre - width / 2, centre + width / 2, 0.02, 2.45, "door")
+
+
+def lay_out_wall(wall: Wall, storeys: list[float], retail: bool,
+                 rng=None) -> None:
     """Fill a wall with a bay grid of openings."""
     if wall.length < MIN_FRONTAGE_M:
         return
@@ -185,7 +199,11 @@ def lay_out_wall(wall: Wall, storeys: list[float], retail: bool) -> None:
         for b in range(bays):
             u0 = b * bay
             if floor == 0 and retail and wall.frontage:
-                wall.openings.append(_shopfront(u0, bay, storey))
+                # Roughly one bay in four is a door rather than a shopfront.
+                if rng is not None and rng.random() < 0.26:
+                    wall.openings.append(_door(u0, bay))
+                else:
+                    wall.openings.append(_shopfront(u0, bay, storey))
                 continue
             # Upper windows shrink with height, following the storey.
             shrink = DIMINUTION ** max(floor - 1, 0)
@@ -260,8 +278,9 @@ def lay_out(scene_data: dict, street=None) -> list[FacadeBuilding]:
         heights = storey_heights(height, storeys, building_class)
         retail = building["kind"] in RETAIL_KINDS
 
+        rng = random.Random(building["osm_id"] & 0xFFFFFFFF)
         for wall in walls:
-            lay_out_wall(wall, heights, retail)
+            lay_out_wall(wall, heights, retail, rng)
 
         laid_out.append(FacadeBuilding(
             osm_id=building["osm_id"],

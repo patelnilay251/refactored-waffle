@@ -81,6 +81,26 @@ def buildings(bbox) -> list[dict]:
     return query(ql)["elements"]
 
 
+def furniture(bbox) -> list[dict]:
+    """Point features: trees, benches, bins, bike stands, crossings, bollards.
+
+    Worth fetching rather than inventing. Soho's street furniture is surveyed
+    well enough that a tree stands where a tree actually stands, which is a
+    different thing from scattering plausible props along a pavement.
+    """
+    area = bbox.overpass()
+    ql = (
+        f'[out:json][timeout:90];('
+        f'node["natural"="tree"]({area});'
+        f'node["amenity"~"^(bench|waste_basket|recycling|bicycle_parking|'
+        f'motorcycle_parking|post_box|bicycle_rental|telephone)$"]({area});'
+        f'node["highway"~"^(crossing|street_lamp|traffic_signals)$"]({area});'
+        f'node["barrier"~"^(bollard|gate)$"]({area});'
+        f');out body;'
+    )
+    return query(ql)["elements"]
+
+
 def roads(bbox) -> list[dict]:
     """Highway ways with full geometry. Includes footways: London sidewalks
     are mapped individually and we want them for the street surface pass."""

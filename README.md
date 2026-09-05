@@ -243,6 +243,59 @@ camera looks through, and at 23.8° elevation with the sun 40° off the street's
 axis it never enters this canyon. The geometry ruled the effect out before the
 render cost did.
 
+## Detail pass
+
+### Markings
+
+Derived from the surfaces, not authored. Double yellows fall out of buffering
+the carriageway boundary inward; lane dashes come from the centrelines; zebra
+bars sit on surveyed crossing nodes, and the yellows and dashes are cut back
+around them.
+
+Double yellows matter more than their 537 m² suggests — they are the most
+recognisably British thing on a street surface, and their absence is what made
+an otherwise correct UK street read as generic. Dashes are suppressed on
+one-way streets, which is most of Soho; a centre line down a one-way street is
+a mistake that reads instantly to anyone who drives.
+
+### Surveyed street furniture
+
+OSM has this block mapped well enough to use directly rather than scatter:
+
+```
+tree 9   bicycle_parking 14   crossing 13   bollard 9
+bench 2   recycling 2   waste_basket 1   post_box 1
+```
+
+A tree standing where a tree stands is worth more than a dozen convincingly
+placed ones. The surveyed bollards also replaced the synthetic run along
+pedestrian streets, which had been a guess.
+
+### Facade fittings
+
+Downpipes on every frontage, hanging signs and shop blinds over about half the
+shopfronts, and street doors in roughly one ground-floor bay in four (167 of
+them). Rainwater goods are the detail that most reliably separates a real
+London elevation from a generated one — every building has them, and a facade
+without any looks scrubbed.
+
+### Trees
+
+The hardest thing here to do procedurally and cheaply. A canopy of six large
+spheres renders as exactly that: faceted polyhedra floating over a stick.
+Roughly a hundred small clumps at varied radii, overlapping heavily and
+smooth-shaded, give a broken silhouette and self-shadowing that reads as
+foliage from across a street. They still will not survive close inspection —
+that needs leaf cards, which is a different kind of asset.
+
+### A third camera
+
+The hero runs down Berwick Street, which is pedestrianised, so it has no
+carriageway and therefore no markings — and the surveyed trees happen to sit
+behind that camera. A detail view was added on Broadwick Street, aimed at the
+centroid of the trees nearest a carriageway, so one frame holds markings,
+trees, furniture and fittings together.
+
 ## Usage
 
 ```bash
@@ -254,6 +307,7 @@ python3 -m pipeline.stage3_streets   # carriageway, kerbs, pavement
 python3 -m pipeline.stage4_facades   # bays, windows, shopfronts, cornices
 python3 -m pipeline.stage5_dressing  # clutter, materials, sun, atmosphere
 python3 -m pipeline.stage6_hero      # hero render (--draft for a fast look)
+python3 -m pipeline.stage7_detail    # markings, fittings, furniture, trees
 ```
 
 Overpass responses are cached under `data/cache/` by query hash; re-runs do not
@@ -285,6 +339,9 @@ pipeline/stage5_dressing.py stage 5 -> out/stage5_*.png
 pipeline/blend/grade.py    compositor bloom, aberration, grade
 pipeline/post.py           vignette and film grain
 pipeline/stage6_hero.py    stage 6 -> out/stage6_*.png
+pipeline/markings.py       double yellows, lane dashes, zebra bars
+pipeline/blend/streetprops.py trees, cycle stands, benches, pillar box
+pipeline/stage7_detail.py  stage 7 -> out/stage7_*.png
 ```
 
 Coordinates downstream of `stage1_data` are **local metres**, +X east, +Y north,
@@ -302,6 +359,8 @@ origin at the site centre.
       street furniture, procedural weathering, computed sun, haze.
 - [x] **6 — Hero render and grade.** Defocus, bloom, aberration, vignette,
       film grain; 256 samples at 1920×1080.
+- [x] **7 — Detail pass.** Road markings, facade fittings, surveyed street
+      furniture and trees.
 
 ## Environment
 

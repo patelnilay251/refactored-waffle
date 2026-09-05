@@ -201,8 +201,30 @@ def build_roads(elements: list[dict], projection: Projection) -> list[dict]:
     return roads
 
 
-def to_scene(name: str, bbox: BBox, config: dict,
-             buildings: list[Building], roads: list[dict]) -> dict:
+def build_furniture(elements: list[dict], projection: Projection) -> list[dict]:
+    """Point features, projected and reduced to a kind plus a position."""
+    items = []
+    for element in elements:
+        if "lat" not in element or "lon" not in element:
+            continue
+        tags = element.get("tags", {})
+        kind = next((f"{k}={tags[k]}" for k in
+                     ("natural", "amenity", "highway", "barrier")
+                     if k in tags), None)
+        if kind is None:
+            continue
+        x, y = projection.to_local(element["lat"], element["lon"])
+        items.append({
+            "osm_id": element["id"],
+            "kind": kind,
+            "position": [round(x, 3), round(y, 3)],
+            "name": tags.get("name"),
+        })
+    return items
+
+
+def to_scene(name: str, bbox: BBox, config: dict, buildings: list[Building],
+             roads: list[dict], furniture: list[dict] | None = None) -> dict:
     width, height = bbox.size_m()
     return {
         "name": name,
@@ -228,6 +250,7 @@ def to_scene(name: str, bbox: BBox, config: dict,
             for b in buildings
         ],
         "roads": roads,
+        "furniture": furniture or [],
     }
 
 
@@ -244,6 +267,8 @@ def main(argv: list[str]) -> int:
     buildings = build_footprints(osm.buildings(bbox), Projection.for_bbox(bbox))
     print("fetching  : roads ...", flush=True)
     roads = build_roads(osm.roads(bbox), Projection.for_bbox(bbox))
+    print("fetching  : furniture ...", flush=True)
+    furniture = build_furniture(osm.furniture(bbox), Projection.for_bbox(bbox))
 
     raw_count = len(buildings)
     buildings, clipped, dropped = resolve_overlaps(buildings)
@@ -256,6 +281,12 @@ def main(argv: list[str]) -> int:
     print(f"\nbuildings : {len(buildings)}")
     print(f"roads     : {len(roads)} ways "
           f"({sum(1 for r in roads if r['is_footway'])} footway)")
+    kinds = {}
+    for item in furniture:
+        kinds[item["kind"]] = kinds.get(item["kind"], 0) + 1
+    top = sorted(kinds.items(), key=lambda kv: -kv[1])[:6]
+    print(f"furniture : {len(furniture)} nodes  "
+          + "  ".join(f"{k.split('=')[1]} {v}" for k, v in top))
     print("\nheight provenance:")
     total = max(len(buildings), 1)
     for source, count in summarise(buildings).items():
@@ -274,7 +305,8 @@ def main(argv: list[str]) -> int:
     out_dir = ROOT / "data" / name
     out_dir.mkdir(parents=True, exist_ok=True)
     scene_path = out_dir / "scene.json"
-    scene_path.write_text(json.dumps(to_scene(name, bbox, config, buildings, roads), indent=1))
+    scene_path.write_text(json.dumps(
+        to_scene(name, bbox, config, buildings, roads, furniture), indent=1))
     print(f"\nwrote     : {scene_path.relative_to(ROOT)}")
     return 0
 

@@ -11954,5 +11954,538 @@
     ]
    ]
   }
+ ],
+ "furniture": [
+  {
+   "osm_id": 499350865,
+   "kind": "amenity=post_box",
+   "position": [
+    -29.969,
+    -1.269
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 670636500,
+   "kind": "amenity=bicycle_parking",
+   "position": [
+    -84.352,
+    -37.426
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 670639204,
+   "kind": "amenity=bicycle_parking",
+   "position": [
+    -18.241,
+    7.158
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 701608620,
+   "kind": "barrier=bollard",
+   "position": [
+    -61.975,
+    -84.581
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 771982958,
+   "kind": "amenity=bicycle_parking",
+   "position": [
+    -67.455,
+    57.83
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 869361727,
+   "kind": "amenity=bicycle_rental",
+   "position": [
+    -16.98,
+    4.865
+   ],
+   "name": "Broadwick Street"
+  },
+  {
+   "osm_id": 925761472,
+   "kind": "amenity=bicycle_parking",
+   "position": [
+    75.907,
+    38.004
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 1330687507,
+   "kind": "amenity=recycling",
+   "position": [
+    3.893,
+    5.599
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 1330687509,
+   "kind": "amenity=recycling",
+   "position": [
+    -10.849,
+    12.201
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 1330687523,
+   "kind": "amenity=bicycle_parking",
+   "position": [
+    -24.808,
+    0.545
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 1330788565,
+   "kind": "barrier=gate",
+   "position": [
+    -0.7,
+    -52.509
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 1330788587,
+   "kind": "barrier=gate",
+   "position": [
+    -18.151,
+    -61.07
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 1330788607,
+   "kind": "barrier=gate",
+   "position": [
+    22.674,
+    -94.043
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 1330788615,
+   "kind": "amenity=motorcycle_parking",
+   "position": [
+    -47.067,
+    -27.641
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 2787909424,
+   "kind": "amenity=motorcycle_parking",
+   "position": [
+    35.83,
+    18.88
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 3079333576,
+   "kind": "natural=tree",
+   "position": [
+    74.847,
+    -74.695
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 3079333690,
+   "kind": "natural=tree",
+   "position": [
+    89.374,
+    48.858
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 4709189323,
+   "kind": "natural=tree",
+   "position": [
+    -47.351,
+    40.32
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 4721392977,
+   "kind": "barrier=bollard",
+   "position": [
+    -11.327,
+    -3.217
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 4721392979,
+   "kind": "barrier=bollard",
+   "position": [
+    -12.809,
+    -2.75
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 4721392980,
+   "kind": "barrier=bollard",
+   "position": [
+    3.817,
+    7.937
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 4721392981,
+   "kind": "barrier=bollard",
+   "position": [
+    2.799,
+    7.047
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 4721392982,
+   "kind": "barrier=bollard",
+   "position": [
+    1.448,
+    5.978
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 4721392983,
+   "kind": "barrier=bollard",
+   "position": [
+    0.194,
+    14.716
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 4721392984,
+   "kind": "barrier=bollard",
+   "position": [
+    -0.409,
+    12.902
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 4721392985,
+   "kind": "barrier=bollard",
+   "position": [
+    -1.386,
+    11.599
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 4721393011,
+   "kind": "natural=tree",
+   "position": [
+    -20.485,
+    4.965
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 4721393012,
+   "kind": "natural=tree",
+   "position": [
+    -16.724,
+    6.59
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 4721393013,
+   "kind": "natural=tree",
+   "position": [
+    -9.9,
+    9.607
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 4721393014,
+   "kind": "natural=tree",
+   "position": [
+    -21.621,
+    -6.312
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 4731045416,
+   "kind": "natural=tree",
+   "position": [
+    -13.571,
+    -83.768
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 4731045417,
+   "kind": "natural=tree",
+   "position": [
+    -8.182,
+    -94.455
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 5610035555,
+   "kind": "amenity=bicycle_parking",
+   "position": [
+    -58.484,
+    -24.78
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 10267752699,
+   "kind": "amenity=bicycle_parking",
+   "position": [
+    40.617,
+    6.824
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 10267752700,
+   "kind": "amenity=bicycle_parking",
+   "position": [
+    5.307,
+    -96.937
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 10267752701,
+   "kind": "amenity=bicycle_parking",
+   "position": [
+    11.569,
+    -93.33
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 10267752703,
+   "kind": "amenity=bicycle_parking",
+   "position": [
+    -11.507,
+    -57.229
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 10267752857,
+   "kind": "amenity=bicycle_parking",
+   "position": [
+    50.829,
+    -17.232
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 11310267287,
+   "kind": "highway=crossing",
+   "position": [
+    -49.505,
+    38.628
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 11310267289,
+   "kind": "highway=crossing",
+   "position": [
+    -84.504,
+    85.527
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 11310267290,
+   "kind": "highway=crossing",
+   "position": [
+    -18.275,
+    51.819
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 11310267296,
+   "kind": "highway=crossing",
+   "position": [
+    -76.219,
+    -20.049
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 11310267303,
+   "kind": "highway=crossing",
+   "position": [
+    -20.631,
+    -8.193
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 11310267305,
+   "kind": "highway=crossing",
+   "position": [
+    -47.912,
+    -21.407
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 11310267307,
+   "kind": "highway=crossing",
+   "position": [
+    -90.365,
+    -38.773
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 11310475190,
+   "kind": "highway=crossing",
+   "position": [
+    49.748,
+    42.502
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 11310475193,
+   "kind": "highway=crossing",
+   "position": [
+    28.999,
+    30.134
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 11329900021,
+   "kind": "highway=crossing",
+   "position": [
+    -69.042,
+    -89.145
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 11991983426,
+   "kind": "amenity=bicycle_parking",
+   "position": [
+    -56.073,
+    63.786
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 12909395664,
+   "kind": "highway=crossing",
+   "position": [
+    -64.185,
+    -90.826
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 12909395668,
+   "kind": "highway=crossing",
+   "position": [
+    -68.695,
+    -82.933
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 13009416258,
+   "kind": "amenity=bicycle_parking",
+   "position": [
+    -26.021,
+    71.2
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 13009465916,
+   "kind": "amenity=motorcycle_parking",
+   "position": [
+    -2.799,
+    25.537
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 13009729599,
+   "kind": "amenity=bicycle_parking",
+   "position": [
+    -40.236,
+    -74.551
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 13014395577,
+   "kind": "amenity=waste_basket",
+   "position": [
+    -3.02,
+    41.032
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 13015849903,
+   "kind": "amenity=bicycle_rental",
+   "position": [
+    8.819,
+    -99.408
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 13819800581,
+   "kind": "highway=crossing",
+   "position": [
+    6.852,
+    21.128
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 14026872326,
+   "kind": "amenity=bench",
+   "position": [
+    1.621,
+    34.409
+   ],
+   "name": null
+  },
+  {
+   "osm_id": 14026935641,
+   "kind": "amenity=bench",
+   "position": [
+    -16.744,
+    47.912
+   ],
+   "name": null
+  }
  ]
 }

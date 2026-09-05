@@ -188,12 +188,130 @@ def street_furniture(scene_data: dict, surfaces: dict) -> list[Prop]:
                 if not pavement.intersects(here) or carriageway.intersects(here):
                     continue
                 if pedestrian:
-                    props.append(Prop("bollard", x, y, 0.135, 0.0,
-                                      0.16, 0.16, 0.92))
-                elif rng.random() < 0.55:
+                    # Superseded by the surveyed bollards in from_survey().
+                    continue
+                if rng.random() < 0.55:
                     props.append(Prop("streetlight", x, y, 0.135,
                                       math.atan2(-ny * side, -nx * side),
                                       0.11, 0.11, rng.uniform(4.6, 5.4)))
+    return props
+
+
+# OSM kind -> prop kind, and how tall to build it.
+FURNITURE_MAP = {
+    "natural=tree": ("tree", 9.5),
+    "amenity=bicycle_parking": ("bike_stand", 0.75),
+    "amenity=bicycle_rental": ("bike_stand", 0.75),
+    "amenity=motorcycle_parking": ("bollard", 0.92),
+    "amenity=bench": ("bench", 0.80),
+    "amenity=waste_basket": ("bin", 0.95),
+    "amenity=recycling": ("bin", 1.10),
+    "amenity=post_box": ("post_box", 1.40),
+    "barrier=bollard": ("bollard", 0.92),
+}
+
+PAVEMENT_Z = 0.135
+
+
+def _nearest_road_angle(roads: list[dict], x: float, y: float) -> float:
+    best, angle = 1e18, 0.0
+    for road in roads:
+        line = road["centreline"]
+        for i in range(len(line) - 1):
+            (x0, y0), (x1, y1) = line[i], line[i + 1]
+            mx, my = (x0 + x1) / 2, (y0 + y1) / 2
+            d = (mx - x) ** 2 + (my - y) ** 2
+            if d < best:
+                best, angle = d, math.atan2(y1 - y0, x1 - x0)
+    return angle
+
+
+def from_survey(scene_data: dict, surfaces: dict) -> list[Prop]:
+    """Street furniture at its surveyed OSM position.
+
+    Preferred over scattering: a tree that stands where a tree stands is worth
+    more than a dozen convincingly placed ones. Bollards from the survey also
+    replace the synthetic run along pedestrian streets, which was a guess.
+    """
+    pavement = surfaces["pavement"]
+    buildings = surfaces["buildings"]
+    roads = scene_data["roads"]
+
+    props: list[Prop] = []
+    for item in scene_data.get("furniture", []):
+        mapped = FURNITURE_MAP.get(item["kind"])
+        if mapped is None:
+            continue
+        kind, height = mapped
+        x, y = item["position"]
+        here = Point(x, y)
+        # A surveyed node can sit a little inside a building outline; nudging
+        # it is wrong, so it is simply dropped.
+        if buildings.contains(here):
+            continue
+
+        rng = _rng(item["osm_id"])
+        z = PAVEMENT_Z if pavement.intersects(here) else 0.01
+        if kind == "tree":
+            props.append(Prop(kind, x, y, z, rng.uniform(0, math.tau),
+                              1.0, 1.0, height * rng.uniform(0.82, 1.18)))
+        else:
+            angle = _nearest_road_angle(roads, x, y)
+            if kind == "bike_stand":
+                # Stands come in short runs, set square to the kerb.
+                for n in range(rng.randint(2, 4)):
+                    offset = (n - 0.5) * 0.95
+                    props.append(Prop(kind,
+                                      x + math.cos(angle) * offset,
+                                      y + math.sin(angle) * offset,
+                                      z, angle + math.pi / 2, 0.7, 0.1, height))
+            else:
+                props.append(Prop(kind, x, y, z, angle, 0.6, 0.6, height))
+    return props
+
+
+def facade_fittings(laid_out) -> list[Prop]:
+    """Downpipes, hanging signs and blinds on street frontages.
+
+    Rainwater goods are the detail that most reliably separates a real London
+    elevation from a generated one — every building has them, and a facade
+    without any looks scrubbed.
+
+    Wall-mounted props use a yaw of `atan2(u.y, u.x)`, which maps local +X
+    along the wall and local +Y out of it.
+    """
+    props: list[Prop] = []
+    for building in laid_out:
+        rng = _rng(building.osm_id ^ 0x5EED)
+        for wall in building.walls:
+            if not wall.frontage or wall.length < 2.5:
+                continue
+            ux, uy = wall.direction
+            nx, ny = wall.normal
+            yaw = math.atan2(uy, ux)
+
+            # One downpipe per frontage, just in from the party-wall corner.
+            along = 0.35 if rng.random() < 0.5 else wall.length - 0.35
+            props.append(Prop(
+                "downpipe",
+                wall.start[0] + ux * along + nx * 0.09,
+                wall.start[1] + uy * along + ny * 0.09,
+                0.0, yaw, 0.11, 0.11, wall.height - 0.25))
+
+            for opening in wall.openings:
+                if opening.kind != "shopfront":
+                    continue
+                centre = (opening.u0 + opening.u1) / 2
+                px = wall.start[0] + ux * centre
+                py = wall.start[1] + uy * centre
+                roll = rng.random()
+                if roll < 0.34:
+                    props.append(Prop("sign", px + nx * 0.02, py + ny * 0.02,
+                                      opening.v1 + 0.30, yaw, 0.7, 0.1, 0.5))
+                elif roll < 0.56:
+                    props.append(Prop("awning", px + nx * 0.02, py + ny * 0.02,
+                                      opening.v1 + 0.06, yaw,
+                                      opening.width * 1.02, 1.2, 0.5))
     return props
 
 

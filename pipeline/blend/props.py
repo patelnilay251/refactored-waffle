@@ -87,12 +87,101 @@ def _streetlight_mesh(name: str, height: float) -> bpy.types.Mesh:
     return mesh
 
 
+def _slanted_awning(name: str, width: float) -> bpy.types.Mesh:
+    """A shop blind, dropping away from the wall.
+
+    Wall-mounted props are built with local +X along the wall and local +Y
+    pointing out of it, which is what a Z rotation of `atan2(u.y, u.x)` maps
+    the wall's own basis onto.
+    """
+    hw = width / 2
+    reach, fall = 1.15, 0.42
+    verts = [(-hw, 0.02, 0.0), (hw, 0.02, 0.0),
+             (hw, reach, -fall), (-hw, reach, -fall),
+             (-hw, 0.02, -0.07), (hw, 0.02, -0.07),
+             (hw, reach, -fall - 0.07), (-hw, reach, -fall - 0.07),
+             (-hw, reach, -fall - 0.30), (hw, reach, -fall - 0.30)]
+    faces = [(0, 1, 2, 3), (7, 6, 5, 4), (0, 3, 7, 4), (1, 5, 6, 2),
+             (3, 2, 6, 7), (0, 4, 5, 1), (7, 6, 9, 8)]
+    return _mesh_from(name, verts, faces)
+
+
+def _hanging_sign(name: str) -> bpy.types.Mesh:
+    """Bracket and board projecting over the pavement."""
+    verts: list = []
+    faces: list = []
+
+    def slab(x0, x1, y0, y1, z0, z1):
+        base = len(verts)
+        verts.extend([(x0, y0, z0), (x1, y0, z0), (x1, y1, z0), (x0, y1, z0),
+                      (x0, y0, z1), (x1, y0, z1), (x1, y1, z1), (x0, y1, z1)])
+        faces.extend([(base + 3, base + 2, base + 1, base),
+                      (base + 4, base + 5, base + 6, base + 7),
+                      (base, base + 1, base + 5, base + 4),
+                      (base + 1, base + 2, base + 6, base + 5),
+                      (base + 2, base + 3, base + 7, base + 6),
+                      (base + 3, base, base + 4, base + 7)])
+
+    slab(-0.02, 0.02, 0.0, 0.62, 0.30, 0.34)      # bracket arm
+    slab(-0.02, 0.02, 0.58, 0.62, -0.02, 0.34)    # drop
+    slab(-0.03, 0.03, 0.30, 0.66, -0.44, 0.02)    # board
+    return _mesh_from(name, verts, faces)
+
+
+def _mesh_from(name: str, verts, faces) -> bpy.types.Mesh:
+    mesh = bpy.data.meshes.new(name)
+    mesh.from_pydata(verts, [], faces)
+    mesh.validate(verbose=False)
+    mesh.shade_flat()
+    return mesh
+
+
 def _quantise(value: float) -> float:
     return max(round(value / SIZE_QUANTUM_M), 1) * SIZE_QUANTUM_M
 
 
 def _mesh_for(prop, cache: dict) -> bpy.types.Mesh:
     """One mesh per (kind, quantised size)."""
+    from . import streetprops
+
+    # Surveyed furniture: one mesh per kind, or per size band where it varies.
+    if prop.kind in ("bike_stand", "bench", "bin", "post_box", "sign", "awning"):
+        key = (prop.kind, _quantise(prop.width))
+        if key not in cache:
+            name = f"prop_{prop.kind}"
+            if prop.kind == "bike_stand":
+                cache[key] = streetprops.sheffield_stand(name)
+            elif prop.kind == "bench":
+                cache[key] = streetprops.bench_mesh(name)
+            elif prop.kind == "bin":
+                cache[key] = streetprops.bin_mesh(name, prop.height)
+            elif prop.kind == "post_box":
+                cache[key] = streetprops.post_box(name)
+            elif prop.kind == "sign":
+                cache[key] = _hanging_sign(name)
+            else:
+                cache[key] = _slanted_awning(name, key[1])
+        return cache[key]
+
+    if prop.kind == "tree":
+        # Trees vary individually; a handful of distinct crowns is enough for
+        # nine of them, and identical trees in a row read badly.
+        key = ("tree", round(prop.height * 2), int(prop.yaw * 100) % 5)
+        if key not in cache:
+            cache[key] = streetprops.tree_mesh(f"prop_tree_{key[1]}_{key[2]}",
+                                               prop.height, seed=key[1] * 7 + key[2])
+        return cache[key]
+
+    if prop.kind == "downpipe":
+        key = ("downpipe", _quantise(prop.height))
+        if key not in cache:
+            verts: list = []
+            faces: list = []
+            streetprops._tube(verts, faces, (0, 0, 0), (0, 0, key[1]), 0.055,
+                              sides=6)
+            cache[key] = _mesh_from(f"prop_downpipe_{key[1]}", verts, faces)
+        return cache[key]
+
     if prop.kind in ("pot", "aerial", "bollard"):
         key = (prop.kind, round(prop.height * 4))
     else:
@@ -129,7 +218,11 @@ def place(props, collection: bpy.types.Collection, cache: dict,
     slot_for = {
         "chimney": "brick", "pot": "terracotta", "aerial": "metal",
         "bollard": "metal", "tank": "metal", "plant": "metal",
-        "streetlight": "metal",
+        "streetlight": "metal", "downpipe": "metal", "sign": "metal",
+        "bike_stand": "metal", "bench": "timber", "bin": "metal",
+        "post_box": "postbox_red", "awning": "canvas",
+        # A tree carries two slots: woody faces first, then foliage.
+        "tree": ["bark", "foliage"],
     }
 
     placed = 0
@@ -138,7 +231,9 @@ def place(props, collection: bpy.types.Collection, cache: dict,
         if mesh is None:
             continue
         if not mesh.materials:
-            mesh.materials.append(materials[slot_for.get(prop.kind, "metal")])
+            wanted = slot_for.get(prop.kind, "metal")
+            for key in (wanted if isinstance(wanted, list) else [wanted]):
+                mesh.materials.append(materials[key])
 
         obj = bpy.data.objects.new(f"{prop.kind}_{placed}", mesh)
         rotation = Matrix.Rotation(prop.yaw, 4, "Z")

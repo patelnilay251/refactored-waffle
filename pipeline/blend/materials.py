@@ -119,14 +119,39 @@ def weathered_wall_material(osm_material: str | None, osm_id: int,
 
 
 def prop_materials() -> dict[str, bpy.types.Material]:
-    """Materials for rooftop and street clutter."""
+    """Materials for rooftop clutter and street furniture."""
+    foliage = _principled("prop_foliage", (0.062, 0.098, 0.038), 0.72)
+    # Leaves are thin: without some transmission a crown renders as a solid
+    # dark mass, and the backlit glow is most of what says "tree".
+    bsdf = foliage.node_tree.nodes["Principled BSDF"]
+    for socket in ("Transmission Weight", "Subsurface Weight"):
+        if socket in bsdf.inputs:
+            bsdf.inputs[socket].default_value = 0.18
+            break
+
     return {
         "brick": _principled("prop_brick", (0.196, 0.148, 0.112), 0.88),
         # Chimney pots are unglazed terracotta and read warm even in shade -
         # a useful spot of colour along an otherwise grey roofline.
         "terracotta": _principled("prop_terracotta", (0.315, 0.152, 0.088), 0.80),
         "metal": _principled("prop_metal", (0.105, 0.107, 0.108), 0.44),
+        "bark": _principled("prop_bark", (0.148, 0.132, 0.108), 0.90),
+        "foliage": foliage,
+        "timber": _principled("prop_timber", (0.152, 0.102, 0.062), 0.78),
+        # Post Office red, which is a deep crimson rather than a bright red.
+        "postbox_red": _principled("prop_postbox", (0.288, 0.028, 0.030), 0.52),
+        "canvas": _principled("prop_canvas", (0.086, 0.118, 0.096), 0.86),
     }
+
+
+def road_paint(name: str, colour: tuple[float, float, float]) -> bpy.types.Material:
+    """Thermoplastic road marking.
+
+    Deliberately not bright. Road paint on a live carriageway is worn, dirty
+    and part-covered; pure white lines read as freshly laid and pull the eye
+    straight to the tarmac, which is not where it should go.
+    """
+    return _principled(name, colour, 0.62)
 
 
 def trim(name: str = "trim") -> bpy.types.Material:

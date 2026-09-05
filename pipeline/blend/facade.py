@@ -232,11 +232,36 @@ def window_mesh(width: float, height: float, kind: str,
     # A shopfront is a wider, more open grid than a domestic sash.
     if kind == "shopfront":
         columns, rows, thickness = max(2, int(w / 1.5)), 1, FRAME_THICKNESS * 1.4
+    elif kind == "door":
+        columns, rows, thickness = 1, 2, FRAME_THICKNESS * 1.3
     else:
         columns, rows, thickness = 2, 3, FRAME_THICKNESS
 
     sink = Sink()
     frame = _identity_frame()
+
+    if kind == "door":
+        # Solid leaf with recessed panels, and a glazed fanlight over it. The
+        # fanlight is the giveaway detail on a Georgian street door, and it is
+        # the only part of a door that should read as glass at all.
+        fan = h * 0.80
+        _prism(sink, frame, 0, w, 0, h, 0, FRAME_PROJECTION * 0.6, SLOT_FRAME)
+        for row in range(2):
+            v0 = 0.10 + row * (fan - 0.30) / 2
+            v1 = v0 + (fan - 0.40) / 2
+            _prism(sink, frame, 0.12, w - 0.12, v0, v1,
+                   FRAME_PROJECTION * 0.6, FRAME_PROJECTION * 0.6 + 0.02,
+                   SLOT_FRAME)
+        _prism(sink, frame, 0, w, fan, fan + thickness, 0,
+               FRAME_PROJECTION, SLOT_FRAME)
+        sink.face([frame.at(thickness, fan + thickness, -0.01),
+                   frame.at(w - thickness, fan + thickness, -0.01),
+                   frame.at(w - thickness, h - thickness, -0.01),
+                   frame.at(thickness, h - thickness, -0.01)],
+                  frame.n, SLOT_GLASS)
+        mesh = sink.to_mesh(f"door_{key[0]}x{key[1]}")
+        cache[key] = mesh
+        return mesh
 
     # Outer frame, as four prisms standing proud of the glass.
     _prism(sink, frame, 0, w, 0, thickness, 0, FRAME_PROJECTION, SLOT_FRAME)
