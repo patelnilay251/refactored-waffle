@@ -327,6 +327,24 @@ def configure_render(*, samples: int = 64, resolution: tuple[int, int] = (1600, 
     scene.view_settings.exposure = exposure
 
 
+def depth_of_field(camera: bpy.types.Object, focus_m: float,
+                   fstop: float = 5.6, blades: int = 7) -> None:
+    """Physical defocus.
+
+    Restrained on purpose: a 26mm lens at f/5.6 focused 35 m down a street has
+    almost everything sharp, and that is correct. The point is not visible
+    blur but the small amount on the nearest foot of pavement and the furthest
+    facade, which is what tells the eye it is looking through a lens.
+    `blades` gives the aperture straight edges, so out-of-focus highlights are
+    polygonal rather than perfect discs.
+    """
+    dof = camera.data.dof
+    dof.use_dof = True
+    dof.focus_distance = focus_m
+    dof.aperture_fstop = fstop
+    dof.aperture_blades = blades
+
+
 def render_to(path, camera: bpy.types.Object) -> None:
     scene = bpy.context.scene
     scene.camera = camera

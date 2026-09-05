@@ -207,6 +207,42 @@ render as a scene that is obviously wrong but not obviously why:
   entirely by flat sky ambient. Raising sun strength 150× did nothing at all.
   The box is now 2 km and shadow rays skip the volume.
 
+## Hero render
+
+Final quality is 256 samples at 1920×1080 with denoising — past that the extra
+samples buy less than the extra hour costs on four CPU cores.
+
+Three finishing passes, split by where each effect physically belongs:
+
+- **Defocus** in-camera: 26 mm at f/5.6 focused 34 m down the street. Almost
+  everything stays sharp, which is correct; the point is the small amount on
+  the nearest pavement and the furthest facade that tells the eye it is
+  looking through a lens. Seven aperture blades, so defocused highlights are
+  polygonal rather than perfect discs.
+- **Bloom and chromatic aberration** in the compositor, because both act on
+  *light* and want the render's full dynamic range. Bloom driven from an
+  8-bit image glows off mid-greys instead of only off real highlights. Both
+  are set near the threshold of visibility — lens artefacts should be felt,
+  not seen.
+- **Vignette and grain** in numpy afterwards, since both are properties of the
+  film and the lens barrel rather than of the scene. Grain is weighted to peak
+  in the midtones and is mostly luminance; colour speckle reads as sensor
+  noise, not film.
+
+Blender 5.0 moved compositing out of `Scene.node_tree` into a
+`CompositorNodeTree` assigned to `scene.compositing_node_group`, and turned the
+Glare node's settings from properties into input sockets.
+
+### The light shafts that were not possible
+
+Denser haze with shadow rays crossing the volume was tried, so buildings would
+shadow the haze into visible shafts. It cost the key light exactly as the
+oversized box did in stage 5 — warm-lit pixels fell from 14.1% to 0.0% — and
+it would not have worked regardless. A shaft needs sun entering the volume the
+camera looks through, and at 23.8° elevation with the sun 40° off the street's
+axis it never enters this canyon. The geometry ruled the effect out before the
+render cost did.
+
 ## Usage
 
 ```bash
@@ -217,6 +253,7 @@ python3 -m pipeline.stage2_massing   # extrude and clay-render
 python3 -m pipeline.stage3_streets   # carriageway, kerbs, pavement
 python3 -m pipeline.stage4_facades   # bays, windows, shopfronts, cornices
 python3 -m pipeline.stage5_dressing  # clutter, materials, sun, atmosphere
+python3 -m pipeline.stage6_hero      # hero render (--draft for a fast look)
 ```
 
 Overpass responses are cached under `data/cache/` by query hash; re-runs do not
@@ -245,6 +282,9 @@ pipeline/clutter.py        chimney/plant/furniture placement
 pipeline/blend/props.py    clutter meshing and instancing
 pipeline/blend/textures.py procedural weathering and glass
 pipeline/stage5_dressing.py stage 5 -> out/stage5_*.png
+pipeline/blend/grade.py    compositor bloom, aberration, grade
+pipeline/post.py           vignette and film grain
+pipeline/stage6_hero.py    stage 6 -> out/stage6_*.png
 ```
 
 Coordinates downstream of `stage1_data` are **local metres**, +X east, +Y north,
@@ -260,7 +300,8 @@ origin at the site centre.
       cornices; wall material from OSM tags; instanced openings.
 - [x] **5 — Clutter, materials and atmosphere.** Chimneys and roof plant,
       street furniture, procedural weathering, computed sun, haze.
-- [ ] 6 — Hero render and grade.
+- [x] **6 — Hero render and grade.** Defocus, bloom, aberration, vignette,
+      film grain; 256 samples at 1920×1080.
 
 ## Environment
 
