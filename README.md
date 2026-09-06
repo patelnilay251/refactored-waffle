@@ -273,6 +273,38 @@ camera looks through, and at 23.8° elevation with the sun 40° off the street's
 axis it never enters this canyon. The geometry ruled the effect out before the
 render cost did.
 
+## Roofs
+
+OSM tags `roof:shape` on 1% of this site, so the form has to come from the
+plan. Inward buffering does it: offsetting a footprint inward and lifting the
+result gives a slope, and two offsets at different rates give a steep lower
+pitch meeting a shallow upper one — a **mansard**, which Soho terraces are
+full of. A narrow plan collapses to a ridge on its own, giving a hipped roof
+with no special case.
+
+```
+154 of 189 pitched (154 mansard)   35 left flat   12,665 faces
+rise: min 1.18   median 2.07   max 3.60 m
+```
+
+The 35 flat ones are not a gap. Large modern blocks over 26 m, or with a plan
+too wide to span, genuinely do have flat roofs with plant on them, and the
+existing plant placement is skipped on anything that got a pitch — air
+handling units do not sit on a mansard. Chimney stacks are raised to the new
+ridge line rather than left half-buried in the slope.
+
+Roofs are **additive**: they sit on top of the existing shell rather than
+replacing its cap, so no facade code changed. The cornice already generated at
+the wall head reads as the parapet it would be in reality, with the roof
+rising behind it.
+
+Meshing them needed care. Successive rings have no vertex correspondence — an
+inward buffer produces its own outline — so the slope between two of them
+cannot be built by pairing vertices up. The annulus between them is
+triangulated as a polygon with a hole and each vertex lifted to whichever ring
+it came from; constrained Delaunay adds no points of its own, so every vertex
+is exactly one of the two rings' coordinates and the test is a set lookup.
+
 ## Detail pass
 
 ### Markings
@@ -371,6 +403,7 @@ pipeline/post.py           vignette and film grain
 pipeline/stage6_hero.py    stage 6 -> out/stage6_*.png
 pipeline/markings.py       double yellows, lane dashes, zebra bars
 pipeline/blend/streetprops.py trees, cycle stands, benches, pillar box
+pipeline/roofs.py          mansard/hipped forms from footprint shape
 pipeline/stage7_detail.py  stage 7 -> out/stage7_*.png
 ```
 
@@ -391,6 +424,8 @@ origin at the site centre.
       film grain; 256 samples at 1920×1080.
 - [x] **7 — Detail pass.** Road markings, facade fittings, surveyed street
       furniture and trees.
+- [x] **8 — Texture and roofs.** Masonry courses, paving joints, corrected
+      exposure, mansard roofs inferred from plan.
 
 ## Environment
 

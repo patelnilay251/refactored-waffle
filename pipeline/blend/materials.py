@@ -198,6 +198,21 @@ def road_paint(name: str, colour: tuple[float, float, float]) -> bpy.types.Mater
     return _principled(name, colour, 0.62)
 
 
+def slate(name: str = "slate") -> bpy.types.Material:
+    """Welsh slate, which is what most of these roofs are.
+
+    Dark and slightly glossy: slate is one of the few surfaces in a London
+    street that actually reflects the sky, and letting it do so is what stops
+    a roof reading as a grey lid.
+    """
+    from . import textures
+    return textures.weathered_wall(name, (0.052, 0.056, 0.064), 0.46,
+                                   streak=0.18, grain=0.10,
+                                   courses={"length": 0.50, "course": 0.25,
+                                            "joint": 0.010},
+                                   mortar_shift=0.80, bevel=0.004)
+
+
 def trim(name: str = "trim") -> bpy.types.Material:
     """Painted stone: cornices, sills, shopfront fascias. Off-white rather
     than white, which would blow out against the sky."""

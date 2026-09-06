@@ -155,3 +155,68 @@ def build_buildings(scene_data: dict, collection: bpy.types.Collection,
         collection.objects.link(obj)
         objects.append(obj)
     return objects
+
+
+def roof_shell(levels, name: str) -> bpy.types.Object | None:
+    """Mesh a stack of rings into a roof.
+
+    The rings do not correspond vertex-for-vertex — an inward buffer produces
+    its own outline — so the slope between two of them cannot be built by
+    pairing up vertices. Instead the annulus between them is triangulated as a
+    polygon with a hole, and each resulting vertex is lifted to whichever ring
+    it came from. Constrained Delaunay adds no points of its own, so every
+    vertex is exactly one of the two rings' own coordinates and the test is a
+    set lookup rather than a distance query.
+    """
+    import shapely
+
+    verts: list[tuple[float, float, float]] = []
+    faces: list[tuple[int, ...]] = []
+    index: dict[tuple[int, int, int], int] = {}
+
+    def vertex(x: float, y: float, z: float) -> int:
+        key = (round(x * 1000), round(y * 1000), round(z * 1000))
+        if key not in index:
+            index[key] = len(verts)
+            verts.append((x, y, z))
+        return index[key]
+
+    def emit(polygon, z_of):
+        for triangle in shapely.constrained_delaunay_triangles(polygon).geoms:
+            ring = list(triangle.exterior.coords)[:-1]
+            if len(ring) == 3:
+                faces.append(tuple(vertex(x, y, z_of(x, y)) for x, y in ring))
+
+    for lower, upper in zip(levels, levels[1:]):
+        outer, z_outer = lower
+        inner, z_inner = upper
+        annulus = outer.difference(inner)
+        if annulus.is_empty:
+            continue
+        on_outer = {(round(x * 1000), round(y * 1000))
+                    for x, y in outer.exterior.coords}
+
+        for part in getattr(annulus, "geoms", [annulus]):
+            if part.geom_type != "Polygon" or part.area < 1e-4:
+                continue
+            emit(part, lambda x, y: z_outer
+                 if (round(x * 1000), round(y * 1000)) in on_outer else z_inner)
+
+    cap, cap_z = levels[-1]
+    emit(cap, lambda x, y: cap_z)
+
+    if not faces:
+        return None
+
+    mesh = bpy.data.meshes.new(name)
+    mesh.from_pydata(verts, [], faces)
+    mesh.validate(verbose=False)
+
+    bm = bmesh.new()
+    bm.from_mesh(mesh)
+    bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+    bm.to_mesh(mesh)
+    bm.free()
+
+    mesh.shade_flat()
+    return bpy.data.objects.new(name, mesh)

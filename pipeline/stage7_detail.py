@@ -20,7 +20,7 @@ from pathlib import Path
 import bpy
 from shapely.ops import unary_union
 
-from . import clutter, facades, markings, post, solar, streets
+from . import clutter, facades, markings, post, roofs, solar, streets
 from .blend import facade, grade, materials, mesh, props, shot, textures
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -94,7 +94,20 @@ def build(scene_data: dict) -> dict:
             slab.data.materials.append(paint[name])
             collection.objects.link(slab)
 
-    prop_list = (clutter.rooftops(scene_data)
+    roof_forms = roofs.build(scene_data)
+    slate = materials.slate()
+    roof_tops = {}
+    roof_faces = 0
+    for roof in roof_forms:
+        obj = mesh.roof_shell(roof["levels"], f"roof_{roof['osm_id']}")
+        if obj is None:
+            continue
+        obj.data.materials.append(slate)
+        collection.objects.link(obj)
+        roof_tops[roof["osm_id"]] = roof["levels"][-1][1]
+        roof_faces += len(obj.data.polygons)
+
+    prop_list = (clutter.rooftops(scene_data, roof_tops)
                  + clutter.street_furniture(scene_data, surfaces)
                  + clutter.from_survey(scene_data, surfaces)
                  + clutter.facade_fittings(laid_out))
@@ -114,7 +127,9 @@ def build(scene_data: dict) -> dict:
 
     return {"laid_out": laid_out, "openings": openings, "props": prop_list,
             "placed": placed, "prop_meshes": len(prop_cache),
-            "markings": lines, "sun": sun}
+            "markings": lines, "sun": sun, "roofs": roof_forms,
+            "roof_faces": roof_faces,
+            "buildings": len(scene_data["buildings"])}
 
 
 DETAIL_STREET = "Broadwick Street"
@@ -167,6 +182,8 @@ def main(argv: list[str]) -> int:
     started = time.time()
     built = build(scene_data)
     print(f"built     : in {time.time() - started:.1f}s")
+    print(f"roofs     : {roofs.summarise(built['roofs'], built['buildings'])}"
+          f"  ({built['roof_faces']} faces)")
     print(f"markings  : {markings.summarise(built['markings'])}")
     print(f"clutter   : {clutter.summarise(built['props'])}")
     print(f"            {built['placed']} objects from "

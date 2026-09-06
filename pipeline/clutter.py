@@ -131,9 +131,17 @@ def _roof_plant(building, polygon, rng) -> list[Prop]:
     return props
 
 
-def rooftops(scene_data: dict) -> list[Prop]:
-    """Chimneys, plant, tanks and aerials across every roof on site."""
+def rooftops(scene_data: dict, roof_tops: dict | None = None) -> list[Prop]:
+    """Chimneys, plant, tanks and aerials across every roof on site.
+
+    `roof_tops` maps an OSM id to the height of a pitched roof's ridge. Where
+    one exists the stack is raised to stand on it rather than being half
+    buried in the slope, and the plant is skipped: air handling units do not
+    sit on a mansard.
+    """
     from shapely.strtree import STRtree
+
+    roof_tops = roof_tops or {}
 
     buildings = scene_data["buildings"]
     polygons = [Polygon(b["footprint"]) for b in buildings]
@@ -144,12 +152,17 @@ def rooftops(scene_data: dict) -> list[Prop]:
         rng = _rng(building["osm_id"])
         polygon = polygons[index]
 
+        pitched = building["osm_id"] in roof_tops
         if (building["height_m"] <= CHIMNEY_MAX_HEIGHT_M
                 and building["kind"] in CHIMNEY_KINDS):
             edges = _hidden_edges(building["footprint"], polygons, tree, index)
-            props.extend(_chimneys(building, building["footprint"], edges, rng))
+            raised = dict(building)
+            if pitched:
+                raised["height_m"] = roof_tops[building["osm_id"]]
+            props.extend(_chimneys(raised, building["footprint"], edges, rng))
 
-        props.extend(_roof_plant(building, polygon, rng))
+        if not pitched:
+            props.extend(_roof_plant(building, polygon, rng))
     return props
 
 
