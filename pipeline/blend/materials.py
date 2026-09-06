@@ -113,8 +113,18 @@ def weathered_wall_material(osm_material: str | None, osm_id: int,
         # Stone and stucco streak more visibly than brick: the dirt sits on a
         # pale ground instead of blending into it.
         streak = 0.46 if tone in ("portland_stone", "stucco") else 0.34
+        # Brick is laid in 75 mm courses, stone in far larger ashlar blocks,
+        # and render has no courses at all — running one pattern over all
+        # three is what made every wall read as the same painted surface.
+        if tone.endswith("brick"):
+            spec, mortar = textures.BRICK, 1.55
+        elif tone == "portland_stone":
+            spec, mortar = textures.ASHLAR, 0.88
+        else:
+            spec, mortar = None, 1.0
         cache[key] = textures.weathered_wall(key, colour, roughness,
-                                             streak=streak)
+                                             streak=streak, courses=spec,
+                                             mortar_shift=mortar)
     return cache[key]
 
 

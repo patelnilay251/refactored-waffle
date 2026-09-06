@@ -43,10 +43,27 @@ HERO_UTC_OFFSET = 1.0  # BST
 # is far brighter, and at that scale a sun of 4 is invisible: raising it 150x
 # barely moved the image at all until the atmosphere was fixed. 150 puts the
 # key roughly where a late-afternoon sun sits against this sky.
-SUN_STRENGTH = 150.0
+SUN_STRENGTH = 105.0
 
-# One grade for the whole shoot, set so nothing clips.
-EXPOSURE = -3.0
+# One grade for the whole shoot.
+#
+# This was -3.0, exposed for the shaded canyon of the hero shot, and that was
+# the larger half of why the render looked flat and untextured. A face-on
+# sunlit wall landed at 0.52 linear, well over middle grey, so AgX compressed
+# it toward white and a 0.215-albedo brown brick rendered as pale pink. The
+# albedo -- the material information -- was being thrown away by exposure
+# before any shader could show it. Measured on a sunlit brick wall, moving to
+# -3.7 with a slightly weaker sun and a slightly stronger sky takes chroma on
+# that wall from 0.152 to about 0.23 and puts the brick back at the brown it
+# should be. Going a further third of a stop down keeps gaining chroma, but
+# only slightly, and by then the street reads as evening rather than five in
+# the afternoon.
+EXPOSURE = -3.7
+
+# Sky carries more of the load now, which lifts the shaded side back up as the
+# sun comes down and keeps the scene's contrast near the ~3.5 stops a clear
+# September afternoon actually has.
+SKY_STRENGTH = 1.15
 
 
 def reset() -> None:
@@ -111,7 +128,7 @@ def build(scene_data: dict) -> dict:
     # Sun and sky from the site's own coordinates.
     latitude, longitude = scene_data["origin_wgs84"]
     sun = solar.sun_position(latitude, longitude, HERO_TIME, HERO_UTC_OFFSET)
-    shot.sky(sun, dust=2.6)
+    shot.sky(sun, dust=2.6, strength=SKY_STRENGTH)
     shot.atmosphere()
     # Warmth tracks elevation: the lower the sun, the more atmosphere it has
     # been through and the more of the blue end has been scattered out. At

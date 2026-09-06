@@ -26,7 +26,7 @@ from .blend import facade, grade, materials, mesh, props, shot, textures
 ROOT = Path(__file__).resolve().parent.parent
 
 from .stage5_dressing import (EXPOSURE, HERO_STREET, HERO_TIME,
-                              HERO_UTC_OFFSET, SUN_STRENGTH)
+                              HERO_UTC_OFFSET, SKY_STRENGTH, SUN_STRENGTH)
 
 CARRIAGEWAY_Z = 0.01
 PAVEMENT_Z = CARRIAGEWAY_Z + 0.125
@@ -71,14 +71,16 @@ def build(scene_data: dict) -> dict:
                              "carriageway")
     if road:
         road.data.materials.append(
-            textures.worn_ground("asphalt", (0.085, 0.085, 0.088), 0.85, 1.1))
+            textures.worn_ground("asphalt", (0.085, 0.085, 0.088), 0.85, 1.1,
+                                 bevel=0.0))
         collection.objects.link(road)
 
     kerb = mesh.polygon_slab(surfaces["pavement"], PAVEMENT_Z, PAVEMENT_Z,
                              "pavement")
     if kerb:
         kerb.data.materials.append(
-            textures.worn_ground("paving", (0.30, 0.288, 0.268), 0.80, 2.4))
+            textures.worn_ground("paving", (0.30, 0.288, 0.268), 0.80, 2.4,
+                                 slab=0.60))
         collection.objects.link(kerb)
 
     lines = markings.build(scene_data, surfaces)
@@ -102,7 +104,7 @@ def build(scene_data: dict) -> dict:
 
     latitude, longitude = scene_data["origin_wgs84"]
     sun = solar.sun_position(latitude, longitude, HERO_TIME, HERO_UTC_OFFSET)
-    shot.sky(sun, dust=2.6)
+    shot.sky(sun, dust=2.6, strength=SKY_STRENGTH)
     shot.atmosphere(density=HAZE, span=1800.0, height=550.0)
     bpy.context.scene.cycles.volume_bounces = 2
     warmth = max(0.0, min(1.0, (40.0 - sun.elevation) / 40.0))

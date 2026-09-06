@@ -172,6 +172,33 @@ white.
 Procedural node graphs, no image textures — nothing to fetch, nothing to
 cache, no memory spent on maps.
 
+### Why it looked untextured
+
+The first version of these shaders produced walls that read as painted
+surfaces, and two separate causes turned out to be responsible.
+
+**Nothing was at a resolvable scale.** There was no masonry pattern at all,
+and the only relief was a noise field with 8 mm features — at the hero camera
+that is 0.9 pixels, so it contributed literally nothing. A brick course
+repeats every 75 mm, which lands around nine pixels at the same distance and
+reads clearly. Walls now carry a real course pattern: 225 x 75 mm for brick,
+900 x 340 mm ashlar for stone, none at all for render, with the joints driving
+both relief and roughness. Pavements get 600 mm flags on the same principle.
+
+**Exposure was destroying the albedo.** The grade was set at -3.0 for the
+shaded canyon of the hero shot, which put a face-on sunlit wall at 0.52
+linear — well over middle grey — so AgX compressed it toward white and a
+0.215-albedo brown brick rendered as pale pink. The material information was
+being thrown away before any shader could show it. Measured on that wall,
+moving to -3.7 with a slightly weaker sun and stronger sky takes chroma from
+0.152 to about 0.23. Sun-to-sky on a face-on wall measures 3.9 stops, which is
+about right for a clear September afternoon; the mistake was exposing for the
+shadows rather than the highlights.
+
+A shader **bevel** now rounds the shading normal at every arris. Perfectly
+sharp edges are one of the loudest CG tells, and a cornice or a sill is
+nothing but arrises.
+
 - **Tonal drift** so no two stretches of brickwork match.
 - **Rain streaking** from a noise field crushed in Z. Scale matters more than
   it looks: feature size is `1/(mapping × noise)` metres, and crushing Z too
@@ -179,6 +206,9 @@ cache, no memory spent on maps.
 - **Per-instance glass** driven by Object Info's Random output, which differs
   per linked duplicate — so 5,000 windows sharing 135 meshes still each have
   their own tint and reflectivity. Variation for free, no extra geometry.
+- **Per-building colour**, from the same Random output on the building object.
+  All the stock-brick buildings share one material for memory, so without this
+  an entire terrace is literally the same colour.
 
 ## Clutter
 
